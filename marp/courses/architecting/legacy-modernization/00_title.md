@@ -1,12 +1,11 @@
 ---
-tags:
-  - architecture:patterns
-level: intermediate
-category: architecture
-duration_hours: 16
 audience:
   - audiences:architects
-
+category: architecture
+duration_hours: 16
+level: intermediate
+tags:
+  - architecture:patterns
 ---
 
 # Legacy Modernization

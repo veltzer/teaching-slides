@@ -1,13 +1,12 @@
 ---
-tags:
-- concepts:ai
-- concepts:agents
-- concepts:llm
-level: advanced
-category: ai
 audience:
-- audiences:developers
-
+  - audiences:developers
+category: ai
+level: advanced
+tags:
+  - concepts:ai
+  - concepts:agents
+  - concepts:llm
 ---
 
 # Advanced Skills

@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:data-scientists
+category: ai
+level: advanced
 tags:
   - data-and-ai:nlp
   - data-and-ai:llm
   - concepts:text-generation
-level: advanced
-category: ai
-audience:
-  - audiences:developers
-  - audiences:data-scientists
-
 ---
 
 # Text Generation and Decoding

@@ -1,13 +1,12 @@
 ---
-tags:
-- concepts:idempotency
-- concepts:api-design
-- concepts:reliability
-level: intermediate
-category: architecture
 audience:
-- audiences:developers
-
+  - audiences:developers
+category: architecture
+level: intermediate
+tags:
+  - concepts:idempotency
+  - concepts:api-design
+  - concepts:reliability
 ---
 
 # Idempotency in Web Services

@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: operating-systems
+level: advanced
 tags:
   - infrastructure:linux
   - concepts:kernel
   - concepts:performance
-level: advanced
-category: operating-systems
-audience:
-  - audiences:developers
-
 ---
 
 # Kernel Optimization

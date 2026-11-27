@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: database
+level: beginner
 tags:
   - databases:sql
   - databases:nosql
-level: beginner
-category: database
-audience:
-  - audiences:developers
-
 ---
 
 # SQL vs NoSQL

@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: design-patterns
+level: beginner
 tags:
   - concepts:oop
   - languages:python
   - languages:java
-level: beginner
-category: design-patterns
-audience:
-  - audiences:developers
-
 ---
 
 # Classes and Objects

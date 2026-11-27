@@ -1,11 +1,10 @@
 ---
-tags:
-  - languages:python
-level: beginner
-category: language
 audience:
   - audiences:developers
-
+category: language
+level: beginner
+tags:
+  - languages:python
 ---
 
 # Creating Modules

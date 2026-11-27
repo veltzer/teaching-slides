@@ -1,15 +1,14 @@
 ---
-tags:
-  - infrastructure:cloud
-  - infrastructure:aws
-  - infrastructure:iaas
-level: beginner
-category: cloud
 audience:
   - audiences:developers
   - audiences:sysadmins
   - audiences:managers
-
+category: cloud
+level: beginner
+tags:
+  - infrastructure:cloud
+  - infrastructure:aws
+  - infrastructure:iaas
 ---
 
 # Core Compute Services

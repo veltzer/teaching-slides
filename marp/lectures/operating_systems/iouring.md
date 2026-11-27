@@ -1,13 +1,12 @@
 ---
-tags:
-- concepts:io
-- concepts:linux-kernel
-- concepts:performance
-level: advanced
-category: operating-systems
 audience:
-- audiences:developers
-
+  - audiences:developers
+category: operating-systems
+level: advanced
+tags:
+  - concepts:io
+  - concepts:linux-kernel
+  - concepts:performance
 ---
 
 # io_uring: High-Performance I/O Interface for Linux

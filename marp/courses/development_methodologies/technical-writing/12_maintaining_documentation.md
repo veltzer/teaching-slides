@@ -1,13 +1,12 @@
 ---
-tags:
-  - practices:technical-writing
-  - practices:maintenance
-level: beginner
-category: methodology
 audience:
   - audiences:developers
   - audiences:managers
-
+category: methodology
+level: beginner
+tags:
+  - practices:technical-writing
+  - practices:maintenance
 ---
 
 # Maintaining Documentation

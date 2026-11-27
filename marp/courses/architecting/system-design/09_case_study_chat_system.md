@@ -1,11 +1,10 @@
 ---
-tags:
-  - architecture:system-design
-level: intermediate
-category: architecture
 audience:
   - audiences:developers
-
+category: architecture
+level: intermediate
+tags:
+  - architecture:system-design
 ---
 
 # Case Study: Chat System

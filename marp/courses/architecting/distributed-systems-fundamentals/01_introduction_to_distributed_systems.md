@@ -1,12 +1,11 @@
 ---
-tags:
-  - concepts:distributed-systems
-level: intermediate
-category: architecture
 audience:
   - audiences:developers
   - audiences:architects
-
+category: architecture
+level: intermediate
+tags:
+  - concepts:distributed-systems
 ---
 
 # Introduction to Distributed Systems

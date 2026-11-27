@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:managers
+category: data-driven
+level: beginner
 tags:
   - data-and-ai:data-analytics
   - infrastructure:cloud
-level: beginner
-category: data-driven
-audience:
-  - audiences:managers
-
 ---
 
 # Extra Topics: Cloud, Modern Architecture, Industry Examples

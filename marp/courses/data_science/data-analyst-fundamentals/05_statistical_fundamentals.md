@@ -1,11 +1,10 @@
 ---
-tags:
-  - data-and-ai:statistics
-level: beginner
-category: data-science
 audience:
   - audiences:data-analysts
-
+category: data-science
+level: beginner
+tags:
+  - data-and-ai:statistics
 ---
 
 # Statistical Fundamentals

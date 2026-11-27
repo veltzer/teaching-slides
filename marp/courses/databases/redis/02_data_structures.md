@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: database
+level: intermediate
 tags:
   - tools:redis
   - data-and-ai:nosql
   - concepts:data-structures
-level: intermediate
-category: database
-audience:
-  - audiences:developers
-
 ---
 
 # Redis Data Structures

@@ -1,14 +1,13 @@
 ---
-tags:
-  - practices:methodology
-  - concepts:best-practices
-level: beginner
-category: methodology
-duration_hours: 16
 audience:
   - audiences:developers
   - audiences:managers
-
+category: methodology
+duration_hours: 16
+level: beginner
+tags:
+  - practices:methodology
+  - concepts:best-practices
 ---
 
 # Technical Writing

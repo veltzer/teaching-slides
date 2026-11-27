@@ -1,17 +1,16 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:devops
+  - audiences:sysadmins
+category: devops
+level: beginner
 tags:
   - tools:kubernetes
   - infrastructure:containers
   - infrastructure:orchestration
   - practices:devops
   - tools:docker
-level: beginner
-category: devops
-audience:
-  - audiences:developers
-  - audiences:devops
-  - audiences:sysadmins
-
 ---
 
 # Installation and Configuration

@@ -1,11 +1,10 @@
 ---
-tags:
-  - data-and-ai:llm
-level: advanced
-category: machine-learning
 audience:
   - audiences:developers
-
+category: machine-learning
+level: advanced
+tags:
+  - data-and-ai:llm
 ---
 
 # Production Concerns

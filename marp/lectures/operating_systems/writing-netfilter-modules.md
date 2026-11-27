@@ -1,13 +1,12 @@
 ---
-tags:
-- concepts:linux-kernel
-- concepts:networking
-- concepts:security
-level: advanced
-category: operating-systems
 audience:
-- audiences:developers
-
+  - audiences:developers
+category: operating-systems
+level: advanced
+tags:
+  - concepts:linux-kernel
+  - concepts:networking
+  - concepts:security
 ---
 
 # Writing Netfilter Modules

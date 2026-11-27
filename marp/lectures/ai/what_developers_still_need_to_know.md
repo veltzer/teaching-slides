@@ -1,18 +1,17 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:senior-developers
+  - audiences:architects
+  - audiences:team-leads
+category: ai
+level: intermediate
 tags:
   - data-and-ai:ai
   - concepts:programming
   - concepts:best-practices
   - concepts:test-quality
   - practices:productivity
-level: intermediate
-category: ai
-audience:
-  - audiences:developers
-  - audiences:senior-developers
-  - audiences:architects
-  - audiences:team-leads
-
 ---
 
 # What Developers Using AI Still Need to Know

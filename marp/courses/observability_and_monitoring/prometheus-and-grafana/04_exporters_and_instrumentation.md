@@ -1,11 +1,10 @@
 ---
-tags:
-  - observability:prometheus
-level: intermediate
-category: observability
 audience:
   - audiences:devops
-
+category: observability
+level: intermediate
+tags:
+  - observability:prometheus
 ---
 
 # Exporters and Instrumentation

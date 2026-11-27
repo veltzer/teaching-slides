@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: database
+level: intermediate
 tags:
   - databases:mongodb
   - databases:indexes
-level: intermediate
-category: database
-audience:
-  - audiences:developers
-
 ---
 
 # Indexing for Developers

@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: database
+level: intermediate
 tags:
   - databases:postgresql
   - languages:plpgsql
-level: intermediate
-category: database
-audience:
-  - audiences:developers
-
 ---
 
 # PL/pgSQL Programming

@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: design-patterns
+level: beginner
 tags:
   - concepts:oop
   - concepts:practice
-level: beginner
-category: design-patterns
-audience:
-  - audiences:developers
-
 ---
 
 # OOP in Practice

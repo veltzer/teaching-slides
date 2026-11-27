@@ -1,13 +1,12 @@
 ---
-tags:
-  - security:threat-modeling
-  - concepts:diagrams
-level: intermediate
-category: security
 audience:
   - audiences:developers
   - audiences:architects
-
+category: security
+level: intermediate
+tags:
+  - security:threat-modeling
+  - concepts:diagrams
 ---
 
 # Data Flow Diagrams

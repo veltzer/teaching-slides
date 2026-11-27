@@ -1,18 +1,17 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:devops
+  - audiences:sysadmins
+category: devops
+duration_hours: 40
+level: beginner
 tags:
   - tools:kubernetes
   - infrastructure:containers
   - infrastructure:orchestration
   - practices:devops
   - tools:docker
-level: beginner
-category: devops
-duration_hours: 40
-audience:
-  - audiences:developers
-  - audiences:devops
-  - audiences:sysadmins
-
 ---
 
 # K8s Introduction

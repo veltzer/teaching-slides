@@ -1,15 +1,14 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+category: embedded
+level: advanced
 tags:
   - infrastructure:linux
   - infrastructure:embedded
   - tools:yocto
   - practices:ci-cd
-level: advanced
-category: embedded
-audience:
-  - audiences:developers
-  - audiences:sysadmins
-
 ---
 
 # Build Optimization and CI/CD

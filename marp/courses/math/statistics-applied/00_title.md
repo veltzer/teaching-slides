@@ -1,17 +1,16 @@
 ---
+audience:
+  - audiences:data-analysts
+  - audiences:developers
+  - audiences:analysts
+category: math
+duration_hours: 24
+level: beginner
 tags:
   - math:statistics
   - math:probability
   - math:descriptive-statistics
   - languages:python
-level: beginner
-category: math
-duration_hours: 24
-audience:
-  - audiences:data-analysts
-  - audiences:developers
-  - audiences:analysts
-
 ---
 
 # Applied Statistics

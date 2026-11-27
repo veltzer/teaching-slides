@@ -1,13 +1,12 @@
 ---
-tags:
-  - networking:wifi
-  - security:wireless
-level: intermediate
-category: networking
 audience:
   - audiences:developers
   - audiences:embedded-engineers
-
+category: networking
+level: intermediate
+tags:
+  - networking:wifi
+  - security:wireless
 ---
 
 # Wireless Security

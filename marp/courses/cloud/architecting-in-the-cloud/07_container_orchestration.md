@@ -1,15 +1,14 @@
 ---
-tags:
-  - infrastructure:cloud
-  - infrastructure:containers
-  - concepts:architecture
-level: intermediate
-category: cloud
 audience:
   - audiences:developers
   - audiences:architects
   - audiences:devops
-
+category: cloud
+level: intermediate
+tags:
+  - infrastructure:cloud
+  - infrastructure:containers
+  - concepts:architecture
 ---
 
 # Container Orchestration in the Cloud

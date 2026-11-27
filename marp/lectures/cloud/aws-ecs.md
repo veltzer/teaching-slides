@@ -1,15 +1,14 @@
 ---
-tags:
-  - infrastructure:cloud
-  - infrastructure:aws
-  - practices:containers
-level: intermediate
-category: cloud
 audience:
   - audiences:developers
   - audiences:sysadmins
   - audiences:devops
-
+category: cloud
+level: intermediate
+tags:
+  - infrastructure:cloud
+  - infrastructure:aws
+  - practices:containers
 ---
 
 # AWS ECS: Elastic Container Service

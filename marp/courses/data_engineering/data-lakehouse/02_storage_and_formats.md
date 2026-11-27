@@ -1,12 +1,11 @@
 ---
-tags:
-  - data-and-ai:data-engineering
-level: intermediate
-category: data-engineering
 audience:
   - audiences:data-engineers
   - audiences:architects
-
+category: data-engineering
+level: intermediate
+tags:
+  - data-and-ai:data-engineering
 ---
 
 # Storage and File Formats

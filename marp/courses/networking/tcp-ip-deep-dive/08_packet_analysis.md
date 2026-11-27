@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:devops
+  - audiences:network-engineers
+category: networking
+level: intermediate
 tags:
   - networking:tcp-ip
   - tools:wireshark
   - concepts:troubleshooting
-level: intermediate
-category: networking
-audience:
-  - audiences:devops
-  - audiences:network-engineers
-
 ---
 
 # Packet Analysis and Troubleshooting

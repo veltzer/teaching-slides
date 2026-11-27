@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: database
+level: intermediate
 tags:
   - databases:design
   - databases:normalization
-level: intermediate
-category: database
-audience:
-  - audiences:developers
-
 ---
 
 # Normalisation: Theory and Practice

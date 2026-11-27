@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: methodology
+level: beginner
 tags:
   - practices:code-review
   - practices:pair-programming
-level: beginner
-category: methodology
-audience:
-  - audiences:developers
-
 ---
 
 # Pair Programming as an Alternative

@@ -1,13 +1,12 @@
 ---
-tags:
-  - infrastructure:docker
-  - infrastructure:compose
-level: beginner
-category: containers
 audience:
   - audiences:developers
   - audiences:devops
-
+category: containers
+level: beginner
+tags:
+  - infrastructure:docker
+  - infrastructure:compose
 ---
 
 # Docker Compose

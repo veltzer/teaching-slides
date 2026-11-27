@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: message-queue
+level: intermediate
 tags:
   - tools:rabbitmq
   - concepts:error-handling
-level: intermediate
-category: message-queue
-audience:
-  - audiences:developers
-
 ---
 
 # Dead Letter Queues and Error Handling

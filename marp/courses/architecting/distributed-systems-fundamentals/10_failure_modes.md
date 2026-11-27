@@ -1,12 +1,11 @@
 ---
-tags:
-  - concepts:failure-modes
-level: intermediate
-category: architecture
 audience:
   - audiences:developers
   - audiences:architects
-
+category: architecture
+level: intermediate
+tags:
+  - concepts:failure-modes
 ---
 
 # Failure Modes

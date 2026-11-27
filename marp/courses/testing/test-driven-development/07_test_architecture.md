@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: testing
+level: intermediate
 tags:
   - practices:tdd
   - practices:test-architecture
-level: intermediate
-category: testing
-audience:
-  - audiences:developers
-
 ---
 
 # Test Architecture

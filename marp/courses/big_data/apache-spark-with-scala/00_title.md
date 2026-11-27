@@ -1,15 +1,14 @@
 ---
+audience:
+  - audiences:developers
+category: big-data
+duration_hours: 24
+level: intermediate
 tags:
   - tools:spark
   - languages:scala
   - data-and-ai:big-data
   - concepts:distributed-systems
-level: intermediate
-category: big-data
-duration_hours: 24
-audience:
-  - audiences:developers
-
 ---
 
 # Apache Spark With Scala

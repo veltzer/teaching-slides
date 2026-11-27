@@ -1,12 +1,11 @@
 ---
-tags:
-  - infrastructure:real-time
-level: advanced
-category: real-time
 audience:
   - audiences:embedded-engineers
   - audiences:developers
-
+category: real-time
+level: advanced
+tags:
+  - infrastructure:real-time
 ---
 
 # Types of Real-Time System

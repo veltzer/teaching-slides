@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:architects
+category: architecture
+level: advanced
 tags:
   - concepts:architecture
   - concepts:domain-driven-design
   - concepts:microservices
-level: advanced
-category: architecture
-audience:
-  - audiences:developers
-  - audiences:architects
-
 ---
 
 # Domain-Driven Design

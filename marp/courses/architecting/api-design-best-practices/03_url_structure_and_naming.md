@@ -1,11 +1,10 @@
 ---
-tags:
-  - concepts:api
-level: intermediate
-category: architecture
 audience:
   - audiences:developers
-
+category: architecture
+level: intermediate
+tags:
+  - concepts:api
 ---
 
 # URL Structure and Naming

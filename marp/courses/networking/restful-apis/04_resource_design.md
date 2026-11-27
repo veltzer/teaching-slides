@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: networking
+level: intermediate
 tags:
   - networking:rest
   - practices:design
-level: intermediate
-category: networking
-audience:
-  - audiences:developers
-
 ---
 
 # Resource Design

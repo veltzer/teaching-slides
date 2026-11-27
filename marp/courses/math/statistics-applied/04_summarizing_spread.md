@@ -1,12 +1,11 @@
 ---
-tags:
-  - math:descriptive-statistics
-level: beginner
-category: math
 audience:
   - audiences:data-analysts
   - audiences:developers
-
+category: math
+level: beginner
+tags:
+  - math:descriptive-statistics
 ---
 
 # Summarizing Data: Spread and Shape

@@ -1,11 +1,10 @@
 ---
-tags:
-  - databases:mongodb
-level: beginner
-category: database
 audience:
   - audiences:developers
-
+category: database
+level: beginner
+tags:
+  - databases:mongodb
 ---
 
 # MongoDB

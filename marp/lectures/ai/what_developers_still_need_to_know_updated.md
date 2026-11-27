@@ -1,4 +1,11 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:senior-developers
+  - audiences:architects
+  - audiences:team-leads
+category: ai
+level: intermediate
 tags:
   - data-and-ai:ai
   - data-and-ai:llm
@@ -9,14 +16,6 @@ tags:
   - practices:documentation
   - practices:testing
   - databases:choosing
-level: intermediate
-category: ai
-audience:
-  - audiences:developers
-  - audiences:senior-developers
-  - audiences:architects
-  - audiences:team-leads
-
 ---
 
 # What Every Developer Needs to Know About Working with AI

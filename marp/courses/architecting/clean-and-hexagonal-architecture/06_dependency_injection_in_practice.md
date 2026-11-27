@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: architecture
+level: intermediate
 tags:
   - architecture:clean-architecture
   - architecture:di
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-
 ---
 
 # Dependency Injection in Practice

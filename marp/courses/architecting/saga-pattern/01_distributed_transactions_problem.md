@@ -1,13 +1,12 @@
 ---
-tags:
-  - architecture:saga
-  - concepts:distributed-systems
-level: advanced
-category: architecture
 audience:
   - audiences:architects
   - audiences:developers
-
+category: architecture
+level: advanced
+tags:
+  - architecture:saga
+  - concepts:distributed-systems
 ---
 
 # The Distributed Transactions Problem

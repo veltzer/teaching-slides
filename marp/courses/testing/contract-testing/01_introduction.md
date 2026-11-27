@@ -1,12 +1,11 @@
 ---
-tags:
-  - practices:contract-testing
-level: intermediate
-category: testing
 audience:
   - audiences:developers
   - audiences:testers
-
+category: testing
+level: intermediate
+tags:
+  - practices:contract-testing
 ---
 
 # Introduction to Contract Testing

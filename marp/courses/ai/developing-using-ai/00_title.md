@@ -1,17 +1,16 @@
 ---
+audience:
+  - audiences:developers
+category: ai
+duration_hours: 24
+duration_hours_long: 24
+duration_hours_short: 8
+level: intermediate
 tags:
   - data-and-ai:ai
   - concepts:code-generation
   - data-and-ai:prompt-engineering
   - practices:productivity
-level: intermediate
-category: ai
-duration_hours_short: 8
-duration_hours_long: 24
-audience:
-  - audiences:developers
-duration_hours: 24
-
 ---
 
 # Developing Using Ai

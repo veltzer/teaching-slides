@@ -1,12 +1,11 @@
 ---
-tags:
-  - databases:dynamodb
-level: intermediate
-category: database
-duration_hours: 16
 audience:
   - audiences:developers
-
+category: database
+duration_hours: 16
+level: intermediate
+tags:
+  - databases:dynamodb
 ---
 
 # DynamoDB

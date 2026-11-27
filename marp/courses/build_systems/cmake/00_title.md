@@ -1,16 +1,15 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:devops
+category: build-system
+duration_hours: 16
+level: intermediate
 tags:
   - tools:cmake
   - languages:c
   - languages:c++
   - practices:build-systems
-level: intermediate
-category: build-system
-duration_hours: 16
-audience:
-  - audiences:developers
-  - audiences:devops
-
 ---
 
 # Cmake

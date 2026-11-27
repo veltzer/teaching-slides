@@ -1,16 +1,15 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:team-leads
+category: ai
+level: intermediate
 tags:
   - data-and-ai:ai
   - data-and-ai:generative-ai
   - data-and-ai:agents
   - concepts:code-generation
   - practices:productivity
-level: intermediate
-category: ai
-audience:
-  - audiences:developers
-  - audiences:team-leads
-
 ---
 
 # Working with Kiro

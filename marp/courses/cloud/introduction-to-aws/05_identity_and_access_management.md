@@ -1,15 +1,14 @@
 ---
-tags:
-  - infrastructure:cloud
-  - infrastructure:aws
-  - practices:security
-level: beginner
-category: cloud
 audience:
   - audiences:developers
   - audiences:sysadmins
   - audiences:managers
-
+category: cloud
+level: beginner
+tags:
+  - infrastructure:cloud
+  - infrastructure:aws
+  - practices:security
 ---
 
 # Identity and Access Management

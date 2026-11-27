@@ -1,13 +1,12 @@
 ---
-tags:
-- languages:scala
-- concepts:programming
-- concepts:functional-programming
-level: beginner
-category: language
 audience:
-- audiences:developers
-
+  - audiences:developers
+category: language
+level: beginner
+tags:
+  - languages:scala
+  - concepts:programming
+  - concepts:functional-programming
 ---
 
 # Scala Programming

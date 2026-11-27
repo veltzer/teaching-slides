@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:data-engineers
+category: data-engineering
+level: intermediate
 tags:
   - data-and-ai:airflow
   - practices:production
-level: intermediate
-category: data-engineering
-audience:
-  - audiences:data-engineers
-
 ---
 
 # Best Practices and Production Patterns

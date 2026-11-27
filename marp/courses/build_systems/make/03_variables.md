@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:developers
+category: build-system
+level: intermediate
 tags:
   - tools:make
   - languages:c
   - practices:build-systems
   - infrastructure:linux
-level: intermediate
-category: build-system
-audience:
-  - audiences:developers
-
 ---
 
 # Variables and Macros

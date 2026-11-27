@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: containers
+level: intermediate
 tags:
   - infrastructure:kubernetes
   - networking:k8s
-level: intermediate
-category: containers
-audience:
-  - audiences:developers
-
 ---
 
 # Networking

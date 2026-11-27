@@ -1,16 +1,15 @@
 ---
+audience:
+  - audiences:architects
+  - audiences:devops
+  - audiences:managers
+category: devops
+level: advanced
 tags:
   - practices:devops
   - concepts:architecture
   - practices:ci-cd
   - infrastructure:infrastructure-as-code
-level: advanced
-category: devops
-audience:
-  - audiences:architects
-  - audiences:devops
-  - audiences:managers
-
 ---
 
 # Containerization Decisions

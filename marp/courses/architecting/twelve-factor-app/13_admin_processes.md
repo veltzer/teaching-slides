@@ -1,13 +1,12 @@
 ---
-tags:
-  - concepts:architecture
-  - practices:devops
-level: intermediate
-category: architecture
 audience:
   - audiences:developers
   - audiences:devops
-
+category: architecture
+level: intermediate
+tags:
+  - concepts:architecture
+  - practices:devops
 ---
 
 # Factor XII: Admin Processes

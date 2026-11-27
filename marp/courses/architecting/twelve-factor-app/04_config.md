@@ -1,13 +1,12 @@
 ---
-tags:
-  - concepts:architecture
-  - concepts:best-practices
-level: intermediate
-category: architecture
 audience:
   - audiences:developers
   - audiences:devops
-
+category: architecture
+level: intermediate
+tags:
+  - concepts:architecture
+  - concepts:best-practices
 ---
 
 # Factor III: Config

@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: mobile
+level: advanced
 tags:
   - infrastructure:android
   - concepts:mobile-development
   - concepts:networking
-level: advanced
-category: mobile
-audience:
-  - audiences:developers
-
 ---
 
 # Network Operations

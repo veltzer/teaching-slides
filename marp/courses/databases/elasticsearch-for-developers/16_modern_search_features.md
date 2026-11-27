@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: database
+level: intermediate
 tags:
   - databases:elasticsearch
   - databases:vector-search
-level: intermediate
-category: database
-audience:
-  - audiences:developers
-
 ---
 
 # Modern Search Features

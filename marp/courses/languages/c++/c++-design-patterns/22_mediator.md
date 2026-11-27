@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:developers
+category: language
+level: advanced
 tags:
   - languages:cpp
   - concepts:design-patterns
   - concepts:oop
   - practices:software-design
-level: advanced
-category: language
-audience:
-  - audiences:developers
-
 ---
 
 # Mediator Pattern

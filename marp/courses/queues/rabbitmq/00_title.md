@@ -1,15 +1,14 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:architects
+category: message-queue
+duration_hours: 16
+level: intermediate
 tags:
   - tools:rabbitmq
   - data-and-ai:message-queues
   - concepts:distributed-systems
-level: intermediate
-category: message-queue
-duration_hours: 16
-audience:
-  - audiences:developers
-  - audiences:architects
-
 ---
 
 # RabbitMQ for Developers

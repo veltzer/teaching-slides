@@ -1,11 +1,10 @@
 ---
-tags:
-  - architecture:serverless
-level: intermediate
-category: architecture
 audience:
   - audiences:developers
-
+category: architecture
+level: intermediate
+tags:
+  - architecture:serverless
 ---
 
 # Serverless Design Patterns

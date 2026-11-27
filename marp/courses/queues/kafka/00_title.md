@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:developers
+category: message-queue
+duration_hours: 16
+level: beginner
 tags:
   - tools:kafka
   - data-and-ai:streaming
   - concepts:distributed-systems
-level: beginner
-category: message-queue
-duration_hours: 16
-audience:
-  - audiences:developers
-
 ---
 
 # Introduction to Apache Kafka

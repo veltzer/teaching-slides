@@ -1,16 +1,15 @@
 ---
+audience:
+  - audiences:network-engineers
+  - audiences:sysadmins
+  - audiences:devops
+category: networking
+level: beginner
 tags:
   - architecture:load-balancing
   - networking:tcp-ip
   - networking:troubleshooting
   - practices:sysadmin
-level: beginner
-category: networking
-audience:
-  - audiences:network-engineers
-  - audiences:sysadmins
-  - audiences:devops
-
 ---
 
 # Configuring High Availability

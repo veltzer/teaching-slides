@@ -1,13 +1,12 @@
 ---
-tags:
-  - architecture:api
-  - practices:governance
-level: intermediate
-category: architecture
 audience:
   - audiences:architects
   - audiences:developers
-
+category: architecture
+level: intermediate
+tags:
+  - architecture:api
+  - practices:governance
 ---
 
 # API Governance and Style Guides

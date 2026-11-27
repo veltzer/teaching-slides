@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: design-patterns
+duration_hours: 24
+level: intermediate
 tags:
   - concepts:design-patterns
   - concepts:oop
-level: intermediate
-category: design-patterns
-duration_hours: 24
-audience:
-  - audiences:developers
-
 ---
 
 # Design Patterns

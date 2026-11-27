@@ -1,14 +1,13 @@
 ---
-tags:
-- languages:sql
-- concepts:databases
-- concepts:data-modeling
-level: beginner
-category: database
 audience:
-- audiences:developers
-- audiences:data-engineers
-
+  - audiences:developers
+  - audiences:data-engineers
+category: database
+level: beginner
+tags:
+  - languages:sql
+  - concepts:databases
+  - concepts:data-modeling
 ---
 
 # SQL Databases Fundamentals

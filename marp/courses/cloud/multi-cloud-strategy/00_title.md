@@ -1,17 +1,16 @@
 ---
+audience:
+  - audiences:architects
+  - audiences:managers
+category: cloud
+duration_hours: 16
+level: advanced
 tags:
   - infrastructure:cloud
   - infrastructure:aws
   - infrastructure:azure
   - infrastructure:gcp
   - concepts:architecture
-level: advanced
-category: cloud
-duration_hours: 16
-audience:
-  - audiences:architects
-  - audiences:managers
-
 ---
 
 # Multi-Cloud Strategy

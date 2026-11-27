@@ -1,13 +1,12 @@
 ---
-tags:
-  - security:kubernetes
-  - concepts:threat-model
-level: intermediate
-category: security
 audience:
   - audiences:devops
   - audiences:security-professionals
-
+category: security
+level: intermediate
+tags:
+  - security:kubernetes
+  - concepts:threat-model
 ---
 
 # Kubernetes Threat Landscape

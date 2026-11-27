@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: message-queue
+level: intermediate
 tags:
   - tools:rabbitmq
   - data-and-ai:amqp
-level: intermediate
-category: message-queue
-audience:
-  - audiences:developers
-
 ---
 
 # Exchanges, Queues, and Bindings

@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: database
+level: intermediate
 tags:
   - databases:design
   - databases:security
-level: intermediate
-category: database
-audience:
-  - audiences:developers
-
 ---
 
 # Security and Integrity in Database Design

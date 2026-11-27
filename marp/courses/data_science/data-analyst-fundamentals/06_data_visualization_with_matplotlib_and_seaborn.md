@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:data-analysts
+category: data-science
+level: beginner
 tags:
   - data-and-ai:visualization
   - languages:python
-level: beginner
-category: data-science
-audience:
-  - audiences:data-analysts
-
 ---
 
 # Data Visualization with Matplotlib and Seaborn

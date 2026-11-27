@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: testing
+level: intermediate
 tags:
   - practices:tdd
   - practices:unit-testing
-level: intermediate
-category: testing
-audience:
-  - audiences:developers
-
 ---
 
 # Unit Testing Foundations for TDD

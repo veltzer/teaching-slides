@@ -1,11 +1,10 @@
 ---
-tags:
-  - data-and-ai:dbt
-level: intermediate
-category: data-engineering
 audience:
   - audiences:data-engineers
-
+category: data-engineering
+level: intermediate
+tags:
+  - data-and-ai:dbt
 ---
 
 # Introduction to dbt and the Modern Data Stack

@@ -1,16 +1,15 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:data-scientists
+category: big-data
+duration_hours: 24
+level: intermediate
 tags:
   - tools:spark
   - languages:python
   - data-and-ai:big-data
   - concepts:distributed-systems
-level: intermediate
-category: big-data
-duration_hours: 24
-audience:
-  - audiences:developers
-  - audiences:data-scientists
-
 ---
 
 # Apache Spark With Python

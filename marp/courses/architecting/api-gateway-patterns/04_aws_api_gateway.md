@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: architecture
+level: intermediate
 tags:
   - architecture:api-gateway
   - infrastructure:aws
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-
 ---
 
 # AWS API Gateway

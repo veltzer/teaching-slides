@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:devops
+category: security
+level: intermediate
 tags:
   - security:kubernetes
   - concepts:network-policy
-level: intermediate
-category: security
-audience:
-  - audiences:devops
-
 ---
 
 # Network Policies

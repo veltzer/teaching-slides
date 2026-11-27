@@ -1,4 +1,11 @@
 ---
+audience:
+  - audiences:network-engineers
+  - audiences:sysadmins
+  - audiences:devops
+category: networking
+duration_hours: 24
+level: beginner
 tags:
   - networking:http
   - networking:tcp-ip
@@ -9,14 +16,6 @@ tags:
   - architecture:caching
   - practices:sysadmin
   - security:tls
-level: beginner
-category: networking
-duration_hours: 24
-audience:
-  - audiences:network-engineers
-  - audiences:sysadmins
-  - audiences:devops
-
 ---
 
 # F5 BIG-IP LTM Fundamentals

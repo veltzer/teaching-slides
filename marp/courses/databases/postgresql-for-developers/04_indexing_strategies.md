@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: database
+level: intermediate
 tags:
   - databases:postgresql
   - databases:indexes
-level: intermediate
-category: database
-audience:
-  - audiences:developers
-
 ---
 
 # Indexing Strategies

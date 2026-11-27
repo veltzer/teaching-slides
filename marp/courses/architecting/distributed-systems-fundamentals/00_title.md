@@ -1,14 +1,13 @@
 ---
-tags:
-  - architecture:distributed-systems
-  - concepts:distributed-systems
-level: intermediate
-category: architecture
-duration_hours: 24
 audience:
   - audiences:developers
   - audiences:architects
-
+category: architecture
+duration_hours: 24
+level: intermediate
+tags:
+  - architecture:distributed-systems
+  - concepts:distributed-systems
 ---
 
 # Distributed Systems Fundamentals

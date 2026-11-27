@@ -1,13 +1,12 @@
 ---
-tags:
-  - concepts:domain-driven-design
-  - practices:refactoring
-level: advanced
-category: architecture
 audience:
   - audiences:architects
   - audiences:developers
-
+category: architecture
+level: advanced
+tags:
+  - concepts:domain-driven-design
+  - practices:refactoring
 ---
 
 # Refactoring Toward Deeper Insight

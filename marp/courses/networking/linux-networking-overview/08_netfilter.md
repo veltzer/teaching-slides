@@ -1,15 +1,14 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+category: networking
+level: intermediate
 tags:
   - networking:firewall
   - networking:netfilter
   - infrastructure:linux
   - concepts:kernel
-level: intermediate
-category: networking
-audience:
-  - audiences:developers
-  - audiences:sysadmins
-
 ---
 
 # Netfilters

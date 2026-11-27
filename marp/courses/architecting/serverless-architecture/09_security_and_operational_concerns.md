@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: architecture
+level: intermediate
 tags:
   - architecture:serverless
   - architecture:security
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-
 ---
 
 # Security and Operational Concerns

@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:developers
+category: big-data
+level: intermediate
 tags:
   - tools:spark
   - languages:scala
   - data-and-ai:big-data
   - concepts:graph-processing
-level: intermediate
-category: big-data
-audience:
-  - audiences:developers
-
 ---
 
 # Graph Processing with GraphX

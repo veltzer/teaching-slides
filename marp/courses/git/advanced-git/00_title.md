@@ -1,16 +1,15 @@
 ---
-tags:
-  - tools:git
-  - concepts:version-control
-  - practices:devops
-level: advanced
-category: version-control
-duration_hours: 16
 audience:
   - audiences:developers
   - audiences:devops
   - audiences:team-leads
-
+category: version-control
+duration_hours: 16
+level: advanced
+tags:
+  - tools:git
+  - concepts:version-control
+  - practices:devops
 ---
 
 # Advanced Git

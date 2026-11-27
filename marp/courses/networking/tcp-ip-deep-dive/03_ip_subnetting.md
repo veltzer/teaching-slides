@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:network-engineers
+category: networking
+level: intermediate
 tags:
   - networking:tcp-ip
   - concepts:ip
   - concepts:subnetting
-level: intermediate
-category: networking
-audience:
-  - audiences:developers
-  - audiences:network-engineers
-
 ---
 
 # IP Addressing and Subnetting

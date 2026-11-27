@@ -1,4 +1,10 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:team-leads
+  - audiences:architects
+category: ai
+level: intermediate
 tags:
   - data-and-ai:ai
   - data-and-ai:generative-ai
@@ -6,13 +12,6 @@ tags:
   - concepts:code-generation
   - practices:methodology
   - practices:productivity
-level: intermediate
-category: ai
-audience:
-  - audiences:developers
-  - audiences:team-leads
-  - audiences:architects
-
 ---
 
 # SDD on a Real Team

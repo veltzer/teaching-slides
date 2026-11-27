@@ -1,13 +1,12 @@
 ---
-tags:
-  - networking:dns
-  - security:privacy
-level: intermediate
-category: networking
 audience:
   - audiences:sysadmins
   - audiences:network-engineers
-
+category: networking
+level: intermediate
+tags:
+  - networking:dns
+  - security:privacy
 ---
 
 # DNS over HTTPS and DNS over TLS

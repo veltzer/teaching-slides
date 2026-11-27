@@ -1,13 +1,12 @@
 ---
-tags:
-  - concepts:domain-driven-design
-  - practices:facilitation
-level: advanced
-category: architecture
 audience:
   - audiences:architects
   - audiences:developers
-
+category: architecture
+level: advanced
+tags:
+  - concepts:domain-driven-design
+  - practices:facilitation
 ---
 
 # Event Storming and Domain Discovery

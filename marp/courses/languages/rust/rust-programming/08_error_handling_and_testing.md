@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: language
+level: beginner
 tags:
   - languages:rust
   - concepts:programming
   - concepts:testing
-level: beginner
-category: language
-audience:
-  - audiences:developers
-
 ---
 
 # Error Handling and Testing

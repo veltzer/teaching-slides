@@ -1,11 +1,11 @@
 ---
-tags:
-  - practices:sre
-level: intermediate
-category: architecture
 audience:
   - audiences:developers
   - audiences:devops
+category: architecture
+level: intermediate
+tags:
+  - practices:sre
 ---
 
 # Error Budgets

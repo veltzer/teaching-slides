@@ -1,15 +1,14 @@
 ---
-tags:
-  - networking:tcp-ip
-  - networking:protocols
-  - infrastructure:linux
-level: intermediate
-category: networking
 audience:
   - audiences:developers
   - audiences:sysadmins
   - audiences:devops
-
+category: networking
+level: intermediate
+tags:
+  - networking:tcp-ip
+  - networking:protocols
+  - infrastructure:linux
 ---
 
 # TCP/IP Essentials

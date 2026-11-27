@@ -1,13 +1,12 @@
 ---
-tags:
-  - networking:dns
-  - concepts:records
-level: intermediate
-category: networking
 audience:
   - audiences:sysadmins
   - audiences:developers
-
+category: networking
+level: intermediate
+tags:
+  - networking:dns
+  - concepts:records
 ---
 
 # DNS Record Types

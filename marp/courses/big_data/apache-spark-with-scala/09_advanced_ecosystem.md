@@ -1,15 +1,14 @@
 ---
-tags:
-- tools:spark
-- languages:scala
-- data-and-ai:big-data
-- practices:best-practices
-level: advanced
-category: big-data
 audience:
-- audiences:developers
-- audiences:data-engineers
-
+  - audiences:developers
+  - audiences:data-engineers
+category: big-data
+level: advanced
+tags:
+  - tools:spark
+  - languages:scala
+  - data-and-ai:big-data
+  - practices:best-practices
 ---
 
 # Advanced Spark Ecosystem and Best Practices

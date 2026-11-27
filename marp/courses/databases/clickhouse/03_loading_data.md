@@ -1,12 +1,11 @@
 ---
-tags:
-  - databases:clickhouse
-level: intermediate
-category: database
 audience:
   - audiences:developers
   - audiences:data-engineers
-
+category: database
+level: intermediate
+tags:
+  - databases:clickhouse
 ---
 
 # Loading Data

@@ -1,15 +1,14 @@
 ---
-tags:
-  - concepts:architecture
-  - concepts:monitoring
-  - concepts:observability
-level: advanced
-category: architecture
 audience:
   - audiences:developers
   - audiences:architects
   - audiences:devops
-
+category: architecture
+level: advanced
+tags:
+  - concepts:architecture
+  - concepts:monitoring
+  - concepts:observability
 ---
 
 # Monitoring and Observability

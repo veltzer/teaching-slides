@@ -1,14 +1,13 @@
 ---
-tags:
-  - infrastructure:cloud
-  - practices:finops
-level: intermediate
-category: cloud
 audience:
   - audiences:devops
   - audiences:architects
   - audiences:managers
-
+category: cloud
+level: intermediate
+tags:
+  - infrastructure:cloud
+  - practices:finops
 ---
 
 # Introduction to FinOps

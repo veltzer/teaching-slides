@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: methodology
+level: beginner
 tags:
   - practices:code-review
   - practices:automation
-level: beginner
-category: methodology
-audience:
-  - audiences:developers
-
 ---
 
 # Automated Checks

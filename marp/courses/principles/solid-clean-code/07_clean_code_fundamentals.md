@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: design-patterns
+level: intermediate
 tags:
   - concepts:clean-code
   - concepts:naming
-level: intermediate
-category: design-patterns
-audience:
-  - audiences:developers
-
 ---
 
 # Clean Code Fundamentals

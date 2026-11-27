@@ -1,12 +1,11 @@
 ---
-tags:
-  - infrastructure:linux
-level: intermediate
-category: operating-systems
 audience:
   - audiences:developers
   - audiences:devops
-
+category: operating-systems
+level: intermediate
+tags:
+  - infrastructure:linux
 ---
 
 # Language-Specific Package Managers

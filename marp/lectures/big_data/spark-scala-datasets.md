@@ -1,14 +1,13 @@
 ---
-tags:
-- tools:spark
-- languages:scala
-- data-and-ai:big-data
-level: intermediate
-category: big-data
 audience:
-- audiences:developers
-- audiences:data-engineers
-
+  - audiences:developers
+  - audiences:data-engineers
+category: big-data
+level: intermediate
+tags:
+  - tools:spark
+  - languages:scala
+  - data-and-ai:big-data
 ---
 
 # Spark Datasets and DataFrames in Scala

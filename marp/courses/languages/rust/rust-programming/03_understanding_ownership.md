@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: language
+level: beginner
 tags:
   - languages:rust
   - concepts:programming
   - concepts:memory-management
-level: beginner
-category: language
-audience:
-  - audiences:developers
-
 ---
 
 # Understanding Ownership

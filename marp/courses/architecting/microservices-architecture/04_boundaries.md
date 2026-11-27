@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:architects
+category: architecture
+level: intermediate
 tags:
   - concepts:microservices
   - practices:ddd
-level: intermediate
-category: architecture
-audience:
-  - audiences:architects
-
 ---
 
 # Service Boundaries and Bounded Contexts

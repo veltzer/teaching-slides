@@ -1,15 +1,14 @@
 ---
-tags:
-  - infrastructure:cloud
-  - practices:security
-level: beginner
-category: cloud
 audience:
   - audiences:developers
   - audiences:sysadmins
   - audiences:devops
   - audiences:managers
-
+category: cloud
+level: beginner
+tags:
+  - infrastructure:cloud
+  - practices:security
 ---
 
 # Cloud Security Basics

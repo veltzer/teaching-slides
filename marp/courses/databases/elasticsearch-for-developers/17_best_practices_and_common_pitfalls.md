@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: database
+level: intermediate
 tags:
   - databases:elasticsearch
   - practices:best-practices
-level: intermediate
-category: database
-audience:
-  - audiences:developers
-
 ---
 
 # Best Practices and Common Pitfalls

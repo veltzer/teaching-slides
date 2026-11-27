@@ -1,16 +1,15 @@
 ---
+audience:
+  - audiences:architects
+  - audiences:developers
+category: architecture
+duration_hours: 16
+level: advanced
 tags:
   - architecture:cqrs
   - architecture:event-sourcing
   - concepts:distributed-systems
   - practices:ddd
-level: advanced
-category: architecture
-duration_hours: 16
-audience:
-  - audiences:architects
-  - audiences:developers
-
 ---
 
 # CQRS and Event Sourcing

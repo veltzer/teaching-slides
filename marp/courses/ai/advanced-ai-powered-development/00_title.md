@@ -1,4 +1,12 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:architects
+  - audiences:team-leads
+  - audiences:devops
+category: ai
+duration_hours: 40
+level: advanced
 tags:
   - data-and-ai:ai
   - data-and-ai:agents
@@ -8,15 +16,6 @@ tags:
   - practices:large-codebases
   - data-and-ai:prompt-engineering
   - practices:productivity
-level: advanced
-category: ai
-duration_hours: 40
-audience:
-  - audiences:developers
-  - audiences:architects
-  - audiences:team-leads
-  - audiences:devops
-
 ---
 
 # Advanced Ai Powered Development

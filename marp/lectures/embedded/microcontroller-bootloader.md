@@ -1,13 +1,12 @@
 ---
-tags:
-- concepts:embedded
-- concepts:firmware
-- concepts:bootloader
-level: advanced
-category: embedded
 audience:
-- audiences:developers
-
+  - audiences:developers
+category: embedded
+level: advanced
+tags:
+  - concepts:embedded
+  - concepts:firmware
+  - concepts:bootloader
 ---
 
 # Writing Bootloaders for Microcontrollers

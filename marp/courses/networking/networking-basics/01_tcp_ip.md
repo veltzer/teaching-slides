@@ -1,13 +1,12 @@
 ---
-tags:
-  - networking:tcp-ip
-  - networking:protocols
-level: beginner
-category: networking
 audience:
   - audiences:developers
   - audiences:devops
-
+category: networking
+level: beginner
+tags:
+  - networking:tcp-ip
+  - networking:protocols
 ---
 
 # TCP/IP Fundamentals

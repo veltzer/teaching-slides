@@ -1,15 +1,14 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:team-leads
+category: practices
+duration_hours: 8
+level: beginner
 tags:
   - practices:agile
   - practices:scrum
   - practices:project-management
-level: beginner
-category: practices
-duration_hours: 8
-audience:
-  - audiences:developers
-  - audiences:team-leads
-
 ---
 
 # Agile and Scrum for Developers

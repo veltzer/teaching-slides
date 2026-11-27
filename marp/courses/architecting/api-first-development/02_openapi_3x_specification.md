@@ -1,11 +1,10 @@
 ---
-tags:
-  - architecture:openapi
-level: intermediate
-category: architecture
 audience:
   - audiences:developers
-
+category: architecture
+level: intermediate
+tags:
+  - architecture:openapi
 ---
 
 # OpenAPI 3.x Specification

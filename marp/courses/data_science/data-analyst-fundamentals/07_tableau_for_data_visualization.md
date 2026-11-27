@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:data-analysts
+category: data-science
+level: beginner
 tags:
   - data-and-ai:tableau
   - data-and-ai:visualization
-level: beginner
-category: data-science
-audience:
-  - audiences:data-analysts
-
 ---
 
 # Tableau for Data Visualization

@@ -1,13 +1,12 @@
 ---
-tags:
-  - observability:tracing
-level: intermediate
-category: observability
-duration_hours: 8
 audience:
   - audiences:devops
   - audiences:developers
-
+category: observability
+duration_hours: 8
+level: intermediate
+tags:
+  - observability:tracing
 ---
 
 # Jaeger

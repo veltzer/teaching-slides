@@ -1,12 +1,12 @@
 ---
-tags:
-  - security:cryptography
-  - security:symmetric
-level: intermediate
-category: security
 audience:
   - audiences:developers
   - audiences:security-professionals
+category: security
+level: intermediate
+tags:
+  - security:cryptography
+  - security:symmetric
 ---
 
 # Symmetric Encryption

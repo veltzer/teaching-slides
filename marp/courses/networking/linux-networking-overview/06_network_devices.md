@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: networking
+level: intermediate
 tags:
   - networking:devices
   - infrastructure:linux
   - concepts:kernel
-level: intermediate
-category: networking
-audience:
-  - audiences:developers
-
 ---
 
 # Network Device Overview

@@ -1,4 +1,8 @@
 ---
+audience:
+  - audiences:developers
+category: ai
+level: advanced
 tags:
   - data-and-ai:ai
   - data-and-ai:agents
@@ -8,11 +12,6 @@ tags:
   - practices:large-codebases
   - data-and-ai:prompt-engineering
   - practices:productivity
-level: advanced
-category: ai
-audience:
-  - audiences:developers
-
 ---
 
 # Advanced Topics

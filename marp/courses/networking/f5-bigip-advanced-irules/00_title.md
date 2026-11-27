@@ -1,4 +1,12 @@
 ---
+audience:
+  - audiences:security-engineers
+  - audiences:network-engineers
+  - audiences:devops
+  - audiences:sysadmins
+category: networking
+duration_hours: 16
+level: advanced
 tags:
   - networking:http
   - networking:web
@@ -8,15 +16,6 @@ tags:
   - practices:scripting
   - practices:performance
   - security:web-security
-level: advanced
-category: networking
-duration_hours: 16
-audience:
-  - audiences:security-engineers
-  - audiences:network-engineers
-  - audiences:devops
-  - audiences:sysadmins
-
 ---
 
 # F5 BIG-IP Advanced iRules

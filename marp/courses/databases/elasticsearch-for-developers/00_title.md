@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: database
+duration_hours: 40
+level: intermediate
 tags:
   - databases:elasticsearch
   - data-and-ai:search
-level: intermediate
-category: database
-duration_hours: 40
-audience:
-  - audiences:developers
-
 ---
 
 # Elasticsearch for Developers

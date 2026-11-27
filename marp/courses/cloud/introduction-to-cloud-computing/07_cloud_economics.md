@@ -1,16 +1,15 @@
 ---
-tags:
-  - infrastructure:cloud
-  - practices:finops
-  - concepts:cloud-economics
-level: beginner
-category: cloud
 audience:
   - audiences:developers
   - audiences:sysadmins
   - audiences:devops
   - audiences:managers
-
+category: cloud
+level: beginner
+tags:
+  - infrastructure:cloud
+  - practices:finops
+  - concepts:cloud-economics
 ---
 
 # Cloud Economics and Pay-As-You-Go

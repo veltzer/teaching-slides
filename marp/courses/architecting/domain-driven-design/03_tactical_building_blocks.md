@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: architecture
+level: advanced
 tags:
   - concepts:domain-driven-design
   - concepts:design-patterns
-level: advanced
-category: architecture
-audience:
-  - audiences:developers
-
 ---
 
 # Tactical DDD Building Blocks

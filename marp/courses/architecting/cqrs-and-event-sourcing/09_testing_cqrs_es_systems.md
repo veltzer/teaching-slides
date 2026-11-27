@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:architects
+  - audiences:developers
+category: architecture
+level: advanced
 tags:
   - architecture:cqrs
   - architecture:event-sourcing
   - practices:testing
-level: advanced
-category: architecture
-audience:
-  - audiences:architects
-  - audiences:developers
-
 ---
 
 # Testing CQRS / Event-Sourced Systems

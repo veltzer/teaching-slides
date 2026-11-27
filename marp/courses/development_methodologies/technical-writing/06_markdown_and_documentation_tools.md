@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: methodology
+level: beginner
 tags:
   - practices:technical-writing
   - tools:markdown
-level: beginner
-category: methodology
-audience:
-  - audiences:developers
-
 ---
 
 # Markdown and Documentation Tools

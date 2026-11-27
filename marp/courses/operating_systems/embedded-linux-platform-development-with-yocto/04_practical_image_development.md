@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+category: embedded
+level: advanced
 tags:
   - infrastructure:linux
   - infrastructure:embedded
   - tools:yocto
-level: advanced
-category: embedded
-audience:
-  - audiences:developers
-  - audiences:sysadmins
-
 ---
 
 # Practical Image Development

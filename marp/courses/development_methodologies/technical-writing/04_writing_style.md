@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: methodology
+level: beginner
 tags:
   - practices:technical-writing
   - practices:style
-level: beginner
-category: methodology
-audience:
-  - audiences:developers
-
 ---
 
 # Writing Style

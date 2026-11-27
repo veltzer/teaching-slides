@@ -1,14 +1,13 @@
 ---
-tags:
-  - databases:design
-  - databases:relational
-level: intermediate
-category: database
-duration_hours: 8
 audience:
   - audiences:developers
   - audiences:architects
-
+category: database
+duration_hours: 8
+level: intermediate
+tags:
+  - databases:design
+  - databases:relational
 ---
 
 # Database Design

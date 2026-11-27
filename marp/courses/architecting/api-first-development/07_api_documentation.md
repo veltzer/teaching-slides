@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: architecture
+level: intermediate
 tags:
   - architecture:openapi
   - practices:documentation
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-
 ---
 
 # API Documentation

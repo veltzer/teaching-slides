@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: version-control
+level: advanced
 tags:
   - tools:git
   - concepts:reflog
   - concepts:recovery
-level: advanced
-category: version-control
-audience:
-  - audiences:developers
-
 ---
 
 # Reflog

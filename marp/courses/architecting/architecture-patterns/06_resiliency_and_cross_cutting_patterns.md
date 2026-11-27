@@ -1,15 +1,14 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:architects
+category: architecture
+level: intermediate
 tags:
   - concepts:architecture
   - concepts:design-patterns
   - concepts:resiliency
   - concepts:microservices
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-  - audiences:architects
-
 ---
 
 # Resiliency & Cross-Cutting Patterns

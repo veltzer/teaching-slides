@@ -1,16 +1,15 @@
 ---
-tags:
-  - infrastructure:cloud
-  - infrastructure:iaas
-  - infrastructure:paas
-level: beginner
-category: cloud
 audience:
   - audiences:developers
   - audiences:sysadmins
   - audiences:devops
   - audiences:managers
-
+category: cloud
+level: beginner
+tags:
+  - infrastructure:cloud
+  - infrastructure:iaas
+  - infrastructure:paas
 ---
 
 # Types of Cloud Services

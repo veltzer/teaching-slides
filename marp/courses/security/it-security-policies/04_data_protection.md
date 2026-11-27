@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:managers
+  - audiences:it-staff
+category: security
+level: beginner
 tags:
   - security:security
   - security:policies
   - security:compliance
-level: beginner
-category: security
-audience:
-  - audiences:managers
-  - audiences:it-staff
-
 ---
 
 # Data Protection and Privacy

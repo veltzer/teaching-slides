@@ -1,11 +1,10 @@
 ---
-tags:
-  - practices:api-testing
-level: intermediate
-category: testing
 audience:
   - audiences:qa
-
+category: testing
+level: intermediate
+tags:
+  - practices:api-testing
 ---
 
 # Tooling

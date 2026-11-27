@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: design-patterns
+level: intermediate
 tags:
   - concepts:clean-code
   - concepts:refactoring
-level: intermediate
-category: design-patterns
-audience:
-  - audiences:developers
-
 ---
 
 # Advanced Clean Code Techniques

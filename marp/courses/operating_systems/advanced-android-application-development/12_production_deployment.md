@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: mobile
+level: advanced
 tags:
   - infrastructure:android
   - concepts:mobile-development
   - practices:deployment
-level: advanced
-category: mobile
-audience:
-  - audiences:developers
-
 ---
 
 # Production Deployment

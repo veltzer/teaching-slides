@@ -1,12 +1,11 @@
 ---
-tags:
-  - architecture:api-gateway
-level: intermediate
-category: architecture
 audience:
   - audiences:developers
   - audiences:architects
-
+category: architecture
+level: intermediate
+tags:
+  - architecture:api-gateway
 ---
 
 # Introduction to API Gateways

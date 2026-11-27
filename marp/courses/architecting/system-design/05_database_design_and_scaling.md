@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: architecture
+level: intermediate
 tags:
   - architecture:system-design
   - databases:scaling
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-
 ---
 
 # Database Design and Scaling

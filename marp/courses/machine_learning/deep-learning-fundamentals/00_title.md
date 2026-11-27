@@ -1,18 +1,17 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:data-scientists
+  - audiences:architects
+category: machine-learning
+duration_hours: 24
+level: intermediate
 tags:
   - data-and-ai:deep-learning
   - data-and-ai:ml
   - languages:python
   - tools:pytorch
   - tools:tensorflow
-level: intermediate
-category: machine-learning
-duration_hours: 24
-audience:
-  - audiences:developers
-  - audiences:data-scientists
-  - audiences:architects
-
 ---
 
 # Deep Learning Fundamentals

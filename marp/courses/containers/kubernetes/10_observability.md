@@ -1,13 +1,12 @@
 ---
-tags:
-  - infrastructure:kubernetes
-  - practices:observability
-level: intermediate
-category: containers
 audience:
   - audiences:developers
   - audiences:devops
-
+category: containers
+level: intermediate
+tags:
+  - infrastructure:kubernetes
+  - practices:observability
 ---
 
 # Observability

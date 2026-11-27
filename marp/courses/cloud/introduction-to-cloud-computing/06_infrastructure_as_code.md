@@ -1,15 +1,14 @@
 ---
-tags:
-  - infrastructure:cloud
-  - practices:devops
-  - practices:iac
-level: beginner
-category: cloud
 audience:
   - audiences:developers
   - audiences:sysadmins
   - audiences:devops
-
+category: cloud
+level: beginner
+tags:
+  - infrastructure:cloud
+  - practices:devops
+  - practices:iac
 ---
 
 # Infrastructure as Code Concepts

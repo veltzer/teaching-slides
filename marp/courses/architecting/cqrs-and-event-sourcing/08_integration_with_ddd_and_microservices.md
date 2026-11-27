@@ -1,15 +1,14 @@
 ---
+audience:
+  - audiences:architects
+  - audiences:developers
+category: architecture
+level: advanced
 tags:
   - architecture:cqrs
   - architecture:event-sourcing
   - practices:ddd
   - concepts:microservices
-level: advanced
-category: architecture
-audience:
-  - audiences:architects
-  - audiences:developers
-
 ---
 
 # Integration with DDD and Microservices

@@ -1,11 +1,10 @@
 ---
-tags:
-  - architecture:patterns
-level: intermediate
-category: architecture
 audience:
   - audiences:architects
-
+category: architecture
+level: intermediate
+tags:
+  - architecture:patterns
 ---
 
 # Introduction to Legacy Modernization

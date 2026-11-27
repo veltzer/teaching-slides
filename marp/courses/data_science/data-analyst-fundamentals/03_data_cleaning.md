@@ -1,11 +1,10 @@
 ---
-tags:
-  - data-and-ai:data-cleaning
-level: beginner
-category: data-science
 audience:
   - audiences:data-analysts
-
+category: data-science
+level: beginner
+tags:
+  - data-and-ai:data-cleaning
 ---
 
 # Data Cleaning

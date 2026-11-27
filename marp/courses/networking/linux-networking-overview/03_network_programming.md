@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: networking
+level: intermediate
 tags:
   - networking:sockets
   - languages:c
   - infrastructure:linux
-level: intermediate
-category: networking
-audience:
-  - audiences:developers
-
 ---
 
 # Network C Programming Essentials

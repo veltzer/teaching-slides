@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:architects
+category: architecture
+level: advanced
 tags:
   - concepts:architecture
   - concepts:testing
   - concepts:distributed-systems
-level: advanced
-category: architecture
-audience:
-  - audiences:developers
-  - audiences:architects
-
 ---
 
 # Testing Distributed Systems

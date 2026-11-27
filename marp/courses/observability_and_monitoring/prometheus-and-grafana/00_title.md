@@ -1,14 +1,13 @@
 ---
-tags:
-  - infrastructure:prometheus
-  - infrastructure:grafana
-level: intermediate
-category: observability-and-monitoring
-duration_hours: 16
 audience:
   - audiences:developers
   - audiences:devops
-
+category: observability-and-monitoring
+duration_hours: 16
+level: intermediate
+tags:
+  - infrastructure:prometheus
+  - infrastructure:grafana
 ---
 
 # Prometheus and Grafana

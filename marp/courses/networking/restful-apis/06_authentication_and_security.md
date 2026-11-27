@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: networking
+level: intermediate
 tags:
   - networking:rest
   - security:authentication
-level: intermediate
-category: networking
-audience:
-  - audiences:developers
-
 ---
 
 # Authentication and Security

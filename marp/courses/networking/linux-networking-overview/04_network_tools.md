@@ -1,15 +1,14 @@
 ---
-tags:
-  - networking:tools
-  - infrastructure:linux
-  - observability:monitoring
-level: intermediate
-category: networking
 audience:
   - audiences:developers
   - audiences:sysadmins
   - audiences:devops
-
+category: networking
+level: intermediate
+tags:
+  - networking:tools
+  - infrastructure:linux
+  - observability:monitoring
 ---
 
 # Linux Network Command Line Tools

@@ -1,17 +1,16 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+  - audiences:devops
+category: devops
+level: intermediate
 tags:
   - practices:devops
   - tools:terraform
   - infrastructure:infrastructure-as-code
   - infrastructure:cloud
   - tools:terragrunt
-level: intermediate
-category: devops
-audience:
-  - audiences:developers
-  - audiences:sysadmins
-  - audiences:devops
-
 ---
 
 # Provisioners

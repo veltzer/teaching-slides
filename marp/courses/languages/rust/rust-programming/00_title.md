@@ -1,15 +1,14 @@
 ---
+audience:
+  - audiences:developers
+category: language
+duration_hours: 32
+level: beginner
 tags:
   - languages:rust
   - concepts:programming
   - concepts:concurrency
   - concepts:systems-programming
-level: beginner
-category: language
-duration_hours: 32
-audience:
-  - audiences:developers
-
 ---
 
 # Rust Programming

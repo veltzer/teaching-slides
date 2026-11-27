@@ -1,11 +1,10 @@
 ---
-tags:
-  - databases:elasticsearch
-level: intermediate
-category: database
 audience:
   - audiences:developers
-
+category: database
+level: intermediate
+tags:
+  - databases:elasticsearch
 ---
 
 # Client Libraries and Integration

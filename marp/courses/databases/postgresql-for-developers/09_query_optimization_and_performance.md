@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: database
+level: intermediate
 tags:
   - databases:postgresql
   - databases:performance
-level: intermediate
-category: database
-audience:
-  - audiences:developers
-
 ---
 
 # Query Optimisation and Performance

@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: design-patterns
+level: beginner
 tags:
   - concepts:oop
   - concepts:composition
   - concepts:inheritance
-level: beginner
-category: design-patterns
-audience:
-  - audiences:developers
-
 ---
 
 # Composition vs Inheritance

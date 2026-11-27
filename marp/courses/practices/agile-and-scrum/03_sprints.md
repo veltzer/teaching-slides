@@ -1,13 +1,12 @@
 ---
-tags:
-  - practices:scrum
-  - practices:sprints
-level: beginner
-category: practices
 audience:
   - audiences:developers
   - audiences:team-leads
-
+category: practices
+level: beginner
+tags:
+  - practices:scrum
+  - practices:sprints
 ---
 
 # Sprints

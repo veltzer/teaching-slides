@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: operating-systems
+level: advanced
 tags:
   - infrastructure:linux
   - infrastructure:embedded
   - tools:buildroot
-level: advanced
-category: operating-systems
-audience:
-  - audiences:developers
-
 ---
 
 # Buildroot

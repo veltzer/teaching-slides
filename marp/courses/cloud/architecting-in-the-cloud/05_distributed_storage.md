@@ -1,15 +1,14 @@
 ---
-tags:
-  - infrastructure:cloud
-  - infrastructure:storage
-  - concepts:architecture
-level: intermediate
-category: cloud
 audience:
   - audiences:developers
   - audiences:architects
   - audiences:devops
-
+category: cloud
+level: intermediate
+tags:
+  - infrastructure:cloud
+  - infrastructure:storage
+  - concepts:architecture
 ---
 
 # Distributed Storage

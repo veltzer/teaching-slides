@@ -1,11 +1,10 @@
 ---
-tags:
-  - networking:graphql
-level: intermediate
-category: networking
 audience:
   - audiences:developers
-
+category: networking
+level: intermediate
+tags:
+  - networking:graphql
 ---
 
 # Subscriptions

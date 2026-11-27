@@ -1,13 +1,12 @@
 ---
-tags:
-  - data-and-ai:ai
-  - data-and-ai:llm
-level: intermediate
-category: ai
 audience:
   - audiences:developers
   - audiences:senior-developers
-
+category: ai
+level: intermediate
+tags:
+  - data-and-ai:ai
+  - data-and-ai:llm
 ---
 
 # The Context Window and Compaction

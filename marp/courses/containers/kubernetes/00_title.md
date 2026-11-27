@@ -1,14 +1,13 @@
 ---
-tags:
-  - infrastructure:kubernetes
-  - infrastructure:containers
-level: intermediate
-category: containers
-duration_hours: 24
 audience:
   - audiences:developers
   - audiences:devops
-
+category: containers
+duration_hours: 24
+level: intermediate
+tags:
+  - infrastructure:kubernetes
+  - infrastructure:containers
 ---
 
 # Kubernetes

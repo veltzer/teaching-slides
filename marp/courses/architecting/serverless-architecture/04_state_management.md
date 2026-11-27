@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: architecture
+level: intermediate
 tags:
   - architecture:serverless
   - architecture:state
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-
 ---
 
 # State Management

@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: methodology
+level: beginner
 tags:
   - practices:technical-writing
   - practices:structure
-level: beginner
-category: methodology
-audience:
-  - audiences:developers
-
 ---
 
 # Structure and Organization

@@ -1,11 +1,10 @@
 ---
-tags:
-  - architecture:api-gateway
-level: intermediate
-category: architecture
 audience:
   - audiences:developers
-
+category: architecture
+level: intermediate
+tags:
+  - architecture:api-gateway
 ---
 
 # Request and Response Transformation

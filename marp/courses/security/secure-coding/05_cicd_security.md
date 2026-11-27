@@ -1,14 +1,14 @@
 ---
-tags:
-  - security:secure-coding
-  - practices:ci-cd
-  - practices:devops
-level: intermediate
-category: security
 audience:
   - audiences:devops
   - audiences:developers
   - audiences:security-professionals
+category: security
+level: intermediate
+tags:
+  - security:secure-coding
+  - practices:ci-cd
+  - practices:devops
 ---
 
 # CI/CD Security

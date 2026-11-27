@@ -1,11 +1,10 @@
 ---
-tags:
-  - databases:design
-level: intermediate
-category: database
 audience:
   - audiences:developers
-
+category: database
+level: intermediate
+tags:
+  - databases:design
 ---
 
 # Introduction to Database Design Principles

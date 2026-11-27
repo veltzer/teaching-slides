@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: database
+level: intermediate
 tags:
   - tools:redis
   - data-and-ai:caching
   - concepts:design-patterns
-level: intermediate
-category: database
-audience:
-  - audiences:developers
-
 ---
 
 # Caching with Redis

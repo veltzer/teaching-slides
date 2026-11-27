@@ -1,11 +1,10 @@
 ---
-tags:
-  - concepts:crdt
-level: intermediate
-category: architecture
 audience:
   - audiences:developers
-
+category: architecture
+level: intermediate
+tags:
+  - concepts:crdt
 ---
 
 # CRDTs: Conflict-Free Replicated Data Types

@@ -1,17 +1,16 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+  - audiences:devops
+category: devops
+level: intermediate
 tags:
   - practices:devops
   - tools:ansible
   - infrastructure:configuration-management
   - infrastructure:cloud
   - practices:automation
-level: intermediate
-category: devops
-audience:
-  - audiences:developers
-  - audiences:sysadmins
-  - audiences:devops
-
 ---
 
 # Dynamic Inventory

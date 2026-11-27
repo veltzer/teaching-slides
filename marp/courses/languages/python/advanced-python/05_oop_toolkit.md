@@ -1,11 +1,10 @@
 ---
-tags:
-  - languages:python
-level: advanced
-category: language
 audience:
   - audiences:developers
-
+category: language
+level: advanced
+tags:
+  - languages:python
 ---
 
 # Object Oriented Python Toolkit

@@ -1,14 +1,14 @@
 ---
-tags:
-  - security:secure-coding
-  - security:supply-chain
-  - practices:devops
-level: intermediate
-category: security
 audience:
   - audiences:developers
   - audiences:devops
   - audiences:security-professionals
+category: security
+level: intermediate
+tags:
+  - security:secure-coding
+  - security:supply-chain
+  - practices:devops
 ---
 
 # Supply Chain Security

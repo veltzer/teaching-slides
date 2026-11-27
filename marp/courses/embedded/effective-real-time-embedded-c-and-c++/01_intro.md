@@ -1,15 +1,14 @@
 ---
+audience:
+  - audiences:embedded-engineers
+  - audiences:developers
+category: embedded
+level: advanced
 tags:
   - hardware-and-embedded:embedded
   - infrastructure:real-time
   - languages:c
   - languages:c++
-level: advanced
-category: embedded
-audience:
-  - audiences:embedded-engineers
-  - audiences:developers
-
 ---
 
 # Effective Real Time Embedded C and C++

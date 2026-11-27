@@ -1,13 +1,12 @@
 ---
-tags:
-  - infrastructure:linux
-  - audiences:sysadmin
-level: intermediate
-category: operating-systems
 audience:
   - audiences:sysadmins
   - audiences:developers
-
+category: operating-systems
+level: intermediate
+tags:
+  - infrastructure:linux
+  - audiences:sysadmin
 ---
 
 # GitHub Releases and Source Builds

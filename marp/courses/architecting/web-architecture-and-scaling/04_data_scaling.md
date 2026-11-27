@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:architects
+category: architecture
+level: intermediate
 tags:
   - architecture:patterns
   - practices:scalability
-level: intermediate
-category: architecture
-audience:
-  - audiences:architects
-
 ---
 
 # Data Scaling

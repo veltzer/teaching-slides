@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: networking
+duration_hours: 16
+level: intermediate
 tags:
   - networking:graphql
   - networking:api
-level: intermediate
-category: networking
-duration_hours: 16
-audience:
-  - audiences:developers
-
 ---
 
 # GraphQL

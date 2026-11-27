@@ -1,12 +1,11 @@
 ---
-tags:
-  - practices:scrum
-level: beginner
-category: practices
 audience:
   - audiences:developers
   - audiences:team-leads
-
+category: practices
+level: beginner
+tags:
+  - practices:scrum
 ---
 
 # The Scrum Framework

@@ -1,16 +1,15 @@
 ---
+audience:
+  - audiences:developers
+category: mobile
+duration_hours: 40
+level: advanced
 tags:
   - infrastructure:android
   - languages:java
   - concepts:mobile-development
   - concepts:oop
   - practices:software-design
-level: advanced
-category: mobile
-duration_hours: 40
-audience:
-  - audiences:developers
-
 ---
 
 # Advanced Android Application Development

@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: networking
+level: intermediate
 tags:
   - networking:graphql
   - security:authentication
-level: intermediate
-category: networking
-audience:
-  - audiences:developers
-
 ---
 
 # Security

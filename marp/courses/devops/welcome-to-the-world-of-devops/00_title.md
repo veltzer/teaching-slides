@@ -1,17 +1,16 @@
 ---
-tags:
-  - practices:devops
-  - practices:ci-cd
-  - practices:automation
-level: beginner
-category: devops
-duration_hours: 40
 audience:
   - audiences:developers
   - audiences:sysadmins
   - audiences:devops
   - audiences:managers
-
+category: devops
+duration_hours: 40
+level: beginner
+tags:
+  - practices:devops
+  - practices:ci-cd
+  - practices:automation
 ---
 
 # Welcome To The World Of Devops

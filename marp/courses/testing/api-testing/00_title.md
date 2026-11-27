@@ -1,14 +1,13 @@
 ---
-tags:
-  - practices:testing
-  - practices:api
-level: intermediate
-category: testing
-duration_hours: 8
 audience:
   - audiences:developers
   - audiences:testers
-
+category: testing
+duration_hours: 8
+level: intermediate
+tags:
+  - practices:testing
+  - practices:api
 ---
 
 # API Testing

@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: message-queue
+level: intermediate
 tags:
   - tools:rabbitmq
   - infrastructure:integration
-level: intermediate
-category: message-queue
-audience:
-  - audiences:developers
-
 ---
 
 # Client Libraries and Integration

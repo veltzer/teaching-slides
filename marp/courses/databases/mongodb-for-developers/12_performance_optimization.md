@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: database
+level: intermediate
 tags:
   - databases:mongodb
   - databases:performance
-level: intermediate
-category: database
-audience:
-  - audiences:developers
-
 ---
 
 # Performance Optimisation

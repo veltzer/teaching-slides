@@ -1,11 +1,10 @@
 ---
-tags:
-  - databases:dynamodb
-level: intermediate
-category: database
 audience:
   - audiences:developers
-
+category: database
+level: intermediate
+tags:
+  - databases:dynamodb
 ---
 
 # Data Modeling

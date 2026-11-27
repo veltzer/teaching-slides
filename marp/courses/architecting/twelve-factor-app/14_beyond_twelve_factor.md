@@ -1,13 +1,12 @@
 ---
-tags:
-  - concepts:architecture
-  - concepts:best-practices
-level: intermediate
-category: architecture
 audience:
   - audiences:architects
   - audiences:developers
-
+category: architecture
+level: intermediate
+tags:
+  - concepts:architecture
+  - concepts:best-practices
 ---
 
 # Beyond Twelve-Factor

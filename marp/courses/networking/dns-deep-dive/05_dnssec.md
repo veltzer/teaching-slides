@@ -1,13 +1,12 @@
 ---
-tags:
-  - networking:dns
-  - security:dnssec
-level: intermediate
-category: networking
 audience:
   - audiences:sysadmins
   - audiences:network-engineers
-
+category: networking
+level: intermediate
+tags:
+  - networking:dns
+  - security:dnssec
 ---
 
 # DNSSEC

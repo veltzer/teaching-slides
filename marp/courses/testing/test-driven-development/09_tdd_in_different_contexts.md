@@ -1,11 +1,10 @@
 ---
-tags:
-  - practices:tdd
-level: intermediate
-category: testing
 audience:
   - audiences:developers
-
+category: testing
+level: intermediate
+tags:
+  - practices:tdd
 ---
 
 # TDD in Different Contexts

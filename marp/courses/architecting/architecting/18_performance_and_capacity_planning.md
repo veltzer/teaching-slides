@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:architects
+category: architecture
+level: advanced
 tags:
   - concepts:architecture
   - concepts:performance
   - concepts:capacity-planning
-level: advanced
-category: architecture
-audience:
-  - audiences:developers
-  - audiences:architects
-
 ---
 
 # Performance and Capacity Planning

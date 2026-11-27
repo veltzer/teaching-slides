@@ -1,12 +1,11 @@
 ---
-tags:
-  - data-and-ai:deep-learning
-level: intermediate
-category: machine-learning
 audience:
   - audiences:developers
   - audiences:data-scientists
-
+category: machine-learning
+level: intermediate
+tags:
+  - data-and-ai:deep-learning
 ---
 
 # Neural Network Foundations

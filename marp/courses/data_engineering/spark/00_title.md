@@ -1,12 +1,11 @@
 ---
-tags:
-  - data-and-ai:big-data
-level: intermediate
-category: data-engineering
-duration_hours: 24
 audience:
   - audiences:data-engineers
-
+category: data-engineering
+duration_hours: 24
+level: intermediate
+tags:
+  - data-and-ai:big-data
 ---
 
 # Spark

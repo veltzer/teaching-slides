@@ -1,16 +1,15 @@
 ---
-tags:
-  - networking:http
-  - practices:scripting
-  - architecture:load-balancing
-level: advanced
-category: networking
 audience:
   - audiences:security-engineers
   - audiences:network-engineers
   - audiences:devops
   - audiences:sysadmins
-
+category: networking
+level: advanced
+tags:
+  - networking:http
+  - practices:scripting
+  - architecture:load-balancing
 ---
 
 # Getting Started With iRules

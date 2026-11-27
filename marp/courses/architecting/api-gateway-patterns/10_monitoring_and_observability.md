@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: architecture
+level: intermediate
 tags:
   - architecture:api-gateway
   - practices:observability
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-
 ---
 
 # Monitoring and Observability

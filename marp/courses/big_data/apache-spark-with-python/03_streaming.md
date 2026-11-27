@@ -1,15 +1,14 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:data-scientists
+category: big-data
+level: intermediate
 tags:
   - tools:spark
   - languages:python
   - data-and-ai:big-data
   - concepts:streaming
-level: intermediate
-category: big-data
-audience:
-  - audiences:developers
-  - audiences:data-scientists
-
 ---
 
 # Spark Streaming

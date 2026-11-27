@@ -1,16 +1,15 @@
 ---
+audience:
+  - audiences:network-engineers
+  - audiences:sysadmins
+  - audiences:devops
+category: networking
+level: beginner
 tags:
   - networking:http
   - architecture:load-balancing
   - networking:troubleshooting
   - security:tls
-level: beginner
-category: networking
-audience:
-  - audiences:network-engineers
-  - audiences:sysadmins
-  - audiences:devops
-
 ---
 
 # Maintaining Session State with Persistence

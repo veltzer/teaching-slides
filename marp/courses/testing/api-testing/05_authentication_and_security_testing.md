@@ -1,13 +1,12 @@
 ---
-tags:
-  - practices:api-testing
-  - security:authentication
-level: intermediate
-category: testing
 audience:
   - audiences:qa
   - audiences:security
-
+category: testing
+level: intermediate
+tags:
+  - practices:api-testing
+  - security:authentication
 ---
 
 # Authentication and Security Testing

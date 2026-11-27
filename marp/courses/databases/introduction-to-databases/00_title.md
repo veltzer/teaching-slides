@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: database
+duration_hours: 24
+level: beginner
 tags:
   - databases:relational
   - databases:nosql
-level: beginner
-category: database
-duration_hours: 24
-audience:
-  - audiences:developers
-
 ---
 
 # Introduction to Databases

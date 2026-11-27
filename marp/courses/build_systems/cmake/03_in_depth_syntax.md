@@ -1,15 +1,14 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:devops
+category: build-system
+level: intermediate
 tags:
   - tools:cmake
   - languages:c
   - languages:c++
   - practices:build-systems
-level: intermediate
-category: build-system
-audience:
-  - audiences:developers
-  - audiences:devops
-
 ---
 
 # In-Depth CMake Syntax

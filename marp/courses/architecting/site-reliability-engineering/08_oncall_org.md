@@ -1,12 +1,12 @@
 ---
-tags:
-  - practices:sre
-  - practices:on-call
-level: intermediate
-category: architecture
 audience:
   - audiences:devops
   - audiences:managers
+category: architecture
+level: intermediate
+tags:
+  - practices:sre
+  - practices:on-call
 ---
 
 # On-Call and SRE Organization

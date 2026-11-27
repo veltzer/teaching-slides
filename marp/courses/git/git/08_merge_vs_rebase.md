@@ -1,14 +1,13 @@
 ---
-tags:
-  - tools:git
-  - concepts:version-control
-level: intermediate
-category: version-control
 audience:
   - audiences:developers
   - audiences:sysadmins
   - audiences:devops
-
+category: version-control
+level: intermediate
+tags:
+  - tools:git
+  - concepts:version-control
 ---
 
 # Merge vs Rebase

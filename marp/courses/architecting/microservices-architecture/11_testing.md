@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: architecture
+level: intermediate
 tags:
   - concepts:microservices
   - practices:testing
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-
 ---
 
 # Testing Microservices

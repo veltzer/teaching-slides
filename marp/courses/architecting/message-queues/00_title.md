@@ -1,14 +1,13 @@
 ---
-tags:
-  - architecture:patterns
-  - messaging:overview
-level: intermediate
-category: architecture
-duration_hours: 16
 audience:
   - audiences:architects
   - audiences:developers
-
+category: architecture
+duration_hours: 16
+level: intermediate
+tags:
+  - architecture:patterns
+  - messaging:overview
 ---
 
 # Message Queues Architecture

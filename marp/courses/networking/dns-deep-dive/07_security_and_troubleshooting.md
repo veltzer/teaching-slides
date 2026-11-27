@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:sysadmins
+  - audiences:network-engineers
+category: networking
+level: intermediate
 tags:
   - networking:dns
   - security:attacks
   - concepts:troubleshooting
-level: intermediate
-category: networking
-audience:
-  - audiences:sysadmins
-  - audiences:network-engineers
-
 ---
 
 # DNS Security and Troubleshooting

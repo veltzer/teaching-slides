@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:developers
+category: operating-systems
+level: advanced
 tags:
   - infrastructure:linux
   - concepts:kernel
   - concepts:bsp
   - infrastructure:embedded
-level: advanced
-category: operating-systems
-audience:
-  - audiences:developers
-
 ---
 
 # Board Support Package (BSP) Development

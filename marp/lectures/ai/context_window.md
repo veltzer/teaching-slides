@@ -1,14 +1,13 @@
 ---
-tags:
-- concepts:ai
-- concepts:agents
-- concepts:llm
-- concepts:prompting
-level: intermediate
-category: ai
 audience:
-- audiences:developers
-
+  - audiences:developers
+category: ai
+level: intermediate
+tags:
+  - concepts:ai
+  - concepts:agents
+  - concepts:llm
+  - concepts:prompting
 ---
 
 # The Context Window

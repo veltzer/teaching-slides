@@ -1,12 +1,11 @@
 ---
-tags:
-  - practices:api-testing
-level: intermediate
-category: testing
 audience:
   - audiences:qa
   - audiences:developers
-
+category: testing
+level: intermediate
+tags:
+  - practices:api-testing
 ---
 
 # Contract Testing

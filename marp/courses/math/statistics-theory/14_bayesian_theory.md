@@ -1,12 +1,11 @@
 ---
-tags:
-  - math:bayesian
-level: advanced
-category: math
 audience:
   - audiences:data-scientists
   - audiences:ml-engineers
-
+category: math
+level: advanced
+tags:
+  - math:bayesian
 ---
 
 # Bayesian Theory

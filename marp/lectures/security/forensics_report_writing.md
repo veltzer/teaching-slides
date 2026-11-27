@@ -1,15 +1,14 @@
 ---
-tags:
-- security:forensics
-- security:compliance
-- practices:documentation
-level: intermediate
-category: security
 audience:
-- audiences:forensics-investigators
-- audiences:security-professionals
-- audiences:legal
-
+  - audiences:forensics-investigators
+  - audiences:security-professionals
+  - audiences:legal
+category: security
+level: intermediate
+tags:
+  - security:forensics
+  - security:compliance
+  - practices:documentation
 ---
 
 # Writing an Official Digital Forensics Report

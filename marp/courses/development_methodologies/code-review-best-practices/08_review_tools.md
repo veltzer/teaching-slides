@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: methodology
+level: beginner
 tags:
   - practices:code-review
   - tools:github
   - tools:gitlab
-level: beginner
-category: methodology
-audience:
-  - audiences:developers
-
 ---
 
 # Review Tools

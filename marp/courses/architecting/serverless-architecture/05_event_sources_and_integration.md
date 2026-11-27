@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: architecture
+level: intermediate
 tags:
   - architecture:serverless
   - architecture:events
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-
 ---
 
 # Event Sources and Integration

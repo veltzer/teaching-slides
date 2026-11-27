@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: networking
+level: intermediate
 tags:
   - networking:tcp-ip
   - concepts:ethernet
-level: intermediate
-category: networking
-audience:
-  - audiences:developers
-
 ---
 
 # Link Layer: Ethernet and MAC

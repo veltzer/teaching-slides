@@ -1,15 +1,14 @@
 ---
-tags:
-- languages:python
-- languages:r
-- concepts:programming
-- concepts:data-science
-level: intermediate
-category: language
 audience:
-- audiences:developers
-- audiences:data-scientists
-
+  - audiences:developers
+  - audiences:data-scientists
+category: language
+level: intermediate
+tags:
+  - languages:python
+  - languages:r
+  - concepts:programming
+  - concepts:data-science
 ---
 
 # From R to Python

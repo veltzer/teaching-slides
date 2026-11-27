@@ -1,12 +1,11 @@
 ---
-tags:
-  - languages:c++
-level: advanced
-category: embedded
 audience:
   - audiences:embedded-engineers
   - audiences:developers
-
+category: embedded
+level: advanced
+tags:
+  - languages:c++
 ---
 
 # Input/Output Using Stream Classes

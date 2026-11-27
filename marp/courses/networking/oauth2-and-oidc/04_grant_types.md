@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: security
+level: intermediate
 tags:
   - security:oauth2
   - concepts:grants
-level: intermediate
-category: security
-audience:
-  - audiences:developers
-
 ---
 
 # OAuth2 Grant Types

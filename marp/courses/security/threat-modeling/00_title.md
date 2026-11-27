@@ -1,17 +1,16 @@
 ---
-tags:
-  - security:security
-  - concepts:architecture
-  - concepts:best-practices
-level: intermediate
-category: security
-duration_hours: 16
 audience:
   - audiences:developers
   - audiences:security-professionals
   - audiences:architects
   - audiences:managers
-
+category: security
+duration_hours: 16
+level: intermediate
+tags:
+  - security:security
+  - concepts:architecture
+  - concepts:best-practices
 ---
 
 # Threat Modeling

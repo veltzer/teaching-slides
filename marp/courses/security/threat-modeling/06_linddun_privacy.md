@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:security-professionals
+category: security
+level: intermediate
 tags:
   - security:threat-modeling
   - security:linddun
   - concepts:privacy
-level: intermediate
-category: security
-audience:
-  - audiences:developers
-  - audiences:security-professionals
-
 ---
 
 # LINDDUN: Privacy Threats

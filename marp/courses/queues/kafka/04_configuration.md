@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: message-queue
+level: beginner
 tags:
   - tools:kafka
   - infrastructure:configuration
-level: beginner
-category: message-queue
-audience:
-  - audiences:developers
-
 ---
 
 # Configuration

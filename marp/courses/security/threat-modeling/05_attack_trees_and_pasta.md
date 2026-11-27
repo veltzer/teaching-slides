@@ -1,15 +1,14 @@
 ---
-tags:
-  - security:threat-modeling
-  - security:attack-trees
-  - security:pasta
-level: intermediate
-category: security
 audience:
   - audiences:developers
   - audiences:security-professionals
   - audiences:architects
-
+category: security
+level: intermediate
+tags:
+  - security:threat-modeling
+  - security:attack-trees
+  - security:pasta
 ---
 
 # Attack Trees and PASTA

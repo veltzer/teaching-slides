@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: mobile
+level: advanced
 tags:
   - infrastructure:android
   - concepts:mobile-development
   - practices:testing
-level: advanced
-category: mobile
-audience:
-  - audiences:developers
-
 ---
 
 # Testing and Debugging

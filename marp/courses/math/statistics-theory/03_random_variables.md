@@ -1,12 +1,11 @@
 ---
-tags:
-  - math:random-variables
-level: advanced
-category: math
 audience:
   - audiences:data-scientists
   - audiences:ml-engineers
-
+category: math
+level: advanced
+tags:
+  - math:random-variables
 ---
 
 # Random Variables and Distributions

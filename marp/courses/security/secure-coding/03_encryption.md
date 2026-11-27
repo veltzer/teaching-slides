@@ -1,16 +1,16 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:embedded-engineers
+  - audiences:security-professionals
+category: security
+level: intermediate
 tags:
   - security:secure-coding
   - security:encryption
   - languages:c
   - languages:c++
   - languages:python
-level: intermediate
-category: security
-audience:
-  - audiences:developers
-  - audiences:embedded-engineers
-  - audiences:security-professionals
 ---
 
 # Encryption

@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: networking
+level: intermediate
 tags:
   - networking:tcp-ip
   - concepts:udp
   - concepts:dns
-level: intermediate
-category: networking
-audience:
-  - audiences:developers
-
 ---
 
 # UDP, DNS, and DHCP

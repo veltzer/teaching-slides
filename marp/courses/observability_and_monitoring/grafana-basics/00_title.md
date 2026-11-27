@@ -1,12 +1,11 @@
 ---
-tags:
-  - observability:grafana
-level: beginner
-category: observability
-duration_hours: 8
 audience:
   - audiences:devops
-
+category: observability
+duration_hours: 8
+level: beginner
+tags:
+  - observability:grafana
 ---
 
 # Grafana Basics

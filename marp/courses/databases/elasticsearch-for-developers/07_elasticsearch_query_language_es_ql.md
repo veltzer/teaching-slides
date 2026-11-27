@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: database
+level: intermediate
 tags:
   - databases:elasticsearch
   - databases:esql
-level: intermediate
-category: database
-audience:
-  - audiences:developers
-
 ---
 
 # Elasticsearch Query Language (ES|QL)

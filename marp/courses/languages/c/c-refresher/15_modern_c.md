@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:developers
+category: language
+level: intermediate
 tags:
   - languages:c
   - concepts:programming
   - concepts:memory-management
   - concepts:pointers
-level: intermediate
-category: language
-audience:
-  - audiences:developers
-
 ---
 
 # Modern C: C11, C17, and C23

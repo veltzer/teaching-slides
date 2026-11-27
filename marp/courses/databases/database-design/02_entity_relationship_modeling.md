@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: database
+level: intermediate
 tags:
   - databases:design
   - databases:er
-level: intermediate
-category: database
-audience:
-  - audiences:developers
-
 ---
 
 # Entity-Relationship Modeling

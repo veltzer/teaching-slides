@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:devops
+category: observability
+level: intermediate
 tags:
   - observability:opentelemetry
   - practices:production
-level: intermediate
-category: observability
-audience:
-  - audiences:devops
-
 ---
 
 # Practical Use

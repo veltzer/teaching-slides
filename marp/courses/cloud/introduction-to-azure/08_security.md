@@ -1,15 +1,14 @@
 ---
-tags:
-  - infrastructure:cloud
-  - infrastructure:azure
-  - infrastructure:security
-level: beginner
-category: cloud
 audience:
   - audiences:developers
   - audiences:sysadmins
   - audiences:devops
-
+category: cloud
+level: beginner
+tags:
+  - infrastructure:cloud
+  - infrastructure:azure
+  - infrastructure:security
 ---
 
 # Azure Security Services

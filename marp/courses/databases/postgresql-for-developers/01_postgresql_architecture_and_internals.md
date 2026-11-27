@@ -1,11 +1,10 @@
 ---
-tags:
-  - databases:postgresql
-level: intermediate
-category: database
 audience:
   - audiences:developers
-
+category: database
+level: intermediate
+tags:
+  - databases:postgresql
 ---
 
 # PostgreSQL Architecture and Internals

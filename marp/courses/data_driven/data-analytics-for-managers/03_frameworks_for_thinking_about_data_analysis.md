@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:managers
+category: data-driven
+level: beginner
 tags:
   - data-and-ai:data-analytics
   - data-and-ai:frameworks
-level: beginner
-category: data-driven
-audience:
-  - audiences:managers
-
 ---
 
 # Frameworks for Thinking About Data Analysis

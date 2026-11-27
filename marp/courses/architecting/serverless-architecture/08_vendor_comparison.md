@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:architects
+category: architecture
+level: intermediate
 tags:
   - architecture:serverless
   - infrastructure:cloud
-level: intermediate
-category: architecture
-audience:
-  - audiences:architects
-
 ---
 
 # Vendor Comparison

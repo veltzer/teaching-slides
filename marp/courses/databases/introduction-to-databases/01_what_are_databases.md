@@ -1,11 +1,10 @@
 ---
-tags:
-  - databases:basics
-level: beginner
-category: database
 audience:
   - audiences:developers
-
+category: database
+level: beginner
+tags:
+  - databases:basics
 ---
 
 # What Are Databases?

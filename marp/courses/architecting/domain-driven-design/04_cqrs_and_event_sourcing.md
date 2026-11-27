@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:architects
+  - audiences:developers
+category: architecture
+level: advanced
 tags:
   - concepts:domain-driven-design
   - architecture:cqrs
   - architecture:event-sourcing
-level: advanced
-category: architecture
-audience:
-  - audiences:architects
-  - audiences:developers
-
 ---
 
 # CQRS and Event Sourcing

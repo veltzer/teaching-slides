@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: database
+level: intermediate
 tags:
   - databases:postgresql
   - databases:jsonb
-level: intermediate
-category: database
-audience:
-  - audiences:developers
-
 ---
 
 # JSONB and Semi-Structured Data

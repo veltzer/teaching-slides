@@ -1,13 +1,12 @@
 ---
-tags:
-  - concepts:microservices
-  - concepts:distributed-systems
-level: intermediate
-category: architecture
 audience:
   - audiences:developers
   - audiences:devops
-
+category: architecture
+level: intermediate
+tags:
+  - concepts:microservices
+  - concepts:distributed-systems
 ---
 
 # Service Discovery

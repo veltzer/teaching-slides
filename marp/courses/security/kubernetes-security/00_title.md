@@ -1,16 +1,15 @@
 ---
-tags:
-  - security:kubernetes
-  - security:cloud-native
-  - infrastructure:k8s
-level: intermediate
-category: security
-duration_hours: 16
 audience:
   - audiences:devops
   - audiences:security-professionals
   - audiences:developers
-
+category: security
+duration_hours: 16
+level: intermediate
+tags:
+  - security:kubernetes
+  - security:cloud-native
+  - infrastructure:k8s
 ---
 
 # Kubernetes Security

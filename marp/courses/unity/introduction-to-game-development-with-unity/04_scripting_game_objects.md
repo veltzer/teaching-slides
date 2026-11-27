@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: game-development
+level: beginner
 tags:
   - tools:unity
   - languages:csharp
-level: beginner
-category: game-development
-audience:
-  - audiences:developers
-
 ---
 
 # Scripting Game Objects

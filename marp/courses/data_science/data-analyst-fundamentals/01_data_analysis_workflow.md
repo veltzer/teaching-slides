@@ -1,12 +1,11 @@
 ---
-tags:
-  - data-and-ai:data-analysis
-level: beginner
-category: data-science
 audience:
   - audiences:data-analysts
   - audiences:developers
-
+category: data-science
+level: beginner
+tags:
+  - data-and-ai:data-analysis
 ---
 
 # Data Analysis Workflow

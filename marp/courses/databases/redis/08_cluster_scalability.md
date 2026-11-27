@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: database
+level: intermediate
 tags:
   - tools:redis
   - data-and-ai:nosql
   - concepts:distributed-systems
-level: intermediate
-category: database
-audience:
-  - audiences:developers
-
 ---
 
 # Redis Cluster and Scalability

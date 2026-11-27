@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: containers
+level: intermediate
 tags:
   - infrastructure:kubernetes
   - networking:ingress
-level: intermediate
-category: containers
-audience:
-  - audiences:developers
-
 ---
 
 # Ingress

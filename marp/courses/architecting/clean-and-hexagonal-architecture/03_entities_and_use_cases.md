@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: architecture
+level: intermediate
 tags:
   - architecture:clean-architecture
   - architecture:domain
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-
 ---
 
 # Entities and Use Cases

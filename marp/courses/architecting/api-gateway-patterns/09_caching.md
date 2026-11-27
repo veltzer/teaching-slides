@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: architecture
+level: intermediate
 tags:
   - architecture:api-gateway
   - architecture:caching
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-
 ---
 
 # Caching at the Gateway

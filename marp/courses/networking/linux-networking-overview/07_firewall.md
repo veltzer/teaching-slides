@@ -1,15 +1,14 @@
 ---
-tags:
-  - networking:firewall
-  - networking:security
-  - infrastructure:linux
-level: intermediate
-category: networking
 audience:
   - audiences:developers
   - audiences:sysadmins
   - audiences:devops
-
+category: networking
+level: intermediate
+tags:
+  - networking:firewall
+  - networking:security
+  - infrastructure:linux
 ---
 
 # TCP/IP Firewall

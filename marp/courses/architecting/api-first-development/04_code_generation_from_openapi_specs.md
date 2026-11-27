@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: architecture
+level: intermediate
 tags:
   - architecture:openapi
   - practices:codegen
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-
 ---
 
 # Code Generation From OpenAPI Specs

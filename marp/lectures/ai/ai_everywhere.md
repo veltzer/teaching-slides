@@ -1,14 +1,13 @@
 ---
-tags:
-- concepts:ai
-- concepts:llm
-- concepts:agents
-level: beginner
-category: ai
 audience:
-- audiences:managers
-- audiences:developers
-
+  - audiences:managers
+  - audiences:developers
+category: ai
+level: beginner
+tags:
+  - concepts:ai
+  - concepts:llm
+  - concepts:agents
 ---
 
 # AI Everywhere

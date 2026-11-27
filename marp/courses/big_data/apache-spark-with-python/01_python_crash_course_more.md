@@ -1,13 +1,12 @@
 ---
-tags:
-  - languages:python
-  - data-and-ai:big-data
-level: intermediate
-category: big-data
 audience:
   - audiences:developers
   - audiences:data-scientists
-
+category: big-data
+level: intermediate
+tags:
+  - languages:python
+  - data-and-ai:big-data
 ---
 
 # Python Crash Course for Spark

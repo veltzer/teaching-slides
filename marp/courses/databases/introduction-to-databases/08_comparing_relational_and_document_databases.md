@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: database
+level: beginner
 tags:
   - databases:relational
   - databases:document
-level: beginner
-category: database
-audience:
-  - audiences:developers
-
 ---
 
 # Comparing Relational and Document Databases

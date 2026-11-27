@@ -1,14 +1,13 @@
 ---
-tags:
-  - infrastructure:linux
-  - practices:command-line
-level: intermediate
-category: operating-systems
 audience:
   - audiences:developers
   - audiences:sysadmins
   - audiences:devops
-
+category: operating-systems
+level: intermediate
+tags:
+  - infrastructure:linux
+  - practices:command-line
 ---
 
 # Introduction to Linux Package Management

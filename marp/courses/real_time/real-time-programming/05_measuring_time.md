@@ -1,13 +1,12 @@
 ---
-tags:
-  - infrastructure:real-time
-  - infrastructure:timing
-level: advanced
-category: real-time
 audience:
   - audiences:embedded-engineers
   - audiences:developers
-
+category: real-time
+level: advanced
+tags:
+  - infrastructure:real-time
+  - infrastructure:timing
 ---
 
 # Measuring Time

@@ -1,15 +1,14 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:data-scientists
+category: big-data
+level: advanced
 tags:
   - tools:spark
   - languages:python
   - data-and-ai:big-data
   - data-and-ai:machine-learning
-level: advanced
-category: big-data
-audience:
-  - audiences:developers
-  - audiences:data-scientists
-
 ---
 
 # Advanced Spark MLlib

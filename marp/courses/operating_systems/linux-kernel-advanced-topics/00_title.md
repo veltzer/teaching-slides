@@ -1,17 +1,16 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+category: operating-systems
+duration_hours: 32
+level: advanced
 tags:
   - infrastructure:linux
   - concepts:kernel
   - concepts:device-drivers
   - concepts:bsp
   - infrastructure:embedded
-level: advanced
-category: operating-systems
-duration_hours: 32
-audience:
-  - audiences:developers
-  - audiences:sysadmins
-
 ---
 
 # Linux Kernel Advanced Topics

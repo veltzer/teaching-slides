@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: architecture
+level: intermediate
 tags:
   - architecture:clean-architecture
   - architecture:adapters
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-
 ---
 
 # Interface Adapters

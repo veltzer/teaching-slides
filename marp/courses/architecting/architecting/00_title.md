@@ -1,18 +1,17 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:architects
+  - audiences:devops
+category: architecture
+duration_hours: 40
+level: advanced
 tags:
   - concepts:architecture
   - concepts:microservices
   - infrastructure:cloud-native
   - concepts:domain-driven-design
   - concepts:distributed-systems
-level: advanced
-category: architecture
-duration_hours: 40
-audience:
-  - audiences:developers
-  - audiences:architects
-  - audiences:devops
-
 ---
 
 # Architecting Software Systems

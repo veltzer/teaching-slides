@@ -1,15 +1,14 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:architects
+category: security
+level: intermediate
 tags:
   - security:threat-modeling
   - concepts:microservices
   - concepts:cloud
   - concepts:apis
-level: intermediate
-category: security
-audience:
-  - audiences:developers
-  - audiences:architects
-
 ---
 
 # Threat Modeling in Practice

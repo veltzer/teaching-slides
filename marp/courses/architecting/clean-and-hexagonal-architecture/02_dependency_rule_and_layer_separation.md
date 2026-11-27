@@ -1,11 +1,10 @@
 ---
-tags:
-  - architecture:clean-architecture
-level: intermediate
-category: architecture
 audience:
   - audiences:developers
-
+category: architecture
+level: intermediate
+tags:
+  - architecture:clean-architecture
 ---
 
 # Dependency Rule and Layer Separation

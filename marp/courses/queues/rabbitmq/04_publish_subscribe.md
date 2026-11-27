@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: message-queue
+level: intermediate
 tags:
   - tools:rabbitmq
   - concepts:pub-sub
-level: intermediate
-category: message-queue
-audience:
-  - audiences:developers
-
 ---
 
 # Publish/Subscribe

@@ -1,15 +1,14 @@
 ---
-tags:
-  - infrastructure:cloud
-  - infrastructure:aws
-  - practices:serverless
-level: intermediate
-category: cloud
 audience:
   - audiences:developers
   - audiences:devops
   - audiences:architects
-
+category: cloud
+level: intermediate
+tags:
+  - infrastructure:cloud
+  - infrastructure:aws
+  - practices:serverless
 ---
 
 # AWS Lambda

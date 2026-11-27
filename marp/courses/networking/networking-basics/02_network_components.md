@@ -1,13 +1,12 @@
 ---
-tags:
-  - networking:networking
-  - networking:infrastructure
-level: beginner
-category: networking
 audience:
   - audiences:developers
   - audiences:devops
-
+category: networking
+level: beginner
+tags:
+  - networking:networking
+  - networking:infrastructure
 ---
 
 # Network Components: Understanding the Differences

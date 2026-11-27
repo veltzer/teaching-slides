@@ -1,13 +1,12 @@
 ---
-tags:
-  - practices:chaos-testing
-  - practices:reliability
-level: advanced
-category: testing
 audience:
   - audiences:devops
   - audiences:developers
-
+category: testing
+level: advanced
+tags:
+  - practices:chaos-testing
+  - practices:reliability
 ---
 
 # Failure Injection

@@ -1,4 +1,11 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:senior-developers
+  - audiences:devops
+category: ai
+duration_hours: 8
+level: intermediate
 tags:
   - data-and-ai:ai
   - data-and-ai:llm
@@ -7,14 +14,6 @@ tags:
   - data-and-ai:rag
   - data-and-ai:prompt-engineering
   - practices:productivity
-level: intermediate
-category: ai
-duration_hours: 8
-audience:
-  - audiences:developers
-  - audiences:senior-developers
-  - audiences:devops
-
 ---
 
 # Claude Workshop

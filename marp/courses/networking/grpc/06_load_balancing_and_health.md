@@ -1,13 +1,12 @@
 ---
-tags:
-  - networking:grpc
-  - concepts:load-balancing
-level: intermediate
-category: networking
 audience:
   - audiences:developers
   - audiences:devops
-
+category: networking
+level: intermediate
+tags:
+  - networking:grpc
+  - concepts:load-balancing
 ---
 
 # Load Balancing, Service Discovery, and Health

@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: architecture
+level: intermediate
 tags:
   - concepts:microservices
   - concepts:api
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-
 ---
 
 # API Design for Microservices

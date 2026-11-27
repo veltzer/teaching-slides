@@ -1,14 +1,13 @@
 ---
-tags:
-- tools:kubernetes
-- infrastructure:aws
-- infrastructure:containers
-level: advanced
-category: devops
 audience:
-- audiences:developers
-- audiences:devops
-
+  - audiences:developers
+  - audiences:devops
+category: devops
+level: advanced
+tags:
+  - tools:kubernetes
+  - infrastructure:aws
+  - infrastructure:containers
 ---
 
 # Amazon EKS Deep Dive

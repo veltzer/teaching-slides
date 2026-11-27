@@ -1,15 +1,14 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:testers
+category: testing
+duration_hours: 16
+level: intermediate
 tags:
   - practices:testing
   - practices:tdd
   - practices:refactoring
-level: intermediate
-category: testing
-duration_hours: 16
-audience:
-  - audiences:developers
-  - audiences:testers
-
 ---
 
 # Test-Driven Development

@@ -1,12 +1,11 @@
 ---
-tags:
-  - math:statistics
-level: beginner
-category: math
 audience:
   - audiences:data-analysts
   - audiences:developers
-
+category: math
+level: beginner
+tags:
+  - math:statistics
 ---
 
 # Types of Data

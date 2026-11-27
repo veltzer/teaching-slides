@@ -1,13 +1,12 @@
 ---
-tags:
-  - data-and-ai:machine-learning
-  - practices:devops
-level: advanced
-category: machine-learning
 audience:
   - audiences:data-scientists
   - audiences:devops
-
+category: machine-learning
+level: advanced
+tags:
+  - data-and-ai:machine-learning
+  - practices:devops
 ---
 
 # Serving and Monitoring

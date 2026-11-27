@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:managers
+category: data-driven
+level: beginner
 tags:
   - data-and-ai:data-analytics
   - data-and-ai:business-case
-level: beginner
-category: data-driven
-audience:
-  - audiences:managers
-
 ---
 
 # The Business Case for Data Analysis

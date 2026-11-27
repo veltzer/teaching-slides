@@ -1,15 +1,14 @@
 ---
-tags:
-- practices:devops
-- practices:ci-cd
-- concepts:automation
-level: beginner
-category: devops
 audience:
-- audiences:developers
-- audiences:devops
-- audiences:managers
-
+  - audiences:developers
+  - audiences:devops
+  - audiences:managers
+category: devops
+level: beginner
+tags:
+  - practices:devops
+  - practices:ci-cd
+  - concepts:automation
 ---
 
 # DevOps: Bridging Development and Operations

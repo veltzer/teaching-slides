@@ -1,15 +1,14 @@
 ---
+audience:
+  - audiences:developers
+category: language
+duration_hours: 56
+level: advanced
 tags:
   - languages:python
   - practices:performance
   - concepts:concurrency
   - concepts:data-structures
-level: advanced
-category: language
-duration_hours: 56
-audience:
-  - audiences:developers
-
 ---
 
 # Advanced Python

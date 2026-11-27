@@ -1,14 +1,13 @@
 ---
-tags:
-  - networking:dns
-  - networking:protocols
-level: beginner
-category: networking
 audience:
   - audiences:developers
   - audiences:devops
   - audiences:sysadmins
-
+category: networking
+level: beginner
+tags:
+  - networking:dns
+  - networking:protocols
 ---
 
 # DNS Deep Dive

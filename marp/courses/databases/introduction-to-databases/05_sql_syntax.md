@@ -1,11 +1,10 @@
 ---
-tags:
-  - databases:sql
-level: beginner
-category: database
 audience:
   - audiences:developers
-
+category: database
+level: beginner
+tags:
+  - databases:sql
 ---
 
 # SQL Syntax

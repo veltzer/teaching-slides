@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: methodology
+level: beginner
 tags:
   - practices:technical-writing
   - practices:api-docs
-level: beginner
-category: methodology
-audience:
-  - audiences:developers
-
 ---
 
 # API Documentation

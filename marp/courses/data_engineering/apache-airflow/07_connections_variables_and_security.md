@@ -1,13 +1,12 @@
 ---
-tags:
-  - data-and-ai:airflow
-  - infrastructure:security
-level: intermediate
-category: data-engineering
 audience:
   - audiences:data-engineers
   - audiences:devops
-
+category: data-engineering
+level: intermediate
+tags:
+  - data-and-ai:airflow
+  - infrastructure:security
 ---
 
 # Connections, Variables, and Security

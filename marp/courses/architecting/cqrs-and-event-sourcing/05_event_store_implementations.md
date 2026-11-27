@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:architects
+  - audiences:developers
+category: architecture
+level: advanced
 tags:
   - architecture:event-sourcing
   - infrastructure:kafka
   - concepts:databases
-level: advanced
-category: architecture
-audience:
-  - audiences:architects
-  - audiences:developers
-
 ---
 
 # Event Store Implementations

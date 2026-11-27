@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: design-patterns
+level: intermediate
 tags:
   - concepts:solid
   - concepts:lsp
-level: intermediate
-category: design-patterns
-audience:
-  - audiences:developers
-
 ---
 
 # Liskov Substitution Principle (LSP)

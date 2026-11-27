@@ -1,12 +1,12 @@
 ---
-tags:
-  - security:cryptography
-  - security:libraries
-level: intermediate
-category: security
 audience:
   - audiences:developers
   - audiences:security-professionals
+category: security
+level: intermediate
+tags:
+  - security:cryptography
+  - security:libraries
 ---
 
 # Pitfalls, Libraries, and the Post-Quantum Future

@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: security
+level: intermediate
 tags:
   - security:oidc
   - concepts:identity
-level: intermediate
-category: security
-audience:
-  - audiences:developers
-
 ---
 
 # OpenID Connect

@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:devops
+category: security
+level: intermediate
 tags:
   - security:kubernetes
   - concepts:pods
-level: intermediate
-category: security
-audience:
-  - audiences:devops
-
 ---
 
 # Pod Security Standards

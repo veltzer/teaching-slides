@@ -1,13 +1,12 @@
 ---
-tags:
-  - databases:migrations
-  - practices:migration
-level: intermediate
-category: database
 audience:
   - audiences:dba
   - audiences:architects
-
+category: database
+level: intermediate
+tags:
+  - databases:migrations
+  - practices:migration
 ---
 
 # Engine Migrations

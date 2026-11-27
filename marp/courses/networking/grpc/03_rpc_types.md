@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: networking
+level: intermediate
 tags:
   - networking:grpc
   - concepts:rpc
-level: intermediate
-category: networking
-audience:
-  - audiences:developers
-
 ---
 
 # The Four RPC Types

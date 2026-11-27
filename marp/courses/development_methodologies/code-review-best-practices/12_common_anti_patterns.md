@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: methodology
+level: beginner
 tags:
   - practices:code-review
   - practices:antipatterns
-level: beginner
-category: methodology
-audience:
-  - audiences:developers
-
 ---
 
 # Common Anti-Patterns

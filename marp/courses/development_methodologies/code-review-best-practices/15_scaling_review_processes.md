@@ -1,13 +1,12 @@
 ---
-tags:
-  - practices:code-review
-  - practices:scaling
-level: beginner
-category: methodology
 audience:
   - audiences:developers
   - audiences:managers
-
+category: methodology
+level: beginner
+tags:
+  - practices:code-review
+  - practices:scaling
 ---
 
 # Scaling Review Processes

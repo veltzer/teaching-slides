@@ -1,13 +1,12 @@
 ---
-tags:
-  - infrastructure:real-time
-  - infrastructure:operating-systems
-level: advanced
-category: real-time
 audience:
   - audiences:embedded-engineers
   - audiences:developers
-
+category: real-time
+level: advanced
+tags:
+  - infrastructure:real-time
+  - infrastructure:operating-systems
 ---
 
 # Real-Time Systems and Operating Systems

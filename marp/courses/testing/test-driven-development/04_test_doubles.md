@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: testing
+level: intermediate
 tags:
   - practices:tdd
   - practices:test-doubles
-level: intermediate
-category: testing
-audience:
-  - audiences:developers
-
 ---
 
 # Test Doubles

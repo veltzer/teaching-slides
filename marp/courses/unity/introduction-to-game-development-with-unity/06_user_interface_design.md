@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: game-development
+level: beginner
 tags:
   - tools:unity
   - practices:ui
-level: beginner
-category: game-development
-audience:
-  - audiences:developers
-
 ---
 
 # User Interface Design

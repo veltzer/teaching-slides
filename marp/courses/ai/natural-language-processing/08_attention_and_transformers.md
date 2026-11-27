@@ -1,15 +1,14 @@
 ---
-tags:
-  - data-and-ai:nlp
-  - concepts:deep-learning
-  - concepts:transformers
-level: advanced
-category: ai
 audience:
   - audiences:developers
   - audiences:data-scientists
   - audiences:architects
-
+category: ai
+level: advanced
+tags:
+  - data-and-ai:nlp
+  - concepts:deep-learning
+  - concepts:transformers
 ---
 
 # Attention and Transformers

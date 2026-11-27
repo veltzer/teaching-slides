@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:architects
+category: architecture
+level: intermediate
 tags:
   - concepts:architecture
   - concepts:design-patterns
   - concepts:microservices
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-  - audiences:architects
-
 ---
 
 # System Architectures

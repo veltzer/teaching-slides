@@ -1,11 +1,10 @@
 ---
-tags:
-  - concepts:distributed-clocks
-level: intermediate
-category: architecture
 audience:
   - audiences:developers
-
+category: architecture
+level: intermediate
+tags:
+  - concepts:distributed-clocks
 ---
 
 # Distributed Clocks

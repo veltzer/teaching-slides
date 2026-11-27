@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: version-control
+level: advanced
 tags:
   - tools:git
   - concepts:worktree
-level: advanced
-category: version-control
-audience:
-  - audiences:developers
-
 ---
 
 # Worktrees

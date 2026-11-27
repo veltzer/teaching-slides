@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: networking
+level: intermediate
 tags:
   - networking:grpc
   - concepts:middleware
   - security:tls
-level: intermediate
-category: networking
-audience:
-  - audiences:developers
-
 ---
 
 # Interceptors and Security

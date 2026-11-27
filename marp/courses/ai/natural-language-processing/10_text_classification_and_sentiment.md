@@ -1,13 +1,12 @@
 ---
-tags:
-  - data-and-ai:nlp
-  - concepts:classification
-level: advanced
-category: ai
 audience:
   - audiences:developers
   - audiences:data-scientists
-
+category: ai
+level: advanced
+tags:
+  - data-and-ai:nlp
+  - concepts:classification
 ---
 
 # Text Classification and Sentiment Analysis

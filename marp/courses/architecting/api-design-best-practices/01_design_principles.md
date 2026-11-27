@@ -1,13 +1,12 @@
 ---
-tags:
-  - concepts:api
-  - concepts:best-practices
-level: intermediate
-category: architecture
 audience:
   - audiences:developers
   - audiences:architects
-
+category: architecture
+level: intermediate
+tags:
+  - concepts:api
+  - concepts:best-practices
 ---
 
 # API Design Principles

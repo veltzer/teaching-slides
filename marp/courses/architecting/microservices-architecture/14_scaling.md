@@ -1,13 +1,12 @@
 ---
-tags:
-  - concepts:microservices
-  - concepts:scalability
-level: intermediate
-category: architecture
 audience:
   - audiences:developers
   - audiences:architects
-
+category: architecture
+level: intermediate
+tags:
+  - concepts:microservices
+  - concepts:scalability
 ---
 
 # Scaling Microservices

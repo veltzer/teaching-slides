@@ -1,13 +1,12 @@
 ---
-tags:
-  - databases:clickhouse
-level: intermediate
-category: database
-duration_hours: 16
 audience:
   - audiences:developers
   - audiences:data-engineers
-
+category: database
+duration_hours: 16
+level: intermediate
+tags:
+  - databases:clickhouse
 ---
 
 # ClickHouse

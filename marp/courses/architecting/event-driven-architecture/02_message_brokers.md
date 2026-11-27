@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:devops
+category: architecture
+level: intermediate
 tags:
   - infrastructure:brokers
   - tools:kafka
   - tools:rabbitmq
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-  - audiences:devops
-
 ---
 
 # Message Brokers and Streaming Platforms

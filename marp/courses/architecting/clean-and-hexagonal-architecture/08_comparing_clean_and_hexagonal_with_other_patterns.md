@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:architects
+category: architecture
+level: intermediate
 tags:
   - architecture:clean-architecture
   - architecture:patterns
-level: intermediate
-category: architecture
-audience:
-  - audiences:architects
-
 ---
 
 # Comparing Clean and Hexagonal with Other Patterns

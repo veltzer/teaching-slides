@@ -1,15 +1,14 @@
 ---
-tags:
-  - concepts:architecture
-  - practices:ci-cd
-  - practices:devops
-level: advanced
-category: architecture
 audience:
   - audiences:developers
   - audiences:architects
   - audiences:devops
-
+category: architecture
+level: advanced
+tags:
+  - concepts:architecture
+  - practices:ci-cd
+  - practices:devops
 ---
 
 # DevOps and CI/CD for Architects

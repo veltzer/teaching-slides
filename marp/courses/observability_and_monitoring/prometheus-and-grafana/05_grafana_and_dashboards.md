@@ -1,11 +1,10 @@
 ---
-tags:
-  - observability:grafana
-level: intermediate
-category: observability
 audience:
   - audiences:devops
-
+category: observability
+level: intermediate
+tags:
+  - observability:grafana
 ---
 
 # Grafana and Dashboards

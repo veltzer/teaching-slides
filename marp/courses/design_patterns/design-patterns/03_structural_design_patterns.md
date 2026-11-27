@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: design-patterns
+level: intermediate
 tags:
   - concepts:design-patterns
   - concepts:structural-patterns
-level: intermediate
-category: design-patterns
-audience:
-  - audiences:developers
-
 ---
 
 # Structural Design Patterns

@@ -1,15 +1,14 @@
 ---
-tags:
-- tools:spark
-- data-and-ai:big-data
-- practices:monitoring
-- practices:debugging
-level: intermediate
-category: big-data
 audience:
-- audiences:developers
-- audiences:data-engineers
-
+  - audiences:developers
+  - audiences:data-engineers
+category: big-data
+level: intermediate
+tags:
+  - tools:spark
+  - data-and-ai:big-data
+  - practices:monitoring
+  - practices:debugging
 ---
 
 # Understanding the Spark UI

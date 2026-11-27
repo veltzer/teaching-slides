@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: language
+level: advanced
 tags:
   - languages:rust
   - concepts:programming
   - concepts:concurrency
-level: advanced
-category: language
-audience:
-  - audiences:developers
-
 ---
 
 # Concurrency Patterns

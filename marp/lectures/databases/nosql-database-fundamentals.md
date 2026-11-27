@@ -1,14 +1,13 @@
 ---
-tags:
-- data-and-ai:nosql
-- concepts:databases
-- concepts:data-modeling
-level: intermediate
-category: database
 audience:
-- audiences:developers
-- audiences:data-engineers
-
+  - audiences:developers
+  - audiences:data-engineers
+category: database
+level: intermediate
+tags:
+  - data-and-ai:nosql
+  - concepts:databases
+  - concepts:data-modeling
 ---
 
 # NoSQL Databases Fundamentals

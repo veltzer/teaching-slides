@@ -1,15 +1,14 @@
 ---
-tags:
-  - networking:namespaces
-  - infrastructure:linux
-  - infrastructure:containers
-level: intermediate
-category: networking
 audience:
   - audiences:developers
   - audiences:sysadmins
   - audiences:devops
-
+category: networking
+level: intermediate
+tags:
+  - networking:namespaces
+  - infrastructure:linux
+  - infrastructure:containers
 ---
 
 # Linux Namespaces

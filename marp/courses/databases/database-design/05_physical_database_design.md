@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: database
+level: intermediate
 tags:
   - databases:design
   - databases:physical
-level: intermediate
-category: database
-audience:
-  - audiences:developers
-
 ---
 
 # Physical Database Design

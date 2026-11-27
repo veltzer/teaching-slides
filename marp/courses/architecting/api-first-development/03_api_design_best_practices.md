@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: architecture
+level: intermediate
 tags:
   - architecture:api
   - architecture:rest
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-
 ---
 
 # API Design Best Practices

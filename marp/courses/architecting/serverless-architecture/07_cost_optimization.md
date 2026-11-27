@@ -1,13 +1,12 @@
 ---
-tags:
-  - architecture:serverless
-  - architecture:cost
-level: intermediate
-category: architecture
 audience:
   - audiences:developers
   - audiences:architects
-
+category: architecture
+level: intermediate
+tags:
+  - architecture:serverless
+  - architecture:cost
 ---
 
 # Cost Optimisation

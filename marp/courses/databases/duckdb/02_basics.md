@@ -1,12 +1,11 @@
 ---
-tags:
-  - databases:duckdb
-level: intermediate
-category: database
 audience:
   - audiences:developers
   - audiences:data-engineers
-
+category: database
+level: intermediate
+tags:
+  - databases:duckdb
 ---
 
 # Basics

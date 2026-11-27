@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: architecture
+level: intermediate
 tags:
   - architecture:system-design
   - architecture:api
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-
 ---
 
 # API Design

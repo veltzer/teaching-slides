@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: networking
+level: intermediate
 tags:
   - infrastructure:linux
   - concepts:kernel
   - languages:c
-level: intermediate
-category: networking
-audience:
-  - audiences:developers
-
 ---
 
 # Linux Module Primer

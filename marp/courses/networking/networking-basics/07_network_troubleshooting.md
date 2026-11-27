@@ -1,14 +1,13 @@
 ---
-tags:
-  - networking:troubleshooting
-  - networking:tools
-level: beginner
-category: networking
 audience:
   - audiences:developers
   - audiences:devops
   - audiences:sysadmins
-
+category: networking
+level: beginner
+tags:
+  - networking:troubleshooting
+  - networking:tools
 ---
 
 # Network Troubleshooting

@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: database
+level: intermediate
 tags:
   - databases:elasticsearch
   - databases:mappings
-level: intermediate
-category: database
-audience:
-  - audiences:developers
-
 ---
 
 # Data Modeling and Mappings

@@ -1,14 +1,14 @@
 ---
-tags:
-  - security:secure-coding
-  - hardware-and-embedded:embedded
-  - security:application-security
-level: intermediate
-category: security
 audience:
   - audiences:embedded-engineers
   - audiences:developers
   - audiences:security-professionals
+category: security
+level: intermediate
+tags:
+  - security:secure-coding
+  - hardware-and-embedded:embedded
+  - security:application-security
 ---
 
 # Secure Element

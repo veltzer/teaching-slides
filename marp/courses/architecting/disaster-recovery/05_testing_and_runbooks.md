@@ -1,13 +1,12 @@
 ---
-tags:
-  - architecture:patterns
-  - practices:reliability
-level: intermediate
-category: architecture
 audience:
   - audiences:architects
   - audiences:devops
-
+category: architecture
+level: intermediate
+tags:
+  - architecture:patterns
+  - practices:reliability
 ---
 
 # Testing and Runbooks

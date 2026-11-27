@@ -1,12 +1,11 @@
 ---
-tags:
-  - concepts:domain-driven-design
-level: advanced
-category: architecture
 audience:
   - audiences:architects
   - audiences:developers
-
+category: architecture
+level: advanced
+tags:
+  - concepts:domain-driven-design
 ---
 
 # Strategic Domain-Driven Design

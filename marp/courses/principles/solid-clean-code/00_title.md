@@ -1,15 +1,14 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:architects
+category: design-patterns
+duration_hours: 8
+level: intermediate
 tags:
   - concepts:solid
   - concepts:clean-code
   - concepts:best-practices
-level: intermediate
-category: design-patterns
-duration_hours: 8
-audience:
-  - audiences:developers
-  - audiences:architects
-
 ---
 
 # SOLID Principles and Clean Code

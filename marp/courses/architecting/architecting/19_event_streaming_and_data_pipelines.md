@@ -1,15 +1,14 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:architects
+category: architecture
+level: advanced
 tags:
   - concepts:architecture
   - concepts:event-streaming
   - concepts:kafka
   - concepts:data-pipelines
-level: advanced
-category: architecture
-audience:
-  - audiences:developers
-  - audiences:architects
-
 ---
 
 # Event Streaming and Data Pipelines

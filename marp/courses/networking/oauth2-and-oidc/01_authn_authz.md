@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: security
+level: intermediate
 tags:
   - security:oauth2
   - concepts:authentication
-level: intermediate
-category: security
-audience:
-  - audiences:developers
-
 ---
 
 # Authentication and Authorization

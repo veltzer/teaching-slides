@@ -1,14 +1,13 @@
 ---
-tags:
-- tools:spark
-- tools:jupyter
-- data-and-ai:big-data
-level: intermediate
-category: big-data
 audience:
-- audiences:developers
-- audiences:data-scientists
-
+  - audiences:developers
+  - audiences:data-scientists
+category: big-data
+level: intermediate
+tags:
+  - tools:spark
+  - tools:jupyter
+  - data-and-ai:big-data
 ---
 
 # Spark Notebooks Guide

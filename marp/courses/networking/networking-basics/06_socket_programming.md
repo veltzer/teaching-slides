@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: networking
+level: beginner
 tags:
   - networking:sockets
   - languages:python
-level: beginner
-category: networking
-audience:
-  - audiences:developers
-
 ---
 
 # Socket Programming

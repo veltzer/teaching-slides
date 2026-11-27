@@ -1,17 +1,16 @@
 ---
-tags:
-  - databases:elasticsearch
-  - data-and-ai:search
-  - concepts:distributed-systems
-level: intermediate
-category: database
-duration_hours: 40
 audience:
   - audiences:dbas
   - audiences:sysadmins
   - audiences:architects
   - audiences:devops
-
+category: database
+duration_hours: 40
+level: intermediate
+tags:
+  - databases:elasticsearch
+  - data-and-ai:search
+  - concepts:distributed-systems
 ---
 
 # Elasticsearch DBA

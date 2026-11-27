@@ -1,12 +1,11 @@
 ---
-tags:
-  - math:estimation
-level: intermediate
-category: math
 audience:
   - audiences:data-analysts
   - audiences:data-scientists
-
+category: math
+level: intermediate
+tags:
+  - math:estimation
 ---
 
 # Point Estimation

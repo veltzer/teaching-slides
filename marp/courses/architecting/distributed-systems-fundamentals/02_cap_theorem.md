@@ -1,12 +1,11 @@
 ---
-tags:
-  - concepts:cap-theorem
-level: intermediate
-category: architecture
 audience:
   - audiences:developers
   - audiences:architects
-
+category: architecture
+level: intermediate
+tags:
+  - concepts:cap-theorem
 ---
 
 # CAP Theorem

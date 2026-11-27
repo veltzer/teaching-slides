@@ -1,17 +1,16 @@
 ---
+audience:
+  - audiences:network-engineers
+  - audiences:sysadmins
+  - audiences:devops
+category: networking
+level: beginner
 tags:
   - networking:http
   - networking:tcp-ip
   - networking:performance
   - architecture:caching
   - architecture:load-balancing
-level: beginner
-category: networking
-audience:
-  - audiences:network-engineers
-  - audiences:sysadmins
-  - audiences:devops
-
 ---
 
 # Modifying Traffic Behavior with Profiles

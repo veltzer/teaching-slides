@@ -1,15 +1,14 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+category: hardware
+level: beginner
 tags:
   - concepts:io
   - concepts:computer-architecture
   - concepts:pcie
   - concepts:interrupts
-level: beginner
-category: hardware
-audience:
-  - audiences:developers
-  - audiences:sysadmins
-
 ---
 
 # I/O Architecture and Bus Systems

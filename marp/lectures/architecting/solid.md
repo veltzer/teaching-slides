@@ -1,13 +1,12 @@
 ---
-tags:
-- concepts:oop
-- concepts:design-patterns
-- concepts:architecture
-level: intermediate
-category: architecture
 audience:
-- audiences:developers
-
+  - audiences:developers
+category: architecture
+level: intermediate
+tags:
+  - concepts:oop
+  - concepts:design-patterns
+  - concepts:architecture
 ---
 
 # SOLID Principles

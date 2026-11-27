@@ -1,13 +1,12 @@
 ---
-tags:
-  - networking:tcp-ip
-  - concepts:routing
-level: intermediate
-category: networking
 audience:
   - audiences:network-engineers
   - audiences:devops
-
+category: networking
+level: intermediate
+tags:
+  - networking:tcp-ip
+  - concepts:routing
 ---
 
 # Routing

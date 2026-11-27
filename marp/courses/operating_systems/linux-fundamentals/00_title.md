@@ -1,17 +1,16 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+category: operating-systems
+duration_hours: 24
+level: beginner
 tags:
   - infrastructure:linux
   - infrastructure:unix
   - languages:shell
   - practices:command-line
   - audiences:sysadmin
-level: beginner
-category: operating-systems
-duration_hours: 24
-audience:
-  - audiences:developers
-  - audiences:sysadmins
-
 ---
 
 # Linux Fundamentals

@@ -1,17 +1,16 @@
 ---
-tags:
-  - networking:http
-  - networking:security
-  - security:web-security
-  - practices:scripting
-level: advanced
-category: networking
 audience:
   - audiences:security-engineers
   - audiences:network-engineers
   - audiences:devops
   - audiences:sysadmins
-
+category: networking
+level: advanced
+tags:
+  - networking:http
+  - networking:security
+  - security:web-security
+  - practices:scripting
 ---
 
 # Securing Web Applications with iRules

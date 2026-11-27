@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: database
+level: intermediate
 tags:
   - databases:elasticsearch
   - practices:observability
-level: intermediate
-category: database
-audience:
-  - audiences:developers
-
 ---
 
 # Search Analytics and Monitoring

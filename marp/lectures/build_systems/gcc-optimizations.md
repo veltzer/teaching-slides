@@ -1,13 +1,12 @@
 ---
-tags:
-- tools:gcc
-- concepts:performance
-- concepts:compilation
-level: advanced
-category: build-system
 audience:
-- audiences:developers
-
+  - audiences:developers
+category: build-system
+level: advanced
+tags:
+  - tools:gcc
+  - concepts:performance
+  - concepts:compilation
 ---
 
 # GCC CPU-Specific Optimization

@@ -1,13 +1,12 @@
 ---
-tags:
-  - data-and-ai:nlp
-  - concepts:deep-learning
-level: advanced
-category: ai
 audience:
   - audiences:developers
   - audiences:data-scientists
-
+category: ai
+level: advanced
+tags:
+  - data-and-ai:nlp
+  - concepts:deep-learning
 ---
 
 # Sequence Models: RNN, LSTM, GRU

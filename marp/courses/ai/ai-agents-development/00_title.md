@@ -1,12 +1,11 @@
 ---
-tags:
-  - data-and-ai:llm
-level: advanced
-category: machine-learning
-duration_hours: 24
 audience:
   - audiences:developers
-
+category: machine-learning
+duration_hours: 24
+level: advanced
+tags:
+  - data-and-ai:llm
 ---
 
 # AI Agents Development

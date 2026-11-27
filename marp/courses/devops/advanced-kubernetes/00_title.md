@@ -1,16 +1,15 @@
 ---
+audience:
+  - audiences:developers
+category: devops
+duration_hours: 24
+level: advanced
 tags:
   - tools:kubernetes
   - infrastructure:containers
   - practices:devops
   - languages:go
   - concepts:service-mesh
-level: advanced
-category: devops
-duration_hours: 24
-audience:
-  - audiences:developers
-
 ---
 
 # Advanced Kubernetes

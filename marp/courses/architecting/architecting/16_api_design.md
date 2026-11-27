@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:architects
+category: architecture
+level: advanced
 tags:
   - concepts:architecture
   - concepts:api-design
   - concepts:contracts
-level: advanced
-category: architecture
-audience:
-  - audiences:developers
-  - audiences:architects
-
 ---
 
 # API Design

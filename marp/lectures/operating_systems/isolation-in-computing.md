@@ -1,15 +1,14 @@
 ---
-tags:
-- concepts:isolation
-- concepts:security
-- concepts:virtualization
-- infrastructure:containers
-level: intermediate
-category: operating-systems
 audience:
-- audiences:developers
-- audiences:devops
-
+  - audiences:developers
+  - audiences:devops
+category: operating-systems
+level: intermediate
+tags:
+  - concepts:isolation
+  - concepts:security
+  - concepts:virtualization
+  - infrastructure:containers
 ---
 
 # Isolation in Computing

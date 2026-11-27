@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:developers
+category: big-data
+level: intermediate
 tags:
   - tools:spark
   - languages:scala
   - data-and-ai:big-data
   - data-and-ai:machine-learning
-level: intermediate
-category: big-data
-audience:
-  - audiences:developers
-
 ---
 
 # Spark MLlib

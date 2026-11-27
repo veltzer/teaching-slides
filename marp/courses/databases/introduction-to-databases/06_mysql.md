@@ -1,11 +1,10 @@
 ---
-tags:
-  - databases:mysql
-level: beginner
-category: database
 audience:
   - audiences:developers
-
+category: database
+level: beginner
+tags:
+  - databases:mysql
 ---
 
 # MySQL

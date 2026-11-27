@@ -1,12 +1,12 @@
 ---
-tags:
-  - practices:sre
-  - practices:monitoring
-level: intermediate
-category: architecture
 audience:
   - audiences:developers
   - audiences:devops
+category: architecture
+level: intermediate
+tags:
+  - practices:sre
+  - practices:monitoring
 ---
 
 # Monitoring and Alerting

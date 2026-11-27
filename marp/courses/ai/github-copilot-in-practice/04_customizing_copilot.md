@@ -1,17 +1,16 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:team-leads
+  - audiences:devops
+category: ai
+level: intermediate
 tags:
   - data-and-ai:ai
   - data-and-ai:generative-ai
   - concepts:code-generation
   - tools:github
   - practices:productivity
-level: intermediate
-category: ai
-audience:
-  - audiences:developers
-  - audiences:team-leads
-  - audiences:devops
-
 ---
 
 # Customizing Copilot for Your Repository

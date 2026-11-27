@@ -1,14 +1,13 @@
 ---
-tags:
-  - architecture:system-design
-  - concepts:scalability
-level: intermediate
-category: architecture
-duration_hours: 24
 audience:
   - audiences:developers
   - audiences:architects
-
+category: architecture
+duration_hours: 24
+level: intermediate
+tags:
+  - architecture:system-design
+  - concepts:scalability
 ---
 
 # System Design

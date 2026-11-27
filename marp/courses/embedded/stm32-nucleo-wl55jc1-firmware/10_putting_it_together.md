@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:embedded-engineers
+  - audiences:developers
+category: embedded
+level: advanced
 tags:
   - hardware-and-embedded:embedded
   - hardware-and-embedded:hardware-programming
   - infrastructure:real-time
-level: advanced
-category: embedded
-audience:
-  - audiences:embedded-engineers
-  - audiences:developers
-
 ---
 
 # Putting It Together

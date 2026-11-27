@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: networking
+level: intermediate
 tags:
   - networking:rest
   - practices:documentation
-level: intermediate
-category: networking
-audience:
-  - audiences:developers
-
 ---
 
 # Documentation and OpenAPI

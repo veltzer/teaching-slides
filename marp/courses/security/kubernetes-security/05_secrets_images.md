@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:devops
+category: security
+level: intermediate
 tags:
   - security:kubernetes
   - concepts:secrets
   - concepts:images
-level: intermediate
-category: security
-audience:
-  - audiences:devops
-
 ---
 
 # Secrets and Image Security

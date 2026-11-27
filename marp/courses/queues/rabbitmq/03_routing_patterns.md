@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: message-queue
+level: intermediate
 tags:
   - tools:rabbitmq
   - data-and-ai:routing
-level: intermediate
-category: message-queue
-audience:
-  - audiences:developers
-
 ---
 
 # Routing Patterns

@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: language
+level: beginner
 tags:
   - languages:rust
   - concepts:programming
-level: beginner
-category: language
-audience:
-  - audiences:developers
-
 ---
 
 # Rust Fundamentals

@@ -1,11 +1,10 @@
 ---
-tags:
-  - databases:elasticsearch
-level: intermediate
-category: database
 audience:
   - audiences:dbas
-
+category: database
+level: intermediate
+tags:
+  - databases:elasticsearch
 ---
 
 # High Availability

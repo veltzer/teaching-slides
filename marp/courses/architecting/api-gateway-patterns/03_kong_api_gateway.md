@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: architecture
+level: intermediate
 tags:
   - architecture:api-gateway
   - tools:kong
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-
 ---
 
 # Kong API Gateway

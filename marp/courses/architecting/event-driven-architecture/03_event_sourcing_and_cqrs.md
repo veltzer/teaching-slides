@@ -1,13 +1,12 @@
 ---
-tags:
-  - architecture:event-sourcing
-  - architecture:cqrs
-level: advanced
-category: architecture
 audience:
   - audiences:developers
   - audiences:architects
-
+category: architecture
+level: advanced
+tags:
+  - architecture:event-sourcing
+  - architecture:cqrs
 ---
 
 # Event Sourcing and CQRS

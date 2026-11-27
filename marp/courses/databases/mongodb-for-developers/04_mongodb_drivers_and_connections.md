@@ -1,11 +1,10 @@
 ---
-tags:
-  - databases:mongodb
-level: intermediate
-category: database
 audience:
   - audiences:developers
-
+category: database
+level: intermediate
+tags:
+  - databases:mongodb
 ---
 
 # MongoDB Drivers and Connections

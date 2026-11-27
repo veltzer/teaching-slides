@@ -1,16 +1,15 @@
 ---
-tags:
-  - networking:tcp-ip
-  - networking:protocols
-  - infrastructure:networking
-level: intermediate
-category: networking
-duration_hours: 16
 audience:
   - audiences:developers
   - audiences:devops
   - audiences:network-engineers
-
+category: networking
+duration_hours: 16
+level: intermediate
+tags:
+  - networking:tcp-ip
+  - networking:protocols
+  - infrastructure:networking
 ---
 
 # TCP/IP Deep Dive

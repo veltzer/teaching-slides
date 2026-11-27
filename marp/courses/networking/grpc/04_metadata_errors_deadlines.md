@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: networking
+level: intermediate
 tags:
   - networking:grpc
   - concepts:metadata
-level: intermediate
-category: networking
-audience:
-  - audiences:developers
-
 ---
 
 # Metadata, Errors, and Deadlines

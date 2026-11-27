@@ -1,15 +1,14 @@
 ---
-tags:
-- concepts:ai
-- concepts:workflows
-- concepts:agents
-- concepts:llm
-- concepts:orchestration
-level: intermediate
-category: ai
 audience:
-- audiences:developers
-
+  - audiences:developers
+category: ai
+level: intermediate
+tags:
+  - concepts:ai
+  - concepts:workflows
+  - concepts:agents
+  - concepts:llm
+  - concepts:orchestration
 ---
 
 # Workflows and Dynamic Workflows

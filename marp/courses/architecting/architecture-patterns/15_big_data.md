@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:architects
+category: architecture
+level: intermediate
 tags:
   - concepts:architecture
   - concepts:big-data
   - infrastructure:cloud
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-  - audiences:architects
-
 ---
 
 # Architecting Systems for Big Data

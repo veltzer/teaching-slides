@@ -1,11 +1,10 @@
 ---
-tags:
-  - infrastructure:kubernetes
-level: intermediate
-category: containers
 audience:
   - audiences:developers
-
+category: containers
+level: intermediate
+tags:
+  - infrastructure:kubernetes
 ---
 
 # ReplicaSets and Deployments

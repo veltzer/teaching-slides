@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: database
+duration_hours: 24
+level: intermediate
 tags:
   - databases:postgresql
   - databases:sql
-level: intermediate
-category: database
-duration_hours: 24
-audience:
-  - audiences:developers
-
 ---
 
 # PostgreSQL for Developers

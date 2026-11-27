@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: architecture
+level: intermediate
 tags:
   - architecture:api-gateway
   - architecture:auth
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-
 ---
 
 # Authentication and Authorisation

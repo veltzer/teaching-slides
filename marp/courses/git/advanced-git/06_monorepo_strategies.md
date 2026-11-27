@@ -1,13 +1,12 @@
 ---
-tags:
-  - tools:git
-  - concepts:monorepo
-level: advanced
-category: version-control
 audience:
   - audiences:developers
   - audiences:devops
-
+category: version-control
+level: advanced
+tags:
+  - tools:git
+  - concepts:monorepo
 ---
 
 # Monorepo Strategies

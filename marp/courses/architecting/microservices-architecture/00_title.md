@@ -1,16 +1,15 @@
 ---
-tags:
-  - concepts:microservices
-  - concepts:architecture
-  - concepts:distributed-systems
-level: intermediate
-category: architecture
-duration_hours: 16
 audience:
   - audiences:developers
   - audiences:architects
   - audiences:devops
-
+category: architecture
+duration_hours: 16
+level: intermediate
+tags:
+  - concepts:microservices
+  - concepts:architecture
+  - concepts:distributed-systems
 ---
 
 # Microservices Architecture

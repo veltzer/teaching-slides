@@ -1,16 +1,15 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+  - audiences:devops
+category: language
+level: intermediate
 tags:
   - languages:bash
   - practices:scripting
   - infrastructure:linux
   - practices:automation
-level: intermediate
-category: language
-audience:
-  - audiences:developers
-  - audiences:sysadmins
-  - audiences:devops
-
 ---
 
 # Expansion: Brace and Comma

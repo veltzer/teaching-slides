@@ -1,13 +1,12 @@
 ---
-tags:
-  - networking:dns
-  - concepts:resolvers
-level: intermediate
-category: networking
 audience:
   - audiences:sysadmins
   - audiences:devops
-
+category: networking
+level: intermediate
+tags:
+  - networking:dns
+  - concepts:resolvers
 ---
 
 # Recursive Resolvers and Caching

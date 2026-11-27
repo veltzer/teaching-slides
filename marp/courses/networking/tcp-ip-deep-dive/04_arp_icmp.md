@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: networking
+level: intermediate
 tags:
   - networking:tcp-ip
   - concepts:arp
   - concepts:icmp
-level: intermediate
-category: networking
-audience:
-  - audiences:developers
-
 ---
 
 # ARP and ICMP

@@ -1,11 +1,10 @@
 ---
-tags:
-  - architecture:hexagonal
-level: intermediate
-category: architecture
 audience:
   - audiences:architects
-
+category: architecture
+level: intermediate
+tags:
+  - architecture:hexagonal
 ---
 
 # Ports and Adapters (Hexagonal)

@@ -1,13 +1,12 @@
 ---
-tags:
-  - databases:duckdb
-level: intermediate
-category: database
-duration_hours: 8
 audience:
   - audiences:developers
   - audiences:data-engineers
-
+category: database
+duration_hours: 8
+level: intermediate
+tags:
+  - databases:duckdb
 ---
 
 # DuckDB

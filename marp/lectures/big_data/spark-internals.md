@@ -1,14 +1,13 @@
 ---
-tags:
-- tools:spark
-- data-and-ai:big-data
-- concepts:distributed-systems
-level: advanced
-category: big-data
 audience:
-- audiences:developers
-- audiences:data-engineers
-
+  - audiences:developers
+  - audiences:data-engineers
+category: big-data
+level: advanced
+tags:
+  - tools:spark
+  - data-and-ai:big-data
+  - concepts:distributed-systems
 ---
 
 # Spark Internals: From Query to Execution

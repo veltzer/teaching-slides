@@ -1,16 +1,15 @@
 ---
+audience:
+  - audiences:data-scientists
+category: ai
+duration_hours: 40
+level: intermediate
 tags:
   - data-and-ai:ai
   - data-and-ai:generative-ai
   - languages:python
   - data-and-ai:prompt-engineering
   - concepts:ethics
-level: intermediate
-category: ai
-duration_hours: 40
-audience:
-  - audiences:data-scientists
-
 ---
 
 # Generative Ai Applications

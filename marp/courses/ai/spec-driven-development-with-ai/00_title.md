@@ -1,4 +1,11 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:team-leads
+  - audiences:architects
+category: ai
+duration_hours: 8
+level: intermediate
 tags:
   - data-and-ai:ai
   - data-and-ai:generative-ai
@@ -6,14 +13,6 @@ tags:
   - concepts:code-generation
   - practices:methodology
   - practices:productivity
-level: intermediate
-category: ai
-duration_hours: 8
-audience:
-  - audiences:developers
-  - audiences:team-leads
-  - audiences:architects
-
 ---
 
 # Spec-Driven Development with AI

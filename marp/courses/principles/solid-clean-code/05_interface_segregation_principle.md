@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: design-patterns
+level: intermediate
 tags:
   - concepts:solid
   - concepts:isp
-level: intermediate
-category: design-patterns
-audience:
-  - audiences:developers
-
 ---
 
 # Interface Segregation Principle (ISP)

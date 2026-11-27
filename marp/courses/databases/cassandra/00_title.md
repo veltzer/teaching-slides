@@ -1,13 +1,12 @@
 ---
-tags:
-  - databases:cassandra
-level: intermediate
-category: database
-duration_hours: 16
 audience:
   - audiences:developers
   - audiences:dba
-
+category: database
+duration_hours: 16
+level: intermediate
+tags:
+  - databases:cassandra
 ---
 
 # Cassandra

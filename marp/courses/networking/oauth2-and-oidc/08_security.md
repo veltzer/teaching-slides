@@ -1,13 +1,12 @@
 ---
-tags:
-  - security:oauth2
-  - concepts:best-practices
-level: intermediate
-category: security
 audience:
   - audiences:developers
   - audiences:security-professionals
-
+category: security
+level: intermediate
+tags:
+  - security:oauth2
+  - concepts:best-practices
 ---
 
 # OAuth2 Security Best Practices

@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:devops
+category: networking
+level: beginner
 tags:
   - networking:sdn
   - networking:containers
   - networking:kubernetes
-level: beginner
-category: networking
-audience:
-  - audiences:developers
-  - audiences:devops
-
 ---
 
 # Modern Networking

@@ -1,12 +1,11 @@
 ---
-tags:
-  - concepts:partitioning
-level: intermediate
-category: architecture
 audience:
   - audiences:developers
   - audiences:architects
-
+category: architecture
+level: intermediate
+tags:
+  - concepts:partitioning
 ---
 
 # Partitioning (Sharding)

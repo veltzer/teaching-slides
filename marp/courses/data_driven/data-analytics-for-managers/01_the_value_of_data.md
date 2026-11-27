@@ -1,11 +1,10 @@
 ---
-tags:
-  - data-and-ai:data-analytics
-level: beginner
-category: data-driven
 audience:
   - audiences:managers
-
+category: data-driven
+level: beginner
+tags:
+  - data-and-ai:data-analytics
 ---
 
 # The Value of Data

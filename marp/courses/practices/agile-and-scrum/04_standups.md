@@ -1,13 +1,12 @@
 ---
-tags:
-  - practices:scrum
-  - practices:standups
-level: beginner
-category: practices
 audience:
   - audiences:developers
   - audiences:team-leads
-
+category: practices
+level: beginner
+tags:
+  - practices:scrum
+  - practices:standups
 ---
 
 # Standups (Daily Scrum)

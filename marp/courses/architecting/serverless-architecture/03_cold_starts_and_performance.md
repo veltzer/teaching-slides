@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: architecture
+level: intermediate
 tags:
   - architecture:serverless
   - architecture:performance
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-
 ---
 
 # Cold Starts and Performance

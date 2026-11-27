@@ -1,12 +1,11 @@
 ---
-tags:
-  - databases:cockroachdb
-level: intermediate
-category: database
 audience:
   - audiences:developers
   - audiences:dba
-
+category: database
+level: intermediate
+tags:
+  - databases:cockroachdb
 ---
 
 # Multi-Region

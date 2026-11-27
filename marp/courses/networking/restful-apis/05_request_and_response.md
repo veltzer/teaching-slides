@@ -1,11 +1,10 @@
 ---
-tags:
-  - networking:rest
-level: intermediate
-category: networking
 audience:
   - audiences:developers
-
+category: networking
+level: intermediate
+tags:
+  - networking:rest
 ---
 
 # Request and Response

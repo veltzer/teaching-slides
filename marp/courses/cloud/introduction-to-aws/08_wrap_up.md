@@ -1,14 +1,13 @@
 ---
-tags:
-  - infrastructure:cloud
-  - infrastructure:aws
-level: beginner
-category: cloud
 audience:
   - audiences:developers
   - audiences:sysadmins
   - audiences:managers
-
+category: cloud
+level: beginner
+tags:
+  - infrastructure:cloud
+  - infrastructure:aws
 ---
 
 # Course Wrap-Up

@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:data-analysts
+category: data-science
+level: beginner
 tags:
   - data-and-ai:eda
   - data-and-ai:pandas
-level: beginner
-category: data-science
-audience:
-  - audiences:data-analysts
-
 ---
 
 # Exploratory Data Analysis

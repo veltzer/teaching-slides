@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:team-leads
+category: practices
+level: beginner
 tags:
   - practices:agile
   - practices:user-stories
   - practices:estimation
-level: beginner
-category: practices
-audience:
-  - audiences:developers
-  - audiences:team-leads
-
 ---
 
 # User Stories and Estimation

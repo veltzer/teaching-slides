@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: security
+level: intermediate
 tags:
   - security:oauth2
   - concepts:tokens
-level: intermediate
-category: security
-audience:
-  - audiences:developers
-
 ---
 
 # Tokens: Access, Refresh, and ID

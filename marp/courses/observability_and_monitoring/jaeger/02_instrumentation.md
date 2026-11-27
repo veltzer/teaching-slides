@@ -1,12 +1,11 @@
 ---
-tags:
-  - observability:tracing
-level: intermediate
-category: observability
 audience:
   - audiences:devops
   - audiences:developers
-
+category: observability
+level: intermediate
+tags:
+  - observability:tracing
 ---
 
 # Instrumentation

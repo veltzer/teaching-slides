@@ -1,14 +1,13 @@
 ---
-tags:
-- concepts:ai
-- concepts:llm
-- concepts:tools
-- concepts:agents
-level: intermediate
-category: ai
 audience:
-- audiences:developers
-
+  - audiences:developers
+category: ai
+level: intermediate
+tags:
+  - concepts:ai
+  - concepts:llm
+  - concepts:tools
+  - concepts:agents
 ---
 
 # The LLM Ecosystem

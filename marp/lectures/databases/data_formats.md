@@ -1,15 +1,14 @@
 ---
-tags:
-- concepts:data-formats
-- concepts:serialization
-- concepts:databases
-level: beginner
-category: database
 audience:
-- audiences:developers
-- audiences:data-engineers
-- audiences:data-scientists
-
+  - audiences:developers
+  - audiences:data-engineers
+  - audiences:data-scientists
+category: database
+level: beginner
+tags:
+  - concepts:data-formats
+  - concepts:serialization
+  - concepts:databases
 ---
 
 # Data Formats

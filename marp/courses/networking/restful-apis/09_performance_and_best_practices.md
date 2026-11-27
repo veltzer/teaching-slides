@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: networking
+level: intermediate
 tags:
   - networking:rest
   - practices:performance
-level: intermediate
-category: networking
-audience:
-  - audiences:developers
-
 ---
 
 # Performance and Best Practices

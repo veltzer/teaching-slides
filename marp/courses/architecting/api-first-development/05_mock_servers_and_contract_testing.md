@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: architecture
+level: intermediate
 tags:
   - architecture:openapi
   - practices:contract-testing
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-
 ---
 
 # Mock Servers and Contract Testing

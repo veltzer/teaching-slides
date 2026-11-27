@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: language
+level: advanced
 tags:
   - languages:rust
   - concepts:programming
-level: advanced
-category: language
-audience:
-  - audiences:developers
-
 ---
 
 # Async Programming

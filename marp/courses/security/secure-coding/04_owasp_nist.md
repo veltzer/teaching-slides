@@ -1,4 +1,10 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:devops
+  - audiences:security-professionals
+category: security
+level: intermediate
 tags:
   - security:secure-coding
   - security:owasp
@@ -6,12 +12,6 @@ tags:
   - languages:c
   - languages:c++
   - languages:python
-level: intermediate
-category: security
-audience:
-  - audiences:developers
-  - audiences:devops
-  - audiences:security-professionals
 ---
 
 # OWASP and NIST

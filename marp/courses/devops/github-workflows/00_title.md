@@ -1,17 +1,16 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:devops
+  - audiences:managers
+category: devops
+duration_hours: 8
+level: intermediate
 tags:
   - tools:github
   - practices:ci-cd
   - practices:automation
   - practices:devops
-level: intermediate
-category: devops
-duration_hours: 8
-audience:
-  - audiences:developers
-  - audiences:devops
-  - audiences:managers
-
 ---
 
 # Github Workflows

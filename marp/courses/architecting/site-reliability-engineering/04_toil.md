@@ -1,12 +1,12 @@
 ---
-tags:
-  - practices:sre
-  - practices:automation
-level: intermediate
-category: architecture
 audience:
   - audiences:devops
   - audiences:developers
+category: architecture
+level: intermediate
+tags:
+  - practices:sre
+  - practices:automation
 ---
 
 # Toil and Automation

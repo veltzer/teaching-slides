@@ -1,13 +1,12 @@
 ---
-tags:
-  - concepts:microservices
-  - concepts:databases
-level: intermediate
-category: architecture
 audience:
   - audiences:developers
   - audiences:architects
-
+category: architecture
+level: intermediate
+tags:
+  - concepts:microservices
+  - concepts:databases
 ---
 
 # Data Management Patterns

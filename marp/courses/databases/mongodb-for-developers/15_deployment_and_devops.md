@@ -1,13 +1,12 @@
 ---
-tags:
-  - databases:mongodb
-  - infrastructure:devops
-level: intermediate
-category: database
 audience:
   - audiences:developers
   - audiences:devops
-
+category: database
+level: intermediate
+tags:
+  - databases:mongodb
+  - infrastructure:devops
 ---
 
 # Deployment and DevOps

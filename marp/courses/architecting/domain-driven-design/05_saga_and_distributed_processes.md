@@ -1,13 +1,12 @@
 ---
-tags:
-  - concepts:domain-driven-design
-  - architecture:saga
-level: advanced
-category: architecture
 audience:
   - audiences:architects
   - audiences:developers
-
+category: architecture
+level: advanced
+tags:
+  - concepts:domain-driven-design
+  - architecture:saga
 ---
 
 # Saga Pattern and Distributed Processes

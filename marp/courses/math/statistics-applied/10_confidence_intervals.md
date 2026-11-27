@@ -1,13 +1,12 @@
 ---
-tags:
-  - math:inferential-statistics
-  - math:estimation
-level: beginner
-category: math
 audience:
   - audiences:data-analysts
   - audiences:developers
-
+category: math
+level: beginner
+tags:
+  - math:inferential-statistics
+  - math:estimation
 ---
 
 # Confidence Intervals

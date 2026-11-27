@@ -1,16 +1,16 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:devops
+  - audiences:security-professionals
+category: security
+level: intermediate
 tags:
   - security:secure-coding
   - data-and-ai:ai
   - data-and-ai:machine-learning
   - security:owasp
   - security:compliance
-level: intermediate
-category: security
-audience:
-  - audiences:developers
-  - audiences:devops
-  - audiences:security-professionals
 ---
 
 # Secure AI Development

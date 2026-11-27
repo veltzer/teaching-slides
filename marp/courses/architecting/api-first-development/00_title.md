@@ -1,15 +1,14 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:architects
+category: architecture
+duration_hours: 16
+level: intermediate
 tags:
   - architecture:api
   - architecture:openapi
   - practices:design
-level: intermediate
-category: architecture
-duration_hours: 16
-audience:
-  - audiences:developers
-  - audiences:architects
-
 ---
 
 # API-First Development

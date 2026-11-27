@@ -1,11 +1,11 @@
 ---
-tags:
-  - security:cryptography
-level: intermediate
-category: security
 audience:
   - audiences:developers
   - audiences:security-professionals
+category: security
+level: intermediate
+tags:
+  - security:cryptography
 ---
 
 # Cryptography Concepts

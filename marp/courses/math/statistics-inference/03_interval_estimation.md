@@ -1,13 +1,12 @@
 ---
-tags:
-  - math:estimation
-  - math:inferential-statistics
-level: intermediate
-category: math
 audience:
   - audiences:data-analysts
   - audiences:data-scientists
-
+category: math
+level: intermediate
+tags:
+  - math:estimation
+  - math:inferential-statistics
 ---
 
 # Interval Estimation Revisited

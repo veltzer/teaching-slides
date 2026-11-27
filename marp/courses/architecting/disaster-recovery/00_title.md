@@ -1,14 +1,13 @@
 ---
-tags:
-  - architecture:patterns
-  - practices:reliability
-level: intermediate
-category: architecture
-duration_hours: 16
 audience:
   - audiences:architects
   - audiences:devops
-
+category: architecture
+duration_hours: 16
+level: intermediate
+tags:
+  - architecture:patterns
+  - practices:reliability
 ---
 
 # Disaster Recovery

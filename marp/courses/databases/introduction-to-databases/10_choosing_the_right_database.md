@@ -1,12 +1,11 @@
 ---
-tags:
-  - databases:choosing
-level: beginner
-category: database
 audience:
   - audiences:developers
   - audiences:architects
-
+category: database
+level: beginner
+tags:
+  - databases:choosing
 ---
 
 # Choosing the Right Database

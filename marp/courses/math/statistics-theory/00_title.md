@@ -1,17 +1,16 @@
 ---
+audience:
+  - audiences:data-scientists
+  - audiences:ml-engineers
+  - audiences:senior-developers
+category: math
+duration_hours: 40
+level: advanced
 tags:
   - math:probability
   - math:inferential-statistics
   - math:estimation
   - languages:python
-level: advanced
-category: math
-duration_hours: 40
-audience:
-  - audiences:data-scientists
-  - audiences:ml-engineers
-  - audiences:senior-developers
-
 ---
 
 # Statistical Theory

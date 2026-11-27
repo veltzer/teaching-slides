@@ -1,17 +1,16 @@
 ---
-tags:
-  - infrastructure:cloud
-  - infrastructure:aws
-  - infrastructure:azure
-  - infrastructure:gcp
-level: beginner
-category: cloud
 audience:
   - audiences:developers
   - audiences:sysadmins
   - audiences:devops
   - audiences:managers
-
+category: cloud
+level: beginner
+tags:
+  - infrastructure:cloud
+  - infrastructure:aws
+  - infrastructure:azure
+  - infrastructure:gcp
 ---
 
 # Overview of Major Cloud Providers

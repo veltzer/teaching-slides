@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+category: operating-systems
+level: beginner
 tags:
   - infrastructure:linux
   - infrastructure:unix
   - practices:command-line
-level: beginner
-category: operating-systems
-audience:
-  - audiences:developers
-  - audiences:sysadmins
-
 ---
 
 # Introduction to UNIX

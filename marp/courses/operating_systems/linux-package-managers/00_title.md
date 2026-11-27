@@ -1,17 +1,16 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+  - audiences:devops
+category: operating-systems
+duration_hours: 16
+level: intermediate
 tags:
   - infrastructure:linux
   - infrastructure:unix
   - practices:command-line
   - audiences:sysadmin
-level: intermediate
-category: operating-systems
-duration_hours: 16
-audience:
-  - audiences:developers
-  - audiences:sysadmins
-  - audiences:devops
-
 ---
 
 # Linux Package Managers

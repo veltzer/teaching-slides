@@ -1,12 +1,12 @@
 ---
-tags:
-  - practices:sre
-  - practices:release-engineering
-level: intermediate
-category: architecture
 audience:
   - audiences:developers
   - audiences:devops
+category: architecture
+level: intermediate
+tags:
+  - practices:sre
+  - practices:release-engineering
 ---
 
 # Release Engineering and Capacity Planning

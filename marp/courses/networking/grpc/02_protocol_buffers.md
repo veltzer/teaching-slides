@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: networking
+level: intermediate
 tags:
   - networking:grpc
   - tools:protobuf
-level: intermediate
-category: networking
-audience:
-  - audiences:developers
-
 ---
 
 # Protocol Buffers

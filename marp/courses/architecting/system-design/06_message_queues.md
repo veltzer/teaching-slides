@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: architecture
+level: intermediate
 tags:
   - architecture:system-design
   - architecture:queues
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-
 ---
 
 # Message Queues

@@ -1,13 +1,12 @@
 ---
-tags:
-  - networking:dns
-  - concepts:fundamentals
-level: intermediate
-category: networking
 audience:
   - audiences:developers
   - audiences:sysadmins
-
+category: networking
+level: intermediate
+tags:
+  - networking:dns
+  - concepts:fundamentals
 ---
 
 # DNS Fundamentals and Resolution

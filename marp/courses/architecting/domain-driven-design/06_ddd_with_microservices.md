@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:architects
+category: architecture
+level: advanced
 tags:
   - concepts:domain-driven-design
   - concepts:microservices
   - concepts:design-patterns
-level: advanced
-category: architecture
-audience:
-  - audiences:architects
-
 ---
 
 # DDD With Microservices and Hexagonal Architecture

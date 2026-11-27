@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: database
+level: intermediate
 tags:
   - databases:mongodb
   - architecture:patterns
-level: intermediate
-category: database
-audience:
-  - audiences:developers
-
 ---
 
 # Application Patterns

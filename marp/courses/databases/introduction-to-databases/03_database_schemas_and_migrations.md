@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: database
+level: beginner
 tags:
   - databases:schemas
   - databases:migrations
-level: beginner
-category: database
-audience:
-  - audiences:developers
-
 ---
 
 # Database Schemas and Migrations

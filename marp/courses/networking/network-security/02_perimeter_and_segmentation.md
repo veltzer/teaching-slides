@@ -1,12 +1,11 @@
 ---
-tags:
-  - security:network
-level: intermediate
-category: networking
 audience:
   - audiences:devops
   - audiences:security
-
+category: networking
+level: intermediate
+tags:
+  - security:network
 ---
 
 # Perimeter and Segmentation

@@ -1,13 +1,12 @@
 ---
-tags:
-  - concepts:clean-code
-  - concepts:quality
-level: intermediate
-category: design-patterns
 audience:
   - audiences:developers
   - audiences:architects
-
+category: design-patterns
+level: intermediate
+tags:
+  - concepts:clean-code
+  - concepts:quality
 ---
 
 # Introduction to Software Quality and Design Principles

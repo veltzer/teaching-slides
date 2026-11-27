@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:security-professionals
+category: security
+duration_hours: 40
+level: advanced
 tags:
   - infrastructure:linux
   - security:forensics
   - security:security
-level: advanced
-category: security
-duration_hours: 40
-audience:
-  - audiences:security-professionals
-
 ---
 
 # Linux Forensics

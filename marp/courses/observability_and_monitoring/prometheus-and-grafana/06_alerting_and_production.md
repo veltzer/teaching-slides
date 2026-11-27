@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:devops
+category: observability
+level: intermediate
 tags:
   - observability:prometheus
   - observability:grafana
-level: intermediate
-category: observability
-audience:
-  - audiences:devops
-
 ---
 
 # Alerting and Production

@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: database
+level: intermediate
 tags:
   - databases:mongodb
   - databases:design
-level: intermediate
-category: database
-audience:
-  - audiences:developers
-
 ---
 
 # Document Model and Schema Design

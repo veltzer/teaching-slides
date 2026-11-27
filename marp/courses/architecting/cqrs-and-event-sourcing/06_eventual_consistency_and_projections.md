@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:architects
+  - audiences:developers
+category: architecture
+level: advanced
 tags:
   - architecture:cqrs
   - architecture:event-sourcing
   - concepts:distributed-systems
-level: advanced
-category: architecture
-audience:
-  - audiences:architects
-  - audiences:developers
-
 ---
 
 # Eventual Consistency and Projections

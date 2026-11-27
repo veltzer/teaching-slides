@@ -1,13 +1,12 @@
 ---
-tags:
-  - infrastructure:real-time
-  - infrastructure:memory
-level: advanced
-category: real-time
 audience:
   - audiences:embedded-engineers
   - audiences:developers
-
+category: real-time
+level: advanced
+tags:
+  - infrastructure:real-time
+  - infrastructure:memory
 ---
 
 # Real-Time and Memory Allocations

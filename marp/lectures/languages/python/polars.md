@@ -1,16 +1,15 @@
 ---
-tags:
-- languages:python
-- concepts:data-science
-- concepts:dataframes
-- concepts:performance
-- tools:polars
-level: intermediate
-category: language
 audience:
-- audiences:developers
-- audiences:data-scientists
-
+  - audiences:developers
+  - audiences:data-scientists
+category: language
+level: intermediate
+tags:
+  - languages:python
+  - concepts:data-science
+  - concepts:dataframes
+  - concepts:performance
+  - tools:polars
 ---
 
 # Polars and Python

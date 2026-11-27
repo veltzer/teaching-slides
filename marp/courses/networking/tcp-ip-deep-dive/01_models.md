@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: networking
+level: intermediate
 tags:
   - networking:tcp-ip
   - concepts:layers
-level: intermediate
-category: networking
-audience:
-  - audiences:developers
-
 ---
 
 # OSI and TCP/IP Models

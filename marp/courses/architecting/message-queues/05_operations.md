@@ -1,13 +1,12 @@
 ---
-tags:
-  - architecture:patterns
-  - messaging:overview
-level: intermediate
-category: architecture
 audience:
   - audiences:architects
   - audiences:developers
-
+category: architecture
+level: intermediate
+tags:
+  - architecture:patterns
+  - messaging:overview
 ---
 
 # Operations

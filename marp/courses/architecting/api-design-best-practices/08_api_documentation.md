@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: architecture
+level: intermediate
 tags:
   - concepts:api
   - concepts:best-practices
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-
 ---
 
 # API Documentation

@@ -1,11 +1,10 @@
 ---
-tags:
-  - databases:relational
-level: beginner
-category: database
 audience:
   - audiences:developers
-
+category: database
+level: beginner
+tags:
+  - databases:relational
 ---
 
 # Relational Database Concepts

@@ -1,13 +1,12 @@
 ---
-tags:
-- concepts:virtualization
-- concepts:linux-kernel
-- concepts:io
-level: advanced
-category: operating-systems
 audience:
-- audiences:developers
-
+  - audiences:developers
+category: operating-systems
+level: advanced
+tags:
+  - concepts:virtualization
+  - concepts:linux-kernel
+  - concepts:io
 ---
 
 # Understanding Linux Virtio and Queue Management

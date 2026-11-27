@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:data-scientists
+category: machine-learning
+level: intermediate
 tags:
   - data-and-ai:deep-learning
   - tools:pytorch
   - tools:tensorflow
-level: intermediate
-category: machine-learning
-audience:
-  - audiences:developers
-  - audiences:data-scientists
-
 ---
 
 # Deep Learning Frameworks

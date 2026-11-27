@@ -1,12 +1,11 @@
 ---
-tags:
-  - architecture:api
-level: intermediate
-category: architecture
 audience:
   - audiences:developers
   - audiences:architects
-
+category: architecture
+level: intermediate
+tags:
+  - architecture:api
 ---
 
 # Introduction to API-First Design

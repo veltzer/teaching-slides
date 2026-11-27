@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:developers
+category: game-development
+duration_hours: 24
+level: beginner
 tags:
   - tools:unity
   - practices:game-development
   - practices:scripting
-level: beginner
-category: game-development
-duration_hours: 24
-audience:
-  - audiences:developers
-
 ---
 
 # Introduction to Game Development with Unity

@@ -1,11 +1,10 @@
 ---
-tags:
-  - observability:opentelemetry
-level: intermediate
-category: observability
 audience:
   - audiences:devops
-
+category: observability
+level: intermediate
+tags:
+  - observability:opentelemetry
 ---
 
 # Logs

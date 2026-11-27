@@ -1,16 +1,15 @@
 ---
-tags:
-  - networking:http
-  - practices:scripting
-  - practices:performance
-level: advanced
-category: networking
 audience:
   - audiences:security-engineers
   - audiences:network-engineers
   - audiences:devops
   - audiences:sysadmins
-
+category: networking
+level: advanced
+tags:
+  - networking:http
+  - practices:scripting
+  - practices:performance
 ---
 
 # Working with Numbers and Strings

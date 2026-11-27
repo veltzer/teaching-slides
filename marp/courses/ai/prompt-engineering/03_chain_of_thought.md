@@ -1,11 +1,10 @@
 ---
-tags:
-  - data-and-ai:llm
-level: intermediate
-category: machine-learning
 audience:
   - audiences:developers
-
+category: machine-learning
+level: intermediate
+tags:
+  - data-and-ai:llm
 ---
 
 # Chain of Thought

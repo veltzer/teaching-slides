@@ -1,13 +1,12 @@
 ---
-tags:
-  - networking:wifi
-  - networking:physical-layer
-level: intermediate
-category: networking
 audience:
   - audiences:developers
   - audiences:embedded-engineers
-
+category: networking
+level: intermediate
+tags:
+  - networking:wifi
+  - networking:physical-layer
 ---
 
 # Underlying Ideas

@@ -1,15 +1,14 @@
 ---
-tags:
-- tools:azure
-- practices:project-management
-- practices:agile
-level: beginner
-category: cloud
 audience:
-- audiences:developers
-- audiences:managers
-- audiences:devops
-
+  - audiences:developers
+  - audiences:managers
+  - audiences:devops
+category: cloud
+level: beginner
+tags:
+  - tools:azure
+  - practices:project-management
+  - practices:agile
 ---
 
 # Azure Boards: Best Practices Guide

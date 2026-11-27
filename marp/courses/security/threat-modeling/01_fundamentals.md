@@ -1,13 +1,12 @@
 ---
-tags:
-  - security:threat-modeling
-  - concepts:fundamentals
-level: intermediate
-category: security
 audience:
   - audiences:developers
   - audiences:security-professionals
-
+category: security
+level: intermediate
+tags:
+  - security:threat-modeling
+  - concepts:fundamentals
 ---
 
 # Threat Modeling Fundamentals

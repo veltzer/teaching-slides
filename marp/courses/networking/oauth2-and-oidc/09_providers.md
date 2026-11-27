@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: security
+level: intermediate
 tags:
   - security:oauth2
   - tools:auth0
   - tools:keycloak
-level: intermediate
-category: security
-audience:
-  - audiences:developers
-
 ---
 
 # Real Providers and Integration

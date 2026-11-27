@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: design-patterns
+level: intermediate
 tags:
   - concepts:design-patterns
   - concepts:behavioural-patterns
-level: intermediate
-category: design-patterns
-audience:
-  - audiences:developers
-
 ---
 
 # Behavioural Design Patterns

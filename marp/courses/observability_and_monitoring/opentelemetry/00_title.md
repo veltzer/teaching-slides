@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: observability-and-monitoring
+duration_hours: 16
+level: intermediate
 tags:
   - infrastructure:opentelemetry
   - practices:observability
-level: intermediate
-category: observability-and-monitoring
-duration_hours: 16
-audience:
-  - audiences:developers
-
 ---
 
 # OpenTelemetry

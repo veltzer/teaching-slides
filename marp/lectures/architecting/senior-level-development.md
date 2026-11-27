@@ -1,15 +1,14 @@
 ---
-tags:
-- concepts:architecture
-- practices:leadership
-- practices:code-quality
-level: advanced
-category: architecture
 audience:
-- audiences:developers
-- audiences:architects
-- audiences:managers
-
+  - audiences:developers
+  - audiences:architects
+  - audiences:managers
+category: architecture
+level: advanced
+tags:
+  - concepts:architecture
+  - practices:leadership
+  - practices:code-quality
 ---
 
 # Correct Development

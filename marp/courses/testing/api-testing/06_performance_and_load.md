@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:qa
+category: testing
+level: intermediate
 tags:
   - practices:api-testing
   - practices:performance
-level: intermediate
-category: testing
-audience:
-  - audiences:qa
-
 ---
 
 # Performance and Load Testing

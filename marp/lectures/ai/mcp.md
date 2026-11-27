@@ -1,15 +1,14 @@
 ---
-tags:
-- concepts:ai
-- concepts:agents
-- concepts:llm
-- concepts:tools
-- concepts:mcp
-level: intermediate
-category: ai
 audience:
-- audiences:developers
-
+  - audiences:developers
+category: ai
+level: intermediate
+tags:
+  - concepts:ai
+  - concepts:agents
+  - concepts:llm
+  - concepts:tools
+  - concepts:mcp
 ---
 
 # The Model Context Protocol

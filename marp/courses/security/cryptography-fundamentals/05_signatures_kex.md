@@ -1,12 +1,12 @@
 ---
-tags:
-  - security:cryptography
-  - security:signatures
-level: intermediate
-category: security
 audience:
   - audiences:developers
   - audiences:security-professionals
+category: security
+level: intermediate
+tags:
+  - security:cryptography
+  - security:signatures
 ---
 
 # Digital Signatures and Key Exchange

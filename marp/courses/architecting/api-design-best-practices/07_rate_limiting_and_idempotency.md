@@ -1,13 +1,12 @@
 ---
-tags:
-  - concepts:api
-  - concepts:resiliency
-level: intermediate
-category: architecture
 audience:
   - audiences:developers
   - audiences:architects
-
+category: architecture
+level: intermediate
+tags:
+  - concepts:api
+  - concepts:resiliency
 ---
 
 # Rate Limiting and Idempotency

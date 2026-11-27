@@ -1,17 +1,16 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+category: embedded
+duration_hours: 32
+level: advanced
 tags:
   - infrastructure:linux
   - infrastructure:embedded
   - tools:yocto
   - concepts:cross-compilation
   - practices:build-systems
-level: advanced
-category: embedded
-duration_hours: 32
-audience:
-  - audiences:developers
-  - audiences:sysadmins
-
 ---
 
 # Embedded Linux Platform Development With Yocto

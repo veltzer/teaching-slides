@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:devops
+category: containers
+level: intermediate
 tags:
   - infrastructure:kubernetes
   - infrastructure:rbac
-level: intermediate
-category: containers
-audience:
-  - audiences:devops
-
 ---
 
 # Role-Based Access Control (RBAC)

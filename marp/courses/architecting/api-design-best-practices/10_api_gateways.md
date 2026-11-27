@@ -1,13 +1,12 @@
 ---
-tags:
-  - concepts:api
-  - concepts:architecture
-level: intermediate
-category: architecture
 audience:
   - audiences:developers
   - audiences:architects
-
+category: architecture
+level: intermediate
+tags:
+  - concepts:api
+  - concepts:architecture
 ---
 
 # API Gateways

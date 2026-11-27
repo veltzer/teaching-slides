@@ -1,13 +1,12 @@
 ---
-tags:
-  - security:network
-level: intermediate
-category: networking
-duration_hours: 16
 audience:
   - audiences:devops
   - audiences:security
-
+category: networking
+duration_hours: 16
+level: intermediate
+tags:
+  - security:network
 ---
 
 # Network Security

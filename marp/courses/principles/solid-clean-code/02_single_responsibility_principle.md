@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: design-patterns
+level: intermediate
 tags:
   - concepts:solid
   - concepts:srp
-level: intermediate
-category: design-patterns
-audience:
-  - audiences:developers
-
 ---
 
 # Single Responsibility Principle (SRP)

@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:developers
+category: devops
+level: intermediate
 tags:
   - tools:docker
   - infrastructure:containers
   - practices:devops
   - networking:networking
-level: intermediate
-category: devops
-audience:
-  - audiences:developers
-
 ---
 
 # Security with Docker

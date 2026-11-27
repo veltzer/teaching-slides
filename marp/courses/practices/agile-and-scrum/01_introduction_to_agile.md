@@ -1,12 +1,11 @@
 ---
-tags:
-  - practices:agile
-level: beginner
-category: practices
 audience:
   - audiences:developers
   - audiences:team-leads
-
+category: practices
+level: beginner
+tags:
+  - practices:agile
 ---
 
 # Introduction to Agile

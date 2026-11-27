@@ -1,4 +1,10 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:devops
+category: operating-systems
+duration_hours: 64
+level: advanced
 tags:
   - infrastructure:linux
   - languages:c
@@ -7,13 +13,6 @@ tags:
   - infrastructure:ipc
   - networking:networking
   - infrastructure:io
-level: advanced
-category: operating-systems
-duration_hours: 64
-audience:
-  - audiences:developers
-  - audiences:devops
-
 ---
 
 # Linux Systems Programming

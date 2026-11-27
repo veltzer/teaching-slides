@@ -1,14 +1,13 @@
 ---
-tags:
-  - tools:git
-  - concepts:version-control
-level: advanced
-category: version-control
 audience:
   - audiences:developers
   - audiences:sysadmins
   - audiences:devops
-
+category: version-control
+level: advanced
+tags:
+  - tools:git
+  - concepts:version-control
 ---
 
 # Git Submodules

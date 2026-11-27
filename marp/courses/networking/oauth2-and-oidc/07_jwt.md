@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: security
+level: intermediate
 tags:
   - security:jwt
   - concepts:tokens
-level: intermediate
-category: security
-audience:
-  - audiences:developers
-
 ---
 
 # JWT in Depth

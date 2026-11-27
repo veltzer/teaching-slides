@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:senior-developers
+category: ai
+level: intermediate
 tags:
   - data-and-ai:ai
   - data-and-ai:llm
   - data-and-ai:agents
-level: intermediate
-category: ai
-audience:
-  - audiences:developers
-  - audiences:senior-developers
-
 ---
 
 # Agents and Sub-Agents

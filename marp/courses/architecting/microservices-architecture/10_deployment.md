@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:devops
+category: architecture
+level: intermediate
 tags:
   - concepts:microservices
   - practices:ci-cd
   - infrastructure:containers
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-  - audiences:devops
-
 ---
 
 # Deployment Strategies

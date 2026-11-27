@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: architecture
+level: intermediate
 tags:
   - architecture:clean-architecture
   - practices:testing
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-
 ---
 
 # Testing Clean Architecture

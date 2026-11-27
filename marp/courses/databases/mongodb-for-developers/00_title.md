@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: database
+duration_hours: 24
+level: intermediate
 tags:
   - databases:mongodb
   - databases:nosql
-level: intermediate
-category: database
-duration_hours: 24
-audience:
-  - audiences:developers
-
 ---
 
 # MongoDB for Developers

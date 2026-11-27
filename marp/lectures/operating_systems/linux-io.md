@@ -1,13 +1,12 @@
 ---
-tags:
-- concepts:io
-- concepts:linux-kernel
-- concepts:filesystems
-level: advanced
-category: operating-systems
 audience:
-- audiences:developers
-
+  - audiences:developers
+category: operating-systems
+level: advanced
+tags:
+  - concepts:io
+  - concepts:linux-kernel
+  - concepts:filesystems
 ---
 
 # Linux I/O Architecture

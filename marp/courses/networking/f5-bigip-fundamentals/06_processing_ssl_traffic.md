@@ -1,16 +1,15 @@
 ---
+audience:
+  - audiences:network-engineers
+  - audiences:sysadmins
+  - audiences:devops
+category: networking
+level: beginner
 tags:
   - security:tls
   - networking:http
   - networking:troubleshooting
   - networking:performance
-level: beginner
-category: networking
-audience:
-  - audiences:network-engineers
-  - audiences:sysadmins
-  - audiences:devops
-
 ---
 
 # Processing SSL Traffic

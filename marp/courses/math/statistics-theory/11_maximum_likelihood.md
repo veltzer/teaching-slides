@@ -1,12 +1,11 @@
 ---
-tags:
-  - math:estimation
-level: advanced
-category: math
 audience:
   - audiences:data-scientists
   - audiences:ml-engineers
-
+category: math
+level: advanced
+tags:
+  - math:estimation
 ---
 
 # Maximum Likelihood and Asymptotics

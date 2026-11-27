@@ -1,16 +1,15 @@
 ---
+audience:
+  - audiences:devops
+  - audiences:architects
+  - audiences:managers
+category: cloud
+level: intermediate
 tags:
   - infrastructure:cloud
   - infrastructure:onprem
   - practices:finops
   - practices:cost-optimization
-level: intermediate
-category: cloud
-audience:
-  - audiences:devops
-  - audiences:architects
-  - audiences:managers
-
 ---
 
 # Hybrid FinOps

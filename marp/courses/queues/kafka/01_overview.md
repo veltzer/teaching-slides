@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: message-queue
+level: beginner
 tags:
   - tools:kafka
   - data-and-ai:streaming
-level: beginner
-category: message-queue
-audience:
-  - audiences:developers
-
 ---
 
 # Overview

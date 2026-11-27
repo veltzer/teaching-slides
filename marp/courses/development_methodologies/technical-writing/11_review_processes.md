@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: methodology
+level: beginner
 tags:
   - practices:technical-writing
   - practices:review
-level: beginner
-category: methodology
-audience:
-  - audiences:developers
-
 ---
 
 # Review Processes

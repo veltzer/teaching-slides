@@ -1,13 +1,12 @@
 ---
-tags:
-  - practices:api-testing
-  - practices:ci-cd
-level: intermediate
-category: testing
 audience:
   - audiences:qa
   - audiences:developers
-
+category: testing
+level: intermediate
+tags:
+  - practices:api-testing
+  - practices:ci-cd
 ---
 
 # CI and Practices

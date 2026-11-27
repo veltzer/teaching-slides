@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: game-development
+level: beginner
 tags:
   - tools:unity
   - practices:game-design
-level: beginner
-category: game-development
-audience:
-  - audiences:developers
-
 ---
 
 # Game Design Principles

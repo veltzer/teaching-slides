@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: networking
+level: intermediate
 tags:
   - networking:grpc
   - concepts:web
   - concepts:testing
-level: intermediate
-category: networking
-audience:
-  - audiences:developers
-
 ---
 
 # gRPC-Web, Gateway, Testing, Performance

@@ -1,13 +1,12 @@
 ---
-tags:
-  - networking:dns
-  - concepts:authoritative
-level: intermediate
-category: networking
 audience:
   - audiences:sysadmins
   - audiences:devops
-
+category: networking
+level: intermediate
+tags:
+  - networking:dns
+  - concepts:authoritative
 ---
 
 # Authoritative DNS and Zones

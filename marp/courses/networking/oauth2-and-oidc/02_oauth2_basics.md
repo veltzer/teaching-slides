@@ -1,11 +1,10 @@
 ---
-tags:
-  - security:oauth2
-level: intermediate
-category: security
 audience:
   - audiences:developers
-
+category: security
+level: intermediate
+tags:
+  - security:oauth2
 ---
 
 # OAuth2 Basics

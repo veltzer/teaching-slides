@@ -1,13 +1,12 @@
 ---
-tags:
-  - concepts:architecture
-  - practices:ci-cd
-level: intermediate
-category: architecture
 audience:
   - audiences:developers
   - audiences:devops
-
+category: architecture
+level: intermediate
+tags:
+  - concepts:architecture
+  - practices:ci-cd
 ---
 
 # Factor V: Build, Release, Run

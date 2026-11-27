@@ -1,15 +1,14 @@
 ---
-tags:
-  - infrastructure:onprem
-  - practices:finops
-  - practices:cost-optimization
-level: intermediate
-category: cloud
 audience:
   - audiences:devops
   - audiences:architects
   - audiences:managers
-
+category: cloud
+level: intermediate
+tags:
+  - infrastructure:onprem
+  - practices:finops
+  - practices:cost-optimization
 ---
 
 # On-Prem Cost Fundamentals

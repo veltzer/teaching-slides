@@ -1,20 +1,19 @@
 ---
-tags:
-- concepts:ai
-- concepts:agents
-- concepts:llm
-- concepts:architecture
-- concepts:rag
-- concepts:mcp
-- concepts:prompting
-- concepts:tools
-level: beginner
-category: ai
 audience:
-- audiences:managers
-- audiences:project-management
-- audiences:architects
-
+  - audiences:managers
+  - audiences:project-management
+  - audiences:architects
+category: ai
+level: beginner
+tags:
+  - concepts:ai
+  - concepts:agents
+  - concepts:llm
+  - concepts:architecture
+  - concepts:rag
+  - concepts:mcp
+  - concepts:prompting
+  - concepts:tools
 ---
 
 # Principles of Agentic AI Solution Design

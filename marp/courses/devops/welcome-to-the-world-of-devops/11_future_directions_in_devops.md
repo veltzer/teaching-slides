@@ -1,16 +1,15 @@
 ---
-tags:
-  - practices:devops
-  - practices:ci-cd
-  - practices:automation
-level: beginner
-category: devops
 audience:
   - audiences:developers
   - audiences:sysadmins
   - audiences:devops
   - audiences:managers
-
+category: devops
+level: beginner
+tags:
+  - practices:devops
+  - practices:ci-cd
+  - practices:automation
 ---
 
 # Future Directions in DevOps

@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: version-control
+level: advanced
 tags:
   - tools:git
   - concepts:merge
   - concepts:conflict-resolution
-level: advanced
-category: version-control
-audience:
-  - audiences:developers
-
 ---
 
 # Advanced Merge Conflict Resolution

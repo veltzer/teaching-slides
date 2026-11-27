@@ -1,11 +1,10 @@
 ---
-tags:
-  - architecture:api-gateway
-level: intermediate
-category: architecture
 audience:
   - audiences:architects
-
+category: architecture
+level: intermediate
+tags:
+  - architecture:api-gateway
 ---
 
 # Gateway Architectures

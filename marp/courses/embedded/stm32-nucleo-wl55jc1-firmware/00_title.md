@@ -1,14 +1,13 @@
 ---
-tags:
-  - hardware-and-embedded:embedded
-  - hardware-and-embedded:hardware-programming
-level: advanced
-category: embedded
-duration_hours: 24
 audience:
   - audiences:embedded-engineers
   - audiences:developers
-
+category: embedded
+duration_hours: 24
+level: advanced
+tags:
+  - hardware-and-embedded:embedded
+  - hardware-and-embedded:hardware-programming
 ---
 
 # Firmware Development On The STM32 NUCLEO-WL55JC1

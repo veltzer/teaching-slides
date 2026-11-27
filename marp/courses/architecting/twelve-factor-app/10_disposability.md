@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: architecture
+level: intermediate
 tags:
   - concepts:architecture
   - concepts:resiliency
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-
 ---
 
 # Factor IX: Disposability

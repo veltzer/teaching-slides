@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:data-analysts
+category: data-science
+level: beginner
 tags:
   - data-and-ai:storytelling
   - data-and-ai:communication
-level: beginner
-category: data-science
-audience:
-  - audiences:data-analysts
-
 ---
 
 # Storytelling with Data

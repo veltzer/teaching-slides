@@ -1,11 +1,10 @@
 ---
-tags:
-  - observability:grafana
-level: beginner
-category: observability
 audience:
   - audiences:devops
-
+category: observability
+level: beginner
+tags:
+  - observability:grafana
 ---
 
 # Data Sources

@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: database
+level: intermediate
 tags:
   - databases:elasticsearch
   - databases:performance
-level: intermediate
-category: database
-audience:
-  - audiences:developers
-
 ---
 
 # Performance Optimisation for Developers

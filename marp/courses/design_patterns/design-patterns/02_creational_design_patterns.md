@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: design-patterns
+level: intermediate
 tags:
   - concepts:design-patterns
   - concepts:creational-patterns
-level: intermediate
-category: design-patterns
-audience:
-  - audiences:developers
-
 ---
 
 # Creational Design Patterns

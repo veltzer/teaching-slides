@@ -1,12 +1,11 @@
 ---
-tags:
-  - math:regression
-level: beginner
-category: math
 audience:
   - audiences:data-analysts
   - audiences:developers
-
+category: math
+level: beginner
+tags:
+  - math:regression
 ---
 
 # Correlation and Simple Regression

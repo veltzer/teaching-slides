@@ -1,11 +1,10 @@
 ---
-tags:
-  - databases:orm
-level: beginner
-category: database
 audience:
   - audiences:developers
-
+category: database
+level: beginner
+tags:
+  - databases:orm
 ---
 
 # Object-Relational Mappers (ORMs)

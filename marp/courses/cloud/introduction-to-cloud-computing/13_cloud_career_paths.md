@@ -1,14 +1,13 @@
 ---
-tags:
-  - infrastructure:cloud
-level: beginner
-category: cloud
 audience:
   - audiences:developers
   - audiences:sysadmins
   - audiences:devops
   - audiences:managers
-
+category: cloud
+level: beginner
+tags:
+  - infrastructure:cloud
 ---
 
 # Cloud Career Paths

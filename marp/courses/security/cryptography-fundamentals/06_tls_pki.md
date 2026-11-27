@@ -1,14 +1,14 @@
 ---
-tags:
-  - security:cryptography
-  - security:tls
-  - security:pki
-level: intermediate
-category: security
 audience:
   - audiences:developers
   - audiences:security-professionals
   - audiences:devops
+category: security
+level: intermediate
+tags:
+  - security:cryptography
+  - security:tls
+  - security:pki
 ---
 
 # TLS and PKI

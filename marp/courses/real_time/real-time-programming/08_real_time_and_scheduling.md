@@ -1,13 +1,12 @@
 ---
-tags:
-  - infrastructure:real-time
-  - infrastructure:scheduling
-level: advanced
-category: real-time
 audience:
   - audiences:embedded-engineers
   - audiences:developers
-
+category: real-time
+level: advanced
+tags:
+  - infrastructure:real-time
+  - infrastructure:scheduling
 ---
 
 # Real-Time and Scheduling

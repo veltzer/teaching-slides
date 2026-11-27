@@ -1,11 +1,10 @@
 ---
-tags:
-  - concepts:leader-election
-level: intermediate
-category: architecture
 audience:
   - audiences:developers
-
+category: architecture
+level: intermediate
+tags:
+  - concepts:leader-election
 ---
 
 # Leader Election

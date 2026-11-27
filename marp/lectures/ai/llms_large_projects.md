@@ -1,17 +1,16 @@
 ---
-tags:
-- concepts:ai
-- concepts:agents
-- concepts:llm
-- concepts:architecture
-- concepts:microservices
-level: intermediate
-category: ai
 audience:
-- audiences:developers
-- audiences:architects
-- audiences:team-leads
-
+  - audiences:developers
+  - audiences:architects
+  - audiences:team-leads
+category: ai
+level: intermediate
+tags:
+  - concepts:ai
+  - concepts:agents
+  - concepts:llm
+  - concepts:architecture
+  - concepts:microservices
 ---
 
 # LLMs on Large Codebases

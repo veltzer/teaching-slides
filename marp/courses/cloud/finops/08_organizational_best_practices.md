@@ -1,15 +1,14 @@
 ---
-tags:
-  - infrastructure:cloud
-  - practices:finops
-  - practices:cost-optimization
-level: intermediate
-category: cloud
 audience:
   - audiences:devops
   - audiences:architects
   - audiences:managers
-
+category: cloud
+level: intermediate
+tags:
+  - infrastructure:cloud
+  - practices:finops
+  - practices:cost-optimization
 ---
 
 # Organizational Best Practices

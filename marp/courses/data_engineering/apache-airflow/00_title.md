@@ -1,14 +1,13 @@
 ---
-tags:
-  - data-and-ai:airflow
-  - data-and-ai:orchestration
-level: intermediate
-category: data-engineering
-duration_hours: 16
 audience:
   - audiences:data-engineers
   - audiences:developers
-
+category: data-engineering
+duration_hours: 16
+level: intermediate
+tags:
+  - data-and-ai:airflow
+  - data-and-ai:orchestration
 ---
 
 # Apache Airflow

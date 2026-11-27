@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: version-control
+level: advanced
 tags:
   - tools:git
   - concepts:debugging
-level: advanced
-category: version-control
-audience:
-  - audiences:developers
-
 ---
 
 # Bisect

@@ -1,13 +1,12 @@
 ---
-tags:
-  - security:threat-modeling
-  - security:stride
-level: intermediate
-category: security
 audience:
   - audiences:developers
   - audiences:security-professionals
-
+category: security
+level: intermediate
+tags:
+  - security:threat-modeling
+  - security:stride
 ---
 
 # STRIDE Methodology

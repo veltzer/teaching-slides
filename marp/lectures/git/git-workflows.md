@@ -1,14 +1,13 @@
 ---
-tags:
-- tools:git
-- concepts:version-control
-- practices:collaboration
-level: intermediate
-category: version-control
 audience:
-- audiences:developers
-- audiences:devops
-
+  - audiences:developers
+  - audiences:devops
+category: version-control
+level: intermediate
+tags:
+  - tools:git
+  - concepts:version-control
+  - practices:collaboration
 ---
 
 # Git Workflow Strategies

@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:architects
+category: architecture
+level: intermediate
 tags:
   - concepts:architecture
   - concepts:messaging
   - concepts:distributed-systems
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-  - audiences:architects
-
 ---
 
 # Queues in Distributed Systems

@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: architecture
+level: intermediate
 tags:
   - architecture:api-gateway
   - architecture:rate-limiting
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-
 ---
 
 # Rate Limiting and Throttling

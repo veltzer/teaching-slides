@@ -1,11 +1,10 @@
 ---
-tags:
-  - practices:code-review
-level: beginner
-category: methodology
 audience:
   - audiences:developers
-
+category: methodology
+level: beginner
+tags:
+  - practices:code-review
 ---
 
 # What to Look For

@@ -1,16 +1,15 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:testers
+category: design-patterns
+duration_hours: 16
+level: beginner
 tags:
   - concepts:oop
   - concepts:design-patterns
   - concepts:solid
   - concepts:programming
-level: beginner
-category: design-patterns
-duration_hours: 16
-audience:
-  - audiences:developers
-  - audiences:testers
-
 ---
 
 # Object-Oriented Programming

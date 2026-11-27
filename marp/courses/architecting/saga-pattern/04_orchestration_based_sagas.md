@@ -1,13 +1,12 @@
 ---
-tags:
-  - architecture:saga
-  - architecture:orchestration
-level: advanced
-category: architecture
 audience:
   - audiences:architects
   - audiences:developers
-
+category: architecture
+level: advanced
+tags:
+  - architecture:saga
+  - architecture:orchestration
 ---
 
 # Orchestration-Based Sagas

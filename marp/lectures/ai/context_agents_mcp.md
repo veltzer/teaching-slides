@@ -1,18 +1,17 @@
 ---
-tags:
-- concepts:ai
-- concepts:agents
-- concepts:llm
-- concepts:tools
-- concepts:mcp
-- concepts:prompting
-- concepts:workflows
-level: intermediate
-category: ai
 audience:
-- audiences:developers
-- audiences:team-leads
-
+  - audiences:developers
+  - audiences:team-leads
+category: ai
+level: intermediate
+tags:
+  - concepts:ai
+  - concepts:agents
+  - concepts:llm
+  - concepts:tools
+  - concepts:mcp
+  - concepts:prompting
+  - concepts:workflows
 ---
 
 # Context Engineering, Agentic Workflows, and MCP

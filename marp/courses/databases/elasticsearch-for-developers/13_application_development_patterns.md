@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: database
+level: intermediate
 tags:
   - databases:elasticsearch
   - architecture:patterns
-level: intermediate
-category: database
-audience:
-  - audiences:developers
-
 ---
 
 # Application Development Patterns

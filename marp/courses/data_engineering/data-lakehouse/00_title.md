@@ -1,13 +1,12 @@
 ---
-tags:
-  - data-and-ai:data-engineering
-level: intermediate
-category: data-engineering
-duration_hours: 16
 audience:
   - audiences:data-engineers
   - audiences:architects
-
+category: data-engineering
+duration_hours: 16
+level: intermediate
+tags:
+  - data-and-ai:data-engineering
 ---
 
 # Data Lakehouse

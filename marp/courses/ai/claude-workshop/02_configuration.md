@@ -1,15 +1,14 @@
 ---
-tags:
-  - data-and-ai:ai
-  - data-and-ai:llm
-  - practices:productivity
-level: intermediate
-category: ai
 audience:
   - audiences:developers
   - audiences:senior-developers
   - audiences:devops
-
+category: ai
+level: intermediate
+tags:
+  - data-and-ai:ai
+  - data-and-ai:llm
+  - practices:productivity
 ---
 
 # Configuring Claude

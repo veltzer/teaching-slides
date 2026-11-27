@@ -1,16 +1,15 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:devops
+category: networking
+duration_hours: 16
+level: beginner
 tags:
   - networking:networking
   - networking:tcp-ip
   - networking:http
   - networking:protocols
-level: beginner
-category: networking
-duration_hours: 16
-audience:
-  - audiences:developers
-  - audiences:devops
-
 ---
 
 # Networking Basics

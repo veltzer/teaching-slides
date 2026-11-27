@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: mobile
+level: advanced
 tags:
   - infrastructure:android
   - languages:java
   - concepts:mobile-development
-level: advanced
-category: mobile
-audience:
-  - audiences:developers
-
 ---
 
 # Advanced Java for Android

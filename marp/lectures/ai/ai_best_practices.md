@@ -1,15 +1,14 @@
 ---
-tags:
-- concepts:ai
-- concepts:agents
-- concepts:llm
-- concepts:prompting
-- concepts:best-practices
-level: intermediate
-category: ai
 audience:
-- audiences:developers
-
+  - audiences:developers
+category: ai
+level: intermediate
+tags:
+  - concepts:ai
+  - concepts:agents
+  - concepts:llm
+  - concepts:prompting
+  - concepts:best-practices
 ---
 
 # Working with AI Coding Agents

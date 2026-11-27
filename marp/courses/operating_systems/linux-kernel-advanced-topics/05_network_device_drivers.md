@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:developers
+category: operating-systems
+level: advanced
 tags:
   - infrastructure:linux
   - concepts:kernel
   - concepts:device-drivers
   - concepts:networking
-level: advanced
-category: operating-systems
-audience:
-  - audiences:developers
-
 ---
 
 # Network Device Drivers

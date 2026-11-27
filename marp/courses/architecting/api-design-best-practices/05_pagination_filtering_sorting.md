@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: architecture
+level: intermediate
 tags:
   - concepts:api
   - concepts:performance
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-
 ---
 
 # Pagination, Filtering, Sorting, and Searching

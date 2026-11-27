@@ -1,13 +1,12 @@
 ---
-tags:
-  - practices:agile
-  - practices:engineering
-level: beginner
-category: practices
 audience:
   - audiences:developers
   - audiences:team-leads
-
+category: practices
+level: beginner
+tags:
+  - practices:agile
+  - practices:engineering
 ---
 
 # Agile Engineering Practices

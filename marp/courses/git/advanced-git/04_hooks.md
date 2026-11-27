@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:devops
+category: version-control
+level: advanced
 tags:
   - tools:git
   - concepts:hooks
   - practices:automation
-level: advanced
-category: version-control
-audience:
-  - audiences:developers
-  - audiences:devops
-
 ---
 
 # Git Hooks

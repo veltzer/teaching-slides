@@ -1,12 +1,12 @@
 ---
-tags:
-  - security:cryptography
-  - security:passwords
-level: intermediate
-category: security
 audience:
   - audiences:developers
   - audiences:security-professionals
+category: security
+level: intermediate
+tags:
+  - security:cryptography
+  - security:passwords
 ---
 
 # Password Storage and Randomness

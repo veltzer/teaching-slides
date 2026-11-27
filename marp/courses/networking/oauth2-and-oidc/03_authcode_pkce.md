@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: security
+level: intermediate
 tags:
   - security:oauth2
   - security:pkce
-level: intermediate
-category: security
-audience:
-  - audiences:developers
-
 ---
 
 # Authorization Code Flow with PKCE

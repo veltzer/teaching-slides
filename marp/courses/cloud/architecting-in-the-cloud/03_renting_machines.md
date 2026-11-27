@@ -1,15 +1,14 @@
 ---
-tags:
-  - infrastructure:cloud
-  - infrastructure:iaas
-  - concepts:architecture
-level: intermediate
-category: cloud
 audience:
   - audiences:developers
   - audiences:architects
   - audiences:devops
-
+category: cloud
+level: intermediate
+tags:
+  - infrastructure:cloud
+  - infrastructure:iaas
+  - concepts:architecture
 ---
 
 # Renting Machines

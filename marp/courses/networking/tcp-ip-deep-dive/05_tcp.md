@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: networking
+level: intermediate
 tags:
   - networking:tcp-ip
   - concepts:tcp
-level: intermediate
-category: networking
-audience:
-  - audiences:developers
-
 ---
 
 # TCP Deep Dive

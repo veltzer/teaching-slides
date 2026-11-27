@@ -1,15 +1,14 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:data-scientists
+category: big-data
+level: advanced
 tags:
   - tools:spark
   - languages:python
   - data-and-ai:big-data
   - concepts:graph-processing
-level: advanced
-category: big-data
-audience:
-  - audiences:developers
-  - audiences:data-scientists
-
 ---
 
 # Graph Processing with GraphX

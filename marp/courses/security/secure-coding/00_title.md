@@ -1,4 +1,12 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:embedded-engineers
+  - audiences:devops
+  - audiences:security-professionals
+category: security
+duration_hours: 8
+level: intermediate
 tags:
   - security:secure-coding
   - security:owasp
@@ -12,14 +20,6 @@ tags:
   - practices:devops
   - data-and-ai:ai
   - hardware-and-embedded:embedded
-level: intermediate
-category: security
-duration_hours: 8
-audience:
-  - audiences:developers
-  - audiences:embedded-engineers
-  - audiences:devops
-  - audiences:security-professionals
 ---
 
 # Secure Coding

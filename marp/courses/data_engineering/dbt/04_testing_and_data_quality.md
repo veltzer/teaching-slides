@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:data-engineers
+category: data-engineering
+level: intermediate
 tags:
   - data-and-ai:dbt
   - practices:testing
-level: intermediate
-category: data-engineering
-audience:
-  - audiences:data-engineers
-
 ---
 
 # Testing and Data Quality

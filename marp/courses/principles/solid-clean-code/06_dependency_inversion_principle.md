@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: design-patterns
+level: intermediate
 tags:
   - concepts:solid
   - concepts:dip
-level: intermediate
-category: design-patterns
-audience:
-  - audiences:developers
-
 ---
 
 # Dependency Inversion Principle (DIP)

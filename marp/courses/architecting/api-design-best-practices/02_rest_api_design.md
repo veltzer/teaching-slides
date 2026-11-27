@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: architecture
+level: intermediate
 tags:
   - concepts:api
   - concepts:rest
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-
 ---
 
 # REST API Design

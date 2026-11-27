@@ -1,14 +1,13 @@
 ---
-tags:
-  - infrastructure:cloud
-  - infrastructure:azure
-level: beginner
-category: cloud
 audience:
   - audiences:developers
   - audiences:sysadmins
   - audiences:devops
-
+category: cloud
+level: beginner
+tags:
+  - infrastructure:cloud
+  - infrastructure:azure
 ---
 
 # Working with the Azure Portal

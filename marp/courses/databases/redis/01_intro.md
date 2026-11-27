@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: database
+level: intermediate
 tags:
   - tools:redis
   - data-and-ai:nosql
   - data-and-ai:caching
-level: intermediate
-category: database
-audience:
-  - audiences:developers
-
 ---
 
 # Redis: Introduction

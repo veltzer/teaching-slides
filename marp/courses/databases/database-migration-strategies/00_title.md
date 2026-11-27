@@ -1,14 +1,13 @@
 ---
-tags:
-  - databases:migrations
-  - practices:migration
-level: intermediate
-category: database
-duration_hours: 16
 audience:
   - audiences:dba
   - audiences:architects
-
+category: database
+duration_hours: 16
+level: intermediate
+tags:
+  - databases:migrations
+  - practices:migration
 ---
 
 # Database Migration Strategies

@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: database
+level: intermediate
 tags:
   - databases:postgresql
   - databases:sql
-level: intermediate
-category: database
-audience:
-  - audiences:developers
-
 ---
 
 # Window Functions

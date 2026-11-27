@@ -1,14 +1,13 @@
 ---
-tags:
-  - practices:chaos-testing
-  - practices:reliability
-level: advanced
-category: testing
-duration_hours: 16
 audience:
   - audiences:devops
   - audiences:developers
-
+category: testing
+duration_hours: 16
+level: advanced
+tags:
+  - practices:chaos-testing
+  - practices:reliability
 ---
 
 # Chaos Engineering

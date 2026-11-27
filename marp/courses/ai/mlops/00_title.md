@@ -1,14 +1,13 @@
 ---
-tags:
-  - data-and-ai:machine-learning
-  - practices:devops
-level: advanced
-category: machine-learning
-duration_hours: 24
 audience:
   - audiences:data-scientists
   - audiences:devops
-
+category: machine-learning
+duration_hours: 24
+level: advanced
+tags:
+  - data-and-ai:machine-learning
+  - practices:devops
 ---
 
 # MLOps

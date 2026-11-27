@@ -1,15 +1,14 @@
 ---
-tags:
-  - security:threat-modeling
-  - security:dread
-  - concepts:risk
-level: intermediate
-category: security
 audience:
   - audiences:developers
   - audiences:security-professionals
   - audiences:managers
-
+category: security
+level: intermediate
+tags:
+  - security:threat-modeling
+  - security:dread
+  - concepts:risk
 ---
 
 # DREAD and Risk Rating

@@ -1,12 +1,11 @@
 ---
-tags:
-  - practices:performance-testing
-level: intermediate
-category: testing
 audience:
   - audiences:developers
   - audiences:testers
-
+category: testing
+level: intermediate
+tags:
+  - practices:performance-testing
 ---
 
 # Designing Tests

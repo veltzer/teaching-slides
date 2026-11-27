@@ -1,11 +1,10 @@
 ---
-tags:
-  - data-and-ai:machine-learning
-level: intermediate
-category: machine-learning
 audience:
   - audiences:data-scientists
-
+category: machine-learning
+level: intermediate
+tags:
+  - data-and-ai:machine-learning
 ---
 
 # Supervised Algorithms

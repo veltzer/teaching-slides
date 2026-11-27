@@ -1,15 +1,14 @@
 ---
-tags:
-- tools:logstash
-- tools:elk
-- practices:logging
-- practices:monitoring
-level: intermediate
-category: devops
 audience:
-- audiences:developers
-- audiences:devops
-
+  - audiences:developers
+  - audiences:devops
+category: devops
+level: intermediate
+tags:
+  - tools:logstash
+  - tools:elk
+  - practices:logging
+  - practices:monitoring
 ---
 
 # Logstash

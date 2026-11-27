@@ -1,13 +1,12 @@
 ---
-tags:
-  - networking:wifi
-  - networking:802.11
-level: intermediate
-category: networking
 audience:
   - audiences:developers
   - audiences:embedded-engineers
-
+category: networking
+level: intermediate
+tags:
+  - networking:wifi
+  - networking:802.11
 ---
 
 # Protocols Review

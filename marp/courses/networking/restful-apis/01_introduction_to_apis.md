@@ -1,11 +1,10 @@
 ---
-tags:
-  - networking:rest
-level: beginner
-category: networking
 audience:
   - audiences:developers
-
+category: networking
+level: beginner
+tags:
+  - networking:rest
 ---
 
 # Introduction to APIs

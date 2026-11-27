@@ -1,14 +1,13 @@
 ---
-tags:
-  - security:authentication
-  - security:authorization
-level: intermediate
-category: networking
-duration_hours: 16
 audience:
   - audiences:developers
   - audiences:security
-
+category: networking
+duration_hours: 16
+level: intermediate
+tags:
+  - security:authentication
+  - security:authorization
 ---
 
 # OAuth2 and OIDC

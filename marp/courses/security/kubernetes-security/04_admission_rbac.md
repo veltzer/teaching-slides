@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:devops
+category: security
+level: intermediate
 tags:
   - security:kubernetes
   - concepts:rbac
   - concepts:admission-control
-level: intermediate
-category: security
-audience:
-  - audiences:devops
-
 ---
 
 # Admission Controllers and RBAC

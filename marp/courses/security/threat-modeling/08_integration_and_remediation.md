@@ -1,15 +1,14 @@
 ---
-tags:
-  - security:threat-modeling
-  - concepts:sdlc
-  - concepts:remediation
-level: intermediate
-category: security
 audience:
   - audiences:developers
   - audiences:devops
   - audiences:managers
-
+category: security
+level: intermediate
+tags:
+  - security:threat-modeling
+  - concepts:sdlc
+  - concepts:remediation
 ---
 
 # Integration and Remediation

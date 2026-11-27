@@ -1,12 +1,11 @@
 ---
-tags:
-  - math:inferential-statistics
-level: advanced
-category: math
 audience:
   - audiences:data-scientists
   - audiences:ml-engineers
-
+category: math
+level: advanced
+tags:
+  - math:inferential-statistics
 ---
 
 # Confidence Sets and Duality

@@ -1,13 +1,12 @@
 ---
-tags:
-  - infrastructure:real-time
-  - infrastructure:hardware
-level: advanced
-category: real-time
 audience:
   - audiences:embedded-engineers
   - audiences:developers
-
+category: real-time
+level: advanced
+tags:
+  - infrastructure:real-time
+  - infrastructure:hardware
 ---
 
 # Real-Time and the Hardware

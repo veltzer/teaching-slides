@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: language
+level: beginner
 tags:
   - languages:rust
   - concepts:programming
   - concepts:data-structures
-level: beginner
-category: language
-audience:
-  - audiences:developers
-
 ---
 
 # Collections

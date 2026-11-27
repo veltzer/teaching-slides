@@ -1,13 +1,12 @@
 ---
-tags:
-  - architecture:saga
-  - architecture:choreography
-level: advanced
-category: architecture
 audience:
   - audiences:developers
   - audiences:architects
-
+category: architecture
+level: advanced
+tags:
+  - architecture:saga
+  - architecture:choreography
 ---
 
 # Saga and Choreography Patterns

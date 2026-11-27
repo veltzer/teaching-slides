@@ -1,13 +1,12 @@
 ---
-tags:
-  - practices:code-review
-  - practices:metrics
-level: beginner
-category: methodology
 audience:
   - audiences:developers
   - audiences:managers
-
+category: methodology
+level: beginner
+tags:
+  - practices:code-review
+  - practices:metrics
 ---
 
 # Review Metrics

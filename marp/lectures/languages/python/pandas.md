@@ -1,15 +1,14 @@
 ---
-tags:
-- languages:python
-- concepts:data-science
-- concepts:dataframes
-- tools:pandas
-level: intermediate
-category: language
 audience:
-- audiences:developers
-- audiences:data-scientists
-
+  - audiences:developers
+  - audiences:data-scientists
+category: language
+level: intermediate
+tags:
+  - languages:python
+  - concepts:data-science
+  - concepts:dataframes
+  - tools:pandas
 ---
 
 # pandas and Python

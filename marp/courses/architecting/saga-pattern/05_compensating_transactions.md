@@ -1,12 +1,11 @@
 ---
-tags:
-  - architecture:saga
-level: advanced
-category: architecture
 audience:
   - audiences:architects
   - audiences:developers
-
+category: architecture
+level: advanced
+tags:
+  - architecture:saga
 ---
 
 # Compensating Transactions

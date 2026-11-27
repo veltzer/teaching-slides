@@ -1,15 +1,14 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+category: hardware
+level: beginner
 tags:
   - concepts:memory
   - concepts:computer-architecture
   - concepts:virtual-memory
   - concepts:dma
-level: beginner
-category: hardware
-audience:
-  - audiences:developers
-  - audiences:sysadmins
-
 ---
 
 # Memory Systems

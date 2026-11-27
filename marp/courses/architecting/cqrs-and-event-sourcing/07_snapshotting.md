@@ -1,13 +1,12 @@
 ---
-tags:
-  - architecture:event-sourcing
-  - concepts:performance
-level: advanced
-category: architecture
 audience:
   - audiences:architects
   - audiences:developers
-
+category: architecture
+level: advanced
+tags:
+  - architecture:event-sourcing
+  - concepts:performance
 ---
 
 # Snapshotting

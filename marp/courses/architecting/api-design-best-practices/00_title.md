@@ -1,16 +1,15 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:architects
+category: architecture
+duration_hours: 16
+level: intermediate
 tags:
   - concepts:api
   - concepts:rest
   - concepts:architecture
   - concepts:best-practices
-level: intermediate
-category: architecture
-duration_hours: 16
-audience:
-  - audiences:developers
-  - audiences:architects
-
 ---
 
 # API Design Best Practices

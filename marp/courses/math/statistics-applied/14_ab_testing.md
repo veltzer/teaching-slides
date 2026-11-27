@@ -1,12 +1,11 @@
 ---
-tags:
-  - math:hypothesis-testing
-level: beginner
-category: math
 audience:
   - audiences:data-analysts
   - audiences:developers
-
+category: math
+level: beginner
+tags:
+  - math:hypothesis-testing
 ---
 
 # A/B Testing in Practice

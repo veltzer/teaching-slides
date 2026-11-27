@@ -1,12 +1,11 @@
 ---
-tags:
-  - concepts:consistency
-level: intermediate
-category: architecture
 audience:
   - audiences:developers
   - audiences:architects
-
+category: architecture
+level: intermediate
+tags:
+  - concepts:consistency
 ---
 
 # Consistency Models

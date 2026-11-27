@@ -1,13 +1,12 @@
 ---
-tags:
-  - hardware-and-embedded:embedded
-  - infrastructure:build-systems
-level: advanced
-category: embedded
 audience:
   - audiences:embedded-engineers
   - audiences:developers
-
+category: embedded
+level: advanced
+tags:
+  - hardware-and-embedded:embedded
+  - infrastructure:build-systems
 ---
 
 # The Toolchain

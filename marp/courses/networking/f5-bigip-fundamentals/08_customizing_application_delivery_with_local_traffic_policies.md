@@ -1,16 +1,15 @@
 ---
+audience:
+  - audiences:network-engineers
+  - audiences:sysadmins
+  - audiences:devops
+category: networking
+level: beginner
 tags:
   - networking:http
   - architecture:load-balancing
   - security:tls
   - practices:sysadmin
-level: beginner
-category: networking
-audience:
-  - audiences:network-engineers
-  - audiences:sysadmins
-  - audiences:devops
-
 ---
 
 # Customizing Application Delivery with Local Traffic Policies

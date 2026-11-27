@@ -1,16 +1,15 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+category: hardware
+duration_hours: 8
+level: beginner
 tags:
   - concepts:computer-architecture
   - concepts:hardware
   - concepts:performance
   - concepts:security
-level: beginner
-category: hardware
-duration_hours: 8
-audience:
-  - audiences:developers
-  - audiences:sysadmins
-
 ---
 
 # Computer Architecture Fundamentals

@@ -1,13 +1,12 @@
 ---
-tags:
-  - math:distributions
-  - math:probability
-level: beginner
-category: math
 audience:
   - audiences:data-analysts
   - audiences:developers
-
+category: math
+level: beginner
+tags:
+  - math:distributions
+  - math:probability
 ---
 
 # Common Distributions

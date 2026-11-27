@@ -1,12 +1,11 @@
 ---
-tags:
-  - networking:grpc
-level: intermediate
-category: networking
-duration_hours: 16
 audience:
   - audiences:developers
-
+category: networking
+duration_hours: 16
+level: intermediate
+tags:
+  - networking:grpc
 ---
 
 # gRPC

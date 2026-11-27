@@ -1,13 +1,12 @@
 ---
-tags:
-  - data-and-ai:llm
-level: intermediate
-category: machine-learning
-duration_hours: 24
 audience:
   - audiences:developers
   - audiences:data-scientists
-
+category: machine-learning
+duration_hours: 24
+level: intermediate
+tags:
+  - data-and-ai:llm
 ---
 
 # RAG Applications

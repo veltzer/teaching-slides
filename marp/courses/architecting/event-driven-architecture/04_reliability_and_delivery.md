@@ -1,13 +1,12 @@
 ---
-tags:
-  - concepts:reliability
-  - concepts:idempotency
-level: intermediate
-category: architecture
 audience:
   - audiences:developers
   - audiences:devops
-
+category: architecture
+level: intermediate
+tags:
+  - concepts:reliability
+  - concepts:idempotency
 ---
 
 # Reliability and Delivery Guarantees

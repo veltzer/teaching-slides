@@ -1,13 +1,12 @@
 ---
-tags:
-  - concepts:schema
-  - concepts:governance
-level: intermediate
-category: architecture
 audience:
   - audiences:developers
   - audiences:architects
-
+category: architecture
+level: intermediate
+tags:
+  - concepts:schema
+  - concepts:governance
 ---
 
 # Event Schema Evolution and Governance

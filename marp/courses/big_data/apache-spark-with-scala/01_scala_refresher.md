@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: big-data
+level: intermediate
 tags:
   - languages:scala
   - data-and-ai:big-data
-level: intermediate
-category: big-data
-audience:
-  - audiences:developers
-
 ---
 
 # Scala Refresher for Apache Spark

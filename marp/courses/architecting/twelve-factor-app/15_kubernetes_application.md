@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:devops
+category: architecture
+level: intermediate
 tags:
   - concepts:architecture
   - infrastructure:kubernetes
   - infrastructure:containers
-level: intermediate
-category: architecture
-audience:
-  - audiences:developers
-  - audiences:devops
-
 ---
 
 # Practical Application With Containers and Kubernetes

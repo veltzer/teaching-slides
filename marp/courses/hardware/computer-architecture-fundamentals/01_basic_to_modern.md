@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+category: hardware
+level: beginner
 tags:
   - concepts:computer-architecture
   - concepts:hardware
   - concepts:system-design
-level: beginner
-category: hardware
-audience:
-  - audiences:developers
-  - audiences:sysadmins
-
 ---
 
 # Computer Architecture Fundamentals

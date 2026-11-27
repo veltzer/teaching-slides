@@ -1,18 +1,17 @@
 ---
-tags:
-  - networking:dns
-  - protocols:dns
-  - infrastructure:networking
-  - concepts:internet-infrastructure
-level: intermediate
-category: networking
-duration_hours: 16
 audience:
   - audiences:sysadmins
   - audiences:devops
   - audiences:network-engineers
   - audiences:developers
-
+category: networking
+duration_hours: 16
+level: intermediate
+tags:
+  - networking:dns
+  - protocols:dns
+  - infrastructure:networking
+  - concepts:internet-infrastructure
 ---
 
 # DNS Deep Dive

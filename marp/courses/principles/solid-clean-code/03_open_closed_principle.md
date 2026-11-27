@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: design-patterns
+level: intermediate
 tags:
   - concepts:solid
   - concepts:ocp
-level: intermediate
-category: design-patterns
-audience:
-  - audiences:developers
-
 ---
 
 # Open/Closed Principle (OCP)

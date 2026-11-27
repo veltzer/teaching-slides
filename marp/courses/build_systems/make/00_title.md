@@ -1,15 +1,14 @@
 ---
+audience:
+  - audiences:developers
+category: build-system
+duration_hours: 16
+level: intermediate
 tags:
   - tools:make
   - languages:c
   - practices:build-systems
   - infrastructure:linux
-level: intermediate
-category: build-system
-duration_hours: 16
-audience:
-  - audiences:developers
-
 ---
 
 # Make

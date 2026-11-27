@@ -1,13 +1,12 @@
 ---
-tags:
-  - concepts:api
-  - concepts:security
-level: intermediate
-category: architecture
 audience:
   - audiences:developers
   - audiences:architects
-
+category: architecture
+level: intermediate
+tags:
+  - concepts:api
+  - concepts:security
 ---
 
 # Authentication and Security

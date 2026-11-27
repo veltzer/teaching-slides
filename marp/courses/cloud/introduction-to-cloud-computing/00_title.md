@@ -1,15 +1,14 @@
 ---
-tags:
-  - infrastructure:cloud
-level: beginner
-category: cloud
-duration_hours: 16
 audience:
   - audiences:developers
   - audiences:sysadmins
   - audiences:devops
   - audiences:managers
-
+category: cloud
+duration_hours: 16
+level: beginner
+tags:
+  - infrastructure:cloud
 ---
 
 # Introduction To Cloud Computing

@@ -1,12 +1,11 @@
 ---
-tags:
-  - math:probability
-level: beginner
-category: math
 audience:
   - audiences:data-analysts
   - audiences:developers
-
+category: math
+level: beginner
+tags:
+  - math:probability
 ---
 
 # Probability Basics

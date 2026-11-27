@@ -1,14 +1,13 @@
 ---
-tags:
-- concepts:databases
-- concepts:transactions
-- concepts:data-integrity
-level: intermediate
-category: database
 audience:
-- audiences:developers
-- audiences:data-engineers
-
+  - audiences:developers
+  - audiences:data-engineers
+category: database
+level: intermediate
+tags:
+  - concepts:databases
+  - concepts:transactions
+  - concepts:data-integrity
 ---
 
 # Database ACID Guarantees

@@ -1,13 +1,12 @@
 ---
-tags:
-  - infrastructure:kubernetes
-  - tools:helm
-level: intermediate
-category: containers
 audience:
   - audiences:developers
   - audiences:devops
-
+category: containers
+level: intermediate
+tags:
+  - infrastructure:kubernetes
+  - tools:helm
 ---
 
 # Helm

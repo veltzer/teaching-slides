@@ -1,13 +1,12 @@
 ---
-tags:
-  - practices:tdd
-  - practices:advanced
-level: intermediate
-category: testing
 audience:
   - audiences:developers
   - audiences:architects
-
+category: testing
+level: intermediate
+tags:
+  - practices:tdd
+  - practices:advanced
 ---
 
 # Advanced TDD Practices

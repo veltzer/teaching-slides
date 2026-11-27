@@ -1,16 +1,15 @@
 ---
-tags:
-  - practices:sre
-  - practices:devops
-  - concepts:architecture
-level: intermediate
-category: architecture
-duration_hours: 24
 audience:
   - audiences:developers
   - audiences:devops
   - audiences:managers
-
+category: architecture
+duration_hours: 24
+level: intermediate
+tags:
+  - practices:sre
+  - practices:devops
+  - concepts:architecture
 ---
 
 # Site Reliability Engineering

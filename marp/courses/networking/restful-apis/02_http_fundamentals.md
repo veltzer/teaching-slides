@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: networking
+level: beginner
 tags:
   - networking:rest
   - networking:http
-level: beginner
-category: networking
-audience:
-  - audiences:developers
-
 ---
 
 # HTTP Fundamentals

@@ -1,13 +1,12 @@
 ---
-tags:
-  - infrastructure:docker
-  - infrastructure:storage
-level: beginner
-category: containers
 audience:
   - audiences:developers
   - audiences:devops
-
+category: containers
+level: beginner
+tags:
+  - infrastructure:docker
+  - infrastructure:storage
 ---
 
 # Docker Volumes and Storage

@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: mobile
+level: advanced
 tags:
   - infrastructure:android
   - languages:kotlin
   - concepts:mobile-development
-level: advanced
-category: mobile
-audience:
-  - audiences:developers
-
 ---
 
 # Multi-Platform Development and Modern Architecture

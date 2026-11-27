@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: database
+level: intermediate
 tags:
   - databases:postgresql
   - databases:extensions
-level: intermediate
-category: database
-audience:
-  - audiences:developers
-
 ---
 
 # PostgreSQL Extensions

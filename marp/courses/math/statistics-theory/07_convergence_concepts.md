@@ -1,12 +1,11 @@
 ---
-tags:
-  - math:probability
-level: advanced
-category: math
 audience:
   - audiences:data-scientists
   - audiences:ml-engineers
-
+category: math
+level: advanced
+tags:
+  - math:probability
 ---
 
 # Modes of Convergence

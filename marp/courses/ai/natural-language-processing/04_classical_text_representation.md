@@ -1,16 +1,15 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:data-scientists
+category: ai
+level: advanced
 tags:
   - data-and-ai:nlp
   - concepts:bag-of-words
   - concepts:tf-idf
   - concepts:n-grams
   - concepts:topic-modeling
-level: advanced
-category: ai
-audience:
-  - audiences:developers
-  - audiences:data-scientists
-
 ---
 
 # Classical Text Representation

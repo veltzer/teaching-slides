@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:managers
+category: data-driven
+level: beginner
 tags:
   - data-and-ai:data-analytics
   - data-and-ai:data-engineering
-level: beginner
-category: data-driven
-audience:
-  - audiences:managers
-
 ---
 
 # Collecting Data

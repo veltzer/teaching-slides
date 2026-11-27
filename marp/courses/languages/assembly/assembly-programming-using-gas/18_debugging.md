@@ -1,14 +1,13 @@
 ---
+audience:
+  - audiences:developers
+category: language
+level: advanced
 tags:
   - languages:assembly
   - hardware-and-embedded:x86
   - infrastructure:linux
   - infrastructure:low-level
-level: advanced
-category: language
-audience:
-  - audiences:developers
-
 ---
 
 # Debugging and Tools

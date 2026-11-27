@@ -1,11 +1,10 @@
 ---
-tags:
-  - practices:technical-writing
-level: beginner
-category: methodology
 audience:
   - audiences:developers
-
+category: methodology
+level: beginner
+tags:
+  - practices:technical-writing
 ---
 
 # Document Types

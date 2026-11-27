@@ -1,12 +1,11 @@
 ---
-tags:
-  - math:regression
-level: advanced
-category: math
 audience:
   - audiences:data-scientists
   - audiences:ml-engineers
-
+category: math
+level: advanced
+tags:
+  - math:regression
 ---
 
 # Linear Models Theory

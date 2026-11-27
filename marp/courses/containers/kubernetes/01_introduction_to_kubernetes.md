@@ -1,12 +1,11 @@
 ---
-tags:
-  - infrastructure:kubernetes
-level: intermediate
-category: containers
 audience:
   - audiences:developers
   - audiences:devops
-
+category: containers
+level: intermediate
+tags:
+  - infrastructure:kubernetes
 ---
 
 # Introduction to Kubernetes

@@ -1,13 +1,12 @@
 ---
+audience:
+  - audiences:developers
+category: message-queue
+level: beginner
 tags:
   - tools:kafka
   - data-and-ai:streaming
   - concepts:distributed-systems
-level: beginner
-category: message-queue
-audience:
-  - audiences:developers
-
 ---
 
 # Design Points

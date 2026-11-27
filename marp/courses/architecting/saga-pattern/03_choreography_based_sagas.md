@@ -1,13 +1,12 @@
 ---
-tags:
-  - architecture:saga
-  - architecture:event-driven
-level: advanced
-category: architecture
 audience:
   - audiences:architects
   - audiences:developers
-
+category: architecture
+level: advanced
+tags:
+  - architecture:saga
+  - architecture:event-driven
 ---
 
 # Choreography-Based Sagas

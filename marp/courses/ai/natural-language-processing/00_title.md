@@ -1,18 +1,17 @@
 ---
+audience:
+  - audiences:developers
+  - audiences:data-scientists
+  - audiences:architects
+category: ai
+duration_hours: 64
+level: advanced
 tags:
   - data-and-ai:nlp
   - data-and-ai:machine-learning
   - data-and-ai:deep-learning
   - data-and-ai:llm
   - concepts:embeddings
-level: advanced
-category: ai
-duration_hours: 64
-audience:
-  - audiences:developers
-  - audiences:data-scientists
-  - audiences:architects
-
 ---
 
 # Natural Language Processing

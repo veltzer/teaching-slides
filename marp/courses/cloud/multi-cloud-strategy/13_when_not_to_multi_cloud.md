@@ -1,16 +1,15 @@
 ---
+audience:
+  - audiences:architects
+  - audiences:managers
+category: cloud
+level: advanced
 tags:
   - infrastructure:cloud
   - infrastructure:aws
   - infrastructure:azure
   - infrastructure:gcp
   - concepts:architecture
-level: advanced
-category: cloud
-audience:
-  - audiences:architects
-  - audiences:managers
-
 ---
 
 # When Not to Go Multi-Cloud

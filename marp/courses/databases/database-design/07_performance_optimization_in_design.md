@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:developers
+category: database
+level: intermediate
 tags:
   - databases:design
   - databases:performance
-level: intermediate
-category: database
-audience:
-  - audiences:developers
-
 ---
 
 # Performance Optimisation in Design

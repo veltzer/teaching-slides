@@ -1,13 +1,12 @@
 ---
-tags:
-  - architecture:cqrs
-  - concepts:design-patterns
-level: advanced
-category: architecture
 audience:
   - audiences:architects
   - audiences:developers
-
+category: architecture
+level: advanced
+tags:
+  - architecture:cqrs
+  - concepts:design-patterns
 ---
 
 # Implementing Commands and Command Handlers

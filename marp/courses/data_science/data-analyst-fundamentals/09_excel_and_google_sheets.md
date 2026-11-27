@@ -1,12 +1,11 @@
 ---
+audience:
+  - audiences:data-analysts
+category: data-science
+level: beginner
 tags:
   - data-and-ai:excel
   - data-and-ai:spreadsheets
-level: beginner
-category: data-science
-audience:
-  - audiences:data-analysts
-
 ---
 
 # Excel and Google Sheets

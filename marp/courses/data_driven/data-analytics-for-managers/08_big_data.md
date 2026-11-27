@@ -1,11 +1,10 @@
 ---
-tags:
-  - data-and-ai:big-data
-level: beginner
-category: data-driven
 audience:
   - audiences:managers
-
+category: data-driven
+level: beginner
+tags:
+  - data-and-ai:big-data
 ---
 
 # Big Data
