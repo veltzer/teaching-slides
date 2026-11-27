@@ -280,6 +280,12 @@ def make_handler(html: str, server_holder: list):
     return H
 
 
+class GalleryServer(socketserver.ThreadingTCPServer):
+    """The gallery's server: it may bind a port that a run just closed."""
+
+    allow_reuse_address = True
+
+
 def main() -> None:
     p = argparse.ArgumentParser()
     p.add_argument("--sample", type=int, default=None)
@@ -306,8 +312,7 @@ def main() -> None:
     server_holder: list = []
     handler = make_handler(html, server_holder)
 
-    socketserver.ThreadingTCPServer.allow_reuse_address = True
-    with socketserver.ThreadingTCPServer(("127.0.0.1", args.port), handler) as srv:
+    with GalleryServer(("127.0.0.1", args.port), handler) as srv:
         server_holder.append(srv)
         url = f"http://127.0.0.1:{args.port}/"
         print(f"serving {len(paths)} slides at {url}", file=sys.stderr)
