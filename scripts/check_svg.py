@@ -37,9 +37,12 @@ import re
 import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
 from svg_lib import compute_bbox, load_palette, palette_for_type
+
+if TYPE_CHECKING:
+    from xml.etree.ElementTree import Element
 
 MIN_FILE_SIZE = 500
 MIN_ELEMENTS = 5
@@ -500,17 +503,17 @@ def _check_no_border(tree: ET.ElementTree[ET.Element]) -> list[str]:
     another rect duplicates it."""
     root = tree.getroot()
 
-    def walk(node, inside_defs):
+    def walk(node: Element, *, inside_defs: bool):
         for child in node:
             tag = child.tag.split('}')[-1]
             if tag == 'defs':
                 yield from walk(child, inside_defs=True)
                 continue
             if inside_defs:
-                yield from walk(child, inside_defs)
+                yield from walk(child, inside_defs=inside_defs)
                 continue
             yield child
-            yield from walk(child, inside_defs)
+            yield from walk(child, inside_defs=inside_defs)
 
     for elem in walk(root, inside_defs=False):
         tag = elem.tag.split('}')[-1]
@@ -592,7 +595,7 @@ def _check_title_bg_rect(tree: ET.ElementTree[ET.Element]) -> list[str]:
     return errors
 
 
-def _find_text_matches(root, spec: dict[str, Any], *, check_weight: bool = True) -> list[ET.Element]:
+def _find_text_matches(root: Element, spec: dict[str, Any], *, check_weight: bool = True) -> list[ET.Element]:
     """Find <text> elements that are direct children of root matching spec."""
     expected_ff = spec.get("font-family", "Arial, sans-serif")
     expected_fs = str(spec.get("font-size", 39))

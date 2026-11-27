@@ -41,6 +41,8 @@ from lxml import etree
 if TYPE_CHECKING:
     from collections.abc import Callable
 
+    from lxml.etree import _Element
+
 SVG_NS = "http://www.w3.org/2000/svg"
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
@@ -204,7 +206,7 @@ def build_metadata_string(svg_type: str = "regular") -> str:
     return f"  <metadata>\n    <type>{svg_type}</type>\n  </metadata>"
 
 
-def svg_type_from_tree(root) -> str:
+def svg_type_from_tree(root: _Element) -> str:
     """Read <metadata><type> from an lxml tree. Returns 'regular' if absent."""
     ns = f"{{{SVG_NS}}}"
     for meta in root.iter(f"{ns}metadata", "metadata"):
@@ -226,7 +228,7 @@ def palette_for_type(svg_type: str) -> str:
 
 # ── Helpers ──
 
-def tag(elem) -> str:
+def tag(elem: _Element) -> str:
     """Return local tag name, stripping namespace."""
     if callable(elem.tag):
         return ""  # comment
@@ -234,7 +236,7 @@ def tag(elem) -> str:
     return t.split("}", 1)[1] if "}" in t else t
 
 
-def is_comment(elem) -> bool:
+def is_comment(elem: _Element) -> bool:
     return callable(elem.tag)
 
 
@@ -254,7 +256,7 @@ class SvgFile:
     """
 
     def __init__(self, path: Path, root: etree._Element,
-                 original_text: str):
+                 original_text: str) -> None:
         self.path = path
         self.root = root
         self.changed = False
@@ -410,7 +412,7 @@ def _element_bbox(
 ) -> tuple[float, float, float, float] | None:
     elem_tag = elem_tag.lower()
 
-    def num(name):
+    def num(name: str) -> float | None:
         return _parse_num(attrs.get(name))
 
     if elem_tag == "rect":
@@ -619,7 +621,7 @@ def _apply_fit_transform(
             out.append((seg_tag, chunk))
             continue
 
-        def sub(m):
+        def sub(m: re.Match[str]) -> str:
             return f"<{m.group(1)}{_transform_element(m.group(1), m.group(2), sx, sy, tx, ty)}{m.group(3)}>"
 
         out.append((seg_tag, _FIT_ELEM_RE.sub(sub, chunk)))

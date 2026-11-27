@@ -196,7 +196,7 @@ refreshQueue();
 def make_handler(html: str, server_holder: list[socketserver.ThreadingTCPServer]):
     class H(http.server.SimpleHTTPRequestHandler):
         @override
-        def do_GET(self):
+        def do_GET(self) -> None:
             if self.path == "/":
                 self._send(200, "text/html; charset=utf-8", html.encode())
                 return
@@ -220,7 +220,7 @@ def make_handler(html: str, server_holder: list[socketserver.ThreadingTCPServer]
                 return
             self._send(404, "text/plain", b"not found")
 
-        def do_POST(self):
+        def do_POST(self) -> None:
             length = int(self.headers.get("content-length", 0))
             body = self.rfile.read(length).decode()
             params = urllib.parse.parse_qs(body, keep_blank_values=True)
@@ -278,7 +278,7 @@ def make_handler(html: str, server_holder: list[socketserver.ThreadingTCPServer]
             self.wfile.write(body)
 
         @override
-        def log_message(self, *args, **kwargs):
+        def log_message(self, *args: object, **kwargs: object) -> None:
             pass
     return H
 
@@ -320,7 +320,7 @@ def main() -> None:
         url = f"http://127.0.0.1:{args.port}/"
         print(f"serving {len(paths)} slides at {url}", file=sys.stderr)
         print(f"queue file: {QUEUE}  (Ctrl-C to stop)", file=sys.stderr)
-        def _open_browser():
+        def _open_browser() -> None:
             subprocess.Popen(
                 ["google-chrome", "--incognito", "--new-window",
                  "--user-data-dir=/tmp/chrome-incognito-svg-gallery", url],

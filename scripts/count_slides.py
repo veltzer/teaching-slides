@@ -3,7 +3,7 @@
 from pathlib import Path
 
 
-def count():
+def count() -> None:
     total = 0
     for f in Path("marp").rglob("*.md"):
         content = f.read_text(encoding="utf-8", errors="replace")

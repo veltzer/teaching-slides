@@ -14,6 +14,10 @@ Prints a tier-summary table; pass --detail for a per-course table.
 import argparse
 import re
 from pathlib import Path
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from collections.abc import Sequence
 
 SVG_REF = re.compile(r"svg/(?:courses|lectures)/[^)\s]+\.svg")
 TITLE_SVG = re.compile(r"/title\.svg\b")
@@ -37,7 +41,7 @@ def course_dirs(root: Path):
             yield course_dir, md_files
 
 
-def slide_count_one(md):
+def slide_count_one(md: Path) -> int:
     """Count Marp slides in a single markdown file (ex front matter)."""
     content = md.read_text(encoding="utf-8", errors="replace")
     if content.startswith("---"):
@@ -47,7 +51,7 @@ def slide_count_one(md):
     return 1 + sum(1 for line in content.splitlines() if line.strip() == "---")
 
 
-def svg_count_one(md):
+def svg_count_one(md: Path) -> int:
     """Count non-title SVG references in a single markdown file."""
     n = 0
     for line in md.read_text(encoding="utf-8", errors="replace").splitlines():
@@ -57,31 +61,31 @@ def svg_count_one(md):
     return n
 
 
-def slide_count(md_files):
+def slide_count(md_files: list[Path]) -> int:
     """Count Marp slides across the given markdown files."""
     return sum(slide_count_one(md) for md in md_files)
 
 
-def svg_count(md_files):
+def svg_count(md_files: list[Path]) -> int:
     """Count non-title SVG references across the given markdown files."""
     return sum(svg_count_one(md) for md in md_files)
 
 
-def tier_for(ratio):
+def tier_for(ratio: float) -> str:
     for lo, hi, label, _desc in TIERS:
         if lo <= ratio < hi:
             return label
     return TIERS[-1][2]
 
 
-def print_table(headers, rows, aligns=None):
+def print_table(headers: list[str], rows: Sequence[Sequence[object]], aligns: list[str] | None = None) -> None:
     """Print rows as a fixed-width table. aligns: 'l' or 'r' per column."""
     cols = list(zip(headers, *rows, strict=False))
     widths = [max(len(str(c)) for c in col) for col in cols]
     if aligns is None:
         aligns = ["l"] * len(headers)
 
-    def fmt(cells):
+    def fmt(cells: Sequence[object]) -> str:
         return "  ".join(
             (str(c).rjust(w) if a == "r" else str(c).ljust(w))
             for c, w, a in zip(cells, widths, aligns, strict=False)
@@ -93,7 +97,7 @@ def print_table(headers, rows, aligns=None):
         print(fmt(row))
 
 
-def main():
+def main() -> None:
     p = argparse.ArgumentParser(
         description=__doc__,
         formatter_class=argparse.RawDescriptionHelpFormatter,

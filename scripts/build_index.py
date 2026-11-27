@@ -28,9 +28,12 @@ import subprocess
 import sys
 from datetime import UTC, datetime
 from pathlib import Path
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
 import yaml
+
+if TYPE_CHECKING:
+    from types import ModuleType
 
 ROOT = Path(".")
 if not (ROOT / ".git").exists():
@@ -292,7 +295,7 @@ def build_info_html() -> str:
 
 
 
-def load_shared_themes():
+def load_shared_themes() -> ModuleType:
     """The consumer helper from the shared-themes submodule (shared_themes.py):
     the inlined CSS layers, the switcher, the theme <select> entries and the
     fonts copy, one implementation for every index page in the fleet."""
