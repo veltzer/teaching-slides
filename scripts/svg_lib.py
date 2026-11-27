@@ -33,6 +33,7 @@ import math
 import re
 import sys
 from pathlib import Path
+from typing import Any
 
 import yaml
 from lxml import etree
@@ -94,18 +95,18 @@ def load_palette(svg_type: str = "regular") -> dict:
             f"{DIAGRAM_THEMES_CONFIG}: no diagram theme {name!r} in shared-themes "
             f"(known: {sorted(diagram_themes)})"
         )
-    data: dict = copy.deepcopy(diagram_themes[name])
+    data: dict[str, Any] = copy.deepcopy(diagram_themes[name])
     # The theme's name travels with the palette: the defs builder writes it on
     # the style block, so a renderer that knows the deck's page palette can
     # pick the matching variant (shared-themes' diagram-themes.json).
     data["theme"] = name
     shadow = data.pop("shadow")
     effects = data.setdefault("effects", {})
+    filters: dict[str, dict[str, Any]] = {}
     if shadow == "none":
-        data["filters"] = {}
         effects["rect-shadow"] = {"enabled": False, "apply-to": "none"}
     else:
-        data["filters"] = {
+        filters = {
             "shadow": {
                 "type": "drop-shadow",
                 "dx": shadow["dx"],
@@ -115,6 +116,7 @@ def load_palette(svg_type: str = "regular") -> dict:
             }
         }
         effects["rect-shadow"] = {"enabled": True, "apply-to": shadow["apply-to"]}
+    data["filters"] = filters
     _palette_cache[svg_type] = data
     return data
 
@@ -466,7 +468,10 @@ def compute_bbox(
         re.DOTALL,
     )
     stack: list[tuple[float, float]] = [(0.0, 0.0)]
-    mins_x, mins_y, maxs_x, maxs_y = [], [], [], []
+    mins_x: list[float] = []
+    mins_y: list[float] = []
+    maxs_x: list[float] = []
+    maxs_y: list[float] = []
 
     for m in combined.finditer(outside_defs):
         whole = m.group(0)
